@@ -80,14 +80,16 @@ const FacultySection = () => {
               className="group relative rounded-xl border border-border bg-card overflow-hidden hover:shadow-xl transition-shadow duration-300"
             >
               <div className={`absolute top-0 left-0 right-0 h-1 ${t.accent}`} />
-              <div className="p-6 flex flex-col items-center text-center">
-                <div className="w-24 h-24 rounded-full overflow-hidden mb-4 ring-2 ring-border">
+              <div className="overflow-hidden">
+                <div className="w-full h-56 overflow-hidden">
                   <img
                     src={t.image}
                     alt={t.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-top"
                   />
                 </div>
+              </div>
+              <div className="p-6 flex flex-col items-center text-center">
                 <span className="text-xs font-bold text-accent tracking-wider">{t.exp}</span>
                 <h3 className="font-serif text-lg mt-1 text-foreground">{t.name}</h3>
                 <p className="text-xs text-muted-foreground font-medium">{t.role}</p>
