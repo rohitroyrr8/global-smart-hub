@@ -80,7 +80,7 @@ const HeroSection = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-primary-foreground/70 mb-10 max-w-2xl leading-relaxed">
-            India's MITRA Government Program Partner · Serving 50+ Countries · Transforming Organizations Across 6 Continents
+            Global Institutional Ally · Serving 50+ Nations Across 6 Continents · South East Asian HRD-Certified Excellence
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-20">
