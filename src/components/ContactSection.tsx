@@ -25,7 +25,7 @@ const ContactSection = () => {
             <span className="text-xs tracking-widest uppercase font-semibold text-accent">
               Get In Touch
             </span>
-            <h2 className="text-3xl md:text-5xl font-serif mt-3 text-foreground">
+            <h2 className="text-3xl md:text-5xl font-sans font-bold mt-3 text-foreground">
               Ready to Rewire Your Organization?
             </h2>
             <p className="text-muted-foreground mt-4 leading-relaxed">

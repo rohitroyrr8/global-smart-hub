@@ -41,7 +41,7 @@ const Counter = ({ target, suffix }: { target: number; suffix: string }) => {
 
   return (
     <div ref={ref} className="text-center">
-      <div className="text-3xl md:text-4xl font-serif font-bold text-primary-foreground">
+      <div className="text-3xl md:text-4xl font-sans font-bold text-primary-foreground">
         {count.toLocaleString()}
         {suffix}
       </div>
@@ -73,7 +73,7 @@ const HeroSection = () => {
             </span>
           </div>
 
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif leading-[1.1] mb-6 text-primary-foreground">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-sans font-bold leading-[1.1] mb-6 text-primary-foreground">
             Empowering Global Excellence through{" "}
             <span className="text-gradient-cq">Collaborative Intelligence</span>{" "}
             & Elite Training

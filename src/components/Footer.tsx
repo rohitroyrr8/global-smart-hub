@@ -4,7 +4,7 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <span className="text-xl font-serif font-bold text-primary-foreground tracking-tight">
+            <span className="text-xl font-sans font-bold text-primary-foreground tracking-tight">
               Ocean<span className="text-gradient-cq">GTA</span>
             </span>
             <p className="text-xs text-primary-foreground/50 mt-1">
