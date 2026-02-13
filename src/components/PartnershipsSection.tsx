@@ -4,23 +4,23 @@ import { Award, Globe, Building2, MapPin } from "lucide-react";
 const partnerships = [
   {
     icon: Building2,
-    title: "India's MITRA Program",
-    desc: "Official training partner for government sector transformation and national skill development.",
+    title: "Strategic Government Partnerships",
+    desc: "Official training partner for sovereign sector transformation. We lead large-scale national capacity building and institutional skill development initiatives for government bodies worldwide.",
   },
   {
     icon: Award,
-    title: "SEA HRD Certification",
-    desc: "South East Asian HRD-certified standards recognized across ASEAN nations.",
-  },
-  {
-    icon: MapPin,
-    title: "Asia-Pacific Hub",
-    desc: "Covering Southeast Asia, India, Australia, New Zealand, and emerging markets.",
+    title: "International HRD Standards",
+    desc: "Accredited with South East Asian HRD-certified standards. Our curriculum is recognized for excellence across international borders, ensuring world-class compliance and executive quality.",
   },
   {
     icon: Globe,
-    title: "South Africa Operations",
-    desc: "Strategic base for regional operations serving government and corporate sectors.",
+    title: "Global Command Centers",
+    desc: "Operational across 50+ Nations and 6 Continents. From our primary Asia-Pacific hub, we orchestrate high-level training programs for diverse geopolitical landscapes and emerging markets.",
+  },
+  {
+    icon: MapPin,
+    title: "Regional Strategic Bases",
+    desc: "Strategic operations centers across Africa and South East Asia. These bases serve as a tactical foundation for regional government relations and elite corporate security transformations.",
   },
 ];
 
