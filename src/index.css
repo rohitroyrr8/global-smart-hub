@@ -108,7 +108,7 @@
 
 @layer utilities {
   .gradient-ocean {
-    background: linear-gradient(135deg, hsl(var(--ocean-deep)), hsl(var(--ocean-dark)));
+    background: linear-gradient(135deg, hsl(var(--slate-medium)), hsl(var(--ocean-teal-light)));
   }
 
   .gradient-cq {
