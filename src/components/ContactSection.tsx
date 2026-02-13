@@ -29,7 +29,7 @@ const ContactSection = () => {
               Ready to Rewire Your Organization?
             </h2>
             <p className="text-muted-foreground mt-4 leading-relaxed">
-              Whether you're a government agency, PSU, or corporate enterprise, our programs are tailored to transform your teams. Reach out for a consultation.
+              Whether you're a government agency, PSU, or corporate enterprise, our programs are tailored to transform your teams. Join an elite network of sovereign agencies and global enterprises. Our master consultants are ready to architect a customized transformation for your leadership, security, or technical teams.
             </p>
 
             <div className="mt-8 space-y-4">
