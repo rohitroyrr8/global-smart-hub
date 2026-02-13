@@ -7,7 +7,7 @@ const navLinks = [
   { label: "CQ Framework", href: "#cq" },
   { label: "Faculty", href: "#faculty" },
   { label: "Partnerships", href: "#partnerships" },
-  { label: "Contact", href: "#contact" },
+  { label: "Connect", href: "#contact" },
 ];
 
 const Navbar = () => {
@@ -53,7 +53,7 @@ const Navbar = () => {
             href="#contact"
             className="gradient-cq text-accent-foreground px-5 py-2.5 rounded-md text-sm font-semibold hover:opacity-90 transition-opacity"
           >
-            Book Consultation
+            Schedule Consultation
           </a>
         </div>
 
@@ -89,7 +89,7 @@ const Navbar = () => {
               onClick={() => setMobileOpen(false)}
               className="gradient-cq text-accent-foreground px-5 py-2.5 rounded-md text-sm font-semibold text-center"
             >
-              Book Consultation
+              Schedule Consultation
             </a>
           </div>
         </motion.div>
