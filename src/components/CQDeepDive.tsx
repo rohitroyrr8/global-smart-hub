@@ -209,7 +209,7 @@ const CQDeepDive = () => {
                     </div>
                   ))}
                   <span className="text-accent-foreground font-extrabold text-lg">=</span>
-                  <span className="text-gradient-cq font-sans font-extrabold text-xl px-2">Total Synergy</span>
+                  <span className="font-sans font-extrabold text-xl px-2 text-primary-foreground">Total Synergy</span>
                 </div>
               </div>
             </div>
