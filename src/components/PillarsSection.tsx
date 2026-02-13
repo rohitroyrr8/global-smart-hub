@@ -57,7 +57,7 @@ const PillarsSection = () => {
           <span className="text-xs tracking-widest uppercase font-semibold text-accent">
             Training Excellence
           </span>
-          <h2 className="text-3xl md:text-5xl font-serif mt-3 text-foreground">
+          <h2 className="text-3xl md:text-5xl font-sans font-bold mt-3 text-foreground">
             Three Pillars of Excellence
           </h2>
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
@@ -89,7 +89,7 @@ const PillarsSection = () => {
                 {p.tag}
               </span>
 
-              <h3 className={`text-xl font-serif mt-2 mb-3 ${p.textGradient}`}>{p.title}</h3>
+              <h3 className={`text-xl font-sans font-bold mt-2 mb-3 ${p.textGradient}`}>{p.title}</h3>
 
               <p className="text-sm text-muted-foreground leading-relaxed mb-6">
                 {p.description}

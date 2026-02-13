@@ -61,7 +61,7 @@ const FacultySection = () => {
           <span className="text-xs tracking-widest uppercase font-semibold text-accent">
             International Faculty
           </span>
-          <h2 className="text-3xl md:text-5xl font-serif mt-3 text-foreground">
+          <h2 className="text-3xl md:text-5xl font-sans font-bold mt-3 text-foreground">
             Meet Our Elite Trainers
           </h2>
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
@@ -89,7 +89,7 @@ const FacultySection = () => {
               </div>
               <div className="p-6 flex flex-col items-center text-center">
                 <span className="text-xs font-bold text-accent tracking-wider">{t.exp}</span>
-                <h3 className="font-serif text-lg mt-1 text-foreground">{t.name}</h3>
+                <h3 className="font-sans font-bold text-lg mt-1 text-foreground">{t.name}</h3>
                 <p className="text-xs text-muted-foreground font-medium">{t.role}</p>
                 <p className="text-sm text-muted-foreground mt-3 leading-relaxed">{t.desc}</p>
               </div>

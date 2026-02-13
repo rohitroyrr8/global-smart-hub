@@ -37,7 +37,7 @@ const PartnershipsSection = () => {
           <span className="text-xs tracking-widest uppercase font-semibold text-accent">
             Trust & Partnerships
           </span>
-          <h2 className="text-3xl md:text-5xl font-serif mt-3 text-primary-foreground">
+          <h2 className="text-3xl md:text-5xl font-sans font-bold mt-3 text-primary-foreground">
             Global Reach & Government Partnerships
           </h2>
         </motion.div>
@@ -55,7 +55,7 @@ const PartnershipsSection = () => {
               <div className="w-12 h-12 rounded-lg gradient-teal mx-auto mb-4 flex items-center justify-center">
                 <p.icon className="w-6 h-6 text-primary-foreground" />
               </div>
-              <h3 className="font-serif text-lg text-primary-foreground mb-2">{p.title}</h3>
+              <h3 className="font-sans font-bold text-lg text-primary-foreground mb-2">{p.title}</h3>
               <p className="text-sm text-primary-foreground/60">{p.desc}</p>
             </motion.div>
           ))}
