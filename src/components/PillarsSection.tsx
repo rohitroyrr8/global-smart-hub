@@ -17,8 +17,8 @@ const pillars = [
     title: "Close Protection & Tactical Operations",
     tag: "ELITE SECURITY",
     description:
-      "Elite Security for VVIPs & Diplomatic Corps. 10–15 day intensive programs for Close Protection Officers (CPO) and Defensive Driving Excellence.",
-    highlights: ["CPO Certification", "Defensive Driving", "VVIP Escort"],
+      "Elite Security for VVIPs & Diplomatic Corps. 10-day intensive program for Close Protection Officers (CPO) and Defensive Driving Excellence.",
+    highlights: ["10-Day Intensive", "CPO Certification", "Defensive Driving", "VVIP Escort"],
     gradient: "gradient-teal",
     textGradient: "text-gradient-teal",
   },
@@ -27,8 +27,8 @@ const pillars = [
     title: "Digital Transformation & Tech",
     tag: "INNOVATION",
     description:
-      "Blockchain & Data Engineering. Specialized modules for government digital initiatives, Web3, and scalable data pipelines.",
-    highlights: ["Blockchain / Web3", "Data Engineering", "AI & Fintech"],
+      "Blockchain & Data Engineering. Specialized 2-day modules for government digital initiatives, Web3, and scalable data pipelines.",
+    highlights: ["Blockchain / Web3 – 2 Days", "Data Engineering – 2 Days", "AI & Fintech"],
     gradient: "gradient-ocean",
     textGradient: "text-gradient-teal",
   },
