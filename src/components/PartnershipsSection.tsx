@@ -8,11 +8,6 @@ const partnerships = [
     desc: "Official training partner for government sector transformation and national skill development.",
   },
   {
-    icon: Award,
-    title: "SEA HRD Certification",
-    desc: "South East Asian HRD-certified standards recognized across ASEAN nations.",
-  },
-  {
     icon: MapPin,
     title: "Asia-Pacific Hub",
     desc: "Covering Southeast Asia, India, Australia, New Zealand, and emerging markets.",
