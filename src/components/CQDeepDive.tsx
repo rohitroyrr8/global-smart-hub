@@ -198,18 +198,18 @@ const CQDeepDive = () => {
                 <p className="text-sm text-accent-foreground/80 mb-4">
                   CQ is the latest discovery in team development — a transformational program that shifts the working chemistry of team members. The goal: to make team members more open, understanding, cooperative, forgiving, and trusting within a short period.
                 </p>
-                <div className="flex items-center gap-2 flex-wrap">
+                <div className="flex items-center gap-3 flex-wrap">
                   {synergyFormula.map((s, i) => (
-                    <div key={s.label} className="flex items-center gap-1">
-                      <div className="w-10 h-10 rounded-lg bg-accent-foreground/15 flex flex-col items-center justify-center">
+                    <div key={s.label} className="flex items-center gap-2">
+                      <div className="w-12 h-12 rounded-lg bg-accent-foreground/15 flex flex-col items-center justify-center">
                         <s.icon className="w-4 h-4 text-accent-foreground" />
-                        <span className="text-[9px] font-bold text-accent-foreground">{s.label}</span>
+                        <span className="text-xs font-extrabold tracking-wide text-accent-foreground">{s.label}</span>
                       </div>
-                      {i < synergyFormula.length - 1 && <span className="text-accent-foreground font-bold">+</span>}
+                      {i < synergyFormula.length - 1 && <span className="text-accent-foreground font-extrabold text-lg">+</span>}
                     </div>
                   ))}
-                  <span className="text-accent-foreground font-bold">=</span>
-                  <span className="text-gradient-cq font-serif font-bold text-lg px-2">Total Synergy</span>
+                  <span className="text-accent-foreground font-extrabold text-lg">=</span>
+                  <span className="text-gradient-cq font-serif font-extrabold text-xl px-2">Total Synergy</span>
                 </div>
               </div>
             </div>
