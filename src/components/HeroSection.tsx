@@ -69,7 +69,7 @@ const HeroSection = () => {
           <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full glass-card">
             <div className="w-2 h-2 rounded-full gradient-cq" />
             <span className="text-xs font-semibold tracking-widest uppercase text-primary-foreground/70">
-              Certified Training Program · Professional Certification Course
+              Professional Certification Course
             </span>
           </div>
 
