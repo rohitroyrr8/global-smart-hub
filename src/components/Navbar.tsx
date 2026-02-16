@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import oceangtaLogo from "@/assets/oceangta-logo.jpeg";
+import oceangtaLogo from "@/assets/oceangta-logo.png";
 
 const navLinks = [
   { label: "Programs", href: "#programs" },
