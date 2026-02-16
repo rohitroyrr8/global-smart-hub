@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import oceangtaLogo from "@/assets/oceangta-logo.jpeg";
 
 const navLinks = [
   { label: "Programs", href: "#programs" },
@@ -33,9 +34,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
         <a href="#" className="flex items-center gap-2">
-          <span className="text-2xl font-sans font-bold text-primary-foreground tracking-tight">
-            Ocean<span className="text-gradient-cq">GTA</span>
-          </span>
+          <img src={oceangtaLogo} alt="OceanGTA Logo" className="h-10 w-auto" />
         </a>
 
         {/* Desktop */}
