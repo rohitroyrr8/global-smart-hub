@@ -34,11 +34,11 @@ const ContactSection = () => {
 
             <div className="mt-8 space-y-4">
               <a
-                href="mailto:info@oceangta.com"
+                href="mailto:business@oceangta.com"
                 className="flex items-center gap-3 text-foreground hover:text-accent transition-colors"
               >
                 <Mail className="w-5 h-5" />
-                <span className="text-sm">info@oceangta.com</span>
+                <span className="text-sm">business@oceangta.com</span>
               </a>
               <a
                 href="https://www.oceangta.com"
