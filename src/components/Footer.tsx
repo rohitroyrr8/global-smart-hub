@@ -7,7 +7,7 @@ const Footer = () => {
             <span className="text-xl font-sans font-bold text-primary-foreground tracking-tight">
               Ocean<span className="text-gradient-cq">GTA</span>
             </span>
-            <p className="text-xs text-primary-foreground/50 mt-1">
+            <p className="text-xs text-primary-foreground/50 mt-1 mb-3">
               Ocean Global Training Academy
             </p>
             <p className="text-xs text-primary-foreground/50 mt-2">
