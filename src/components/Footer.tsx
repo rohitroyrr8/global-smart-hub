@@ -11,7 +11,7 @@ const Footer = () => {
               Ocean Global Training Academy
             </p>
             <p className="text-xs text-primary-foreground/50 mt-2">
-              335, Seasons Community, JVC, Dubai
+              Address: #336, Seasons Community, JVC, Dubai, United Arab Emirates
             </p>
             <a href="mailto:business@oceangta.com" className="text-xs text-primary-foreground/50 hover:text-primary-foreground transition-colors">
               business@oceangta.com
