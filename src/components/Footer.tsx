@@ -10,6 +10,12 @@ const Footer = () => {
             <p className="text-xs text-primary-foreground/50 mt-1">
               Ocean Global Training Academy
             </p>
+            <p className="text-xs text-primary-foreground/50 mt-2">
+              335, Seasons Community, JVC, Dubai
+            </p>
+            <a href="mailto:business@oceangta.com" className="text-xs text-primary-foreground/50 hover:text-primary-foreground transition-colors">
+              business@oceangta.com
+            </a>
           </div>
           <div className="flex gap-6 text-xs text-primary-foreground/50">
             <a href="#programs" className="hover:text-primary-foreground transition-colors">Programs</a>
