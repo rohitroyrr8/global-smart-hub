@@ -39,7 +39,7 @@ const trainers = [
     accent: "gradient-ocean",
   },
   {
-    name: "Data Engineering Specialist",
+    name: "Saurabh Gupta",
     role: "Senior Data Engineer | Finance & Logistics",
     exp: "8+ Years",
     desc: "Expert in building robust data pipelines and scalable analytics solutions across the modern data stack for finance and logistics sectors.",
