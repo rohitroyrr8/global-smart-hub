@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Brain, Shield, Database } from "lucide-react";
+import { Brain, Shield, Database, Heart } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const pillars = [
   {
@@ -11,6 +12,7 @@ const pillars = [
     highlights: ["2-Day Intensive", "Cross-Functional Teams", "Fortune 500 & Government"],
     gradient: "gradient-cq",
     textGradient: "text-gradient-cq",
+    link: "",
   },
   {
     icon: Shield,
@@ -21,16 +23,40 @@ const pillars = [
     highlights: ["10-Day Intensive", "CPO Certification", "Defensive Driving", "VVIP Escort"],
     gradient: "gradient-teal",
     textGradient: "text-gradient-teal",
+    link: "",
   },
   {
     icon: Database,
-    title: "Digital Transformation & Tech",
+    title: "Blockchain & Web3",
     tag: "INNOVATION",
     description:
-      "Blockchain & Data Engineering. Specialized 2-day modules for government digital initiatives, Web3, and scalable data pipelines.",
-    highlights: ["Blockchain / Web3 – 2 Days", "Data Engineering – 2 Days", "AI & Fintech"],
+      "Master decentralized technologies, smart contracts, and enterprise blockchain for government digital initiatives.",
+    highlights: ["2-Day Intensive", "Smart Contracts", "Enterprise Blockchain"],
+    gradient: "gradient-cq",
+    textGradient: "text-gradient-cq",
+    link: "/blockchain",
+  },
+  {
+    icon: Database,
+    title: "Data Science & Engineering",
+    tag: "INNOVATION",
+    description:
+      "Scalable data pipelines, machine learning, and AI-powered analytics for digital transformation.",
+    highlights: ["2-Day Intensive", "ML & AI", "Big Data"],
+    gradient: "gradient-teal",
+    textGradient: "text-gradient-teal",
+    link: "/data-science",
+  },
+  {
+    icon: Heart,
+    title: "Health & Wellness",
+    tag: "WELLNESS",
+    description:
+      "Holistic program blending Ayurveda, preventive care, yoga, and nutrition for complete well-being.",
+    highlights: ["Ayurveda", "Yoga", "Corporate Wellness"],
     gradient: "gradient-ocean",
     textGradient: "text-gradient-teal",
+    link: "/health-wellness",
   },
 ];
 
