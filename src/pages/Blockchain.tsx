@@ -162,6 +162,19 @@ const Blockchain = () => {
               </div>
             ))}
           </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center mt-12"
+          >
+            <Link to="/#contact" className="inline-block gradient-cq text-accent-foreground px-8 py-3 rounded-md font-semibold hover:opacity-90 transition-opacity">
+              Enroll Now
+            </Link>
+            <a href="mailto:business@oceangta.com" className="inline-block border border-accent text-accent px-8 py-3 rounded-md font-semibold hover:bg-accent/10 transition-colors">
+              Request a Quote
+            </a>
+          </motion.div>
         </div>
       </section>
 
@@ -339,7 +352,9 @@ const Blockchain = () => {
           </motion.div>
         </div>
       </section>
-      <section className="py-20 bg-background">
+
+      {/* FAQ */}
+      <section className="py-20 bg-muted/50">
         <div className="container mx-auto px-6">
           <motion.div {...fadeUp} className="text-center mb-14">
             <span className="text-xs tracking-widest uppercase font-semibold text-accent">Support</span>
@@ -363,7 +378,7 @@ const Blockchain = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-muted/50">
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold text-foreground mb-4">Ready to Master Blockchain?</h2>
           <p className="text-muted-foreground mb-8 max-w-lg mx-auto">Join our next cohort and gain industry-recognized certification in blockchain and Web3 technologies.</p>
