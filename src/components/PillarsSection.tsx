@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Brain, Shield, Database, Heart } from "lucide-react";
+import { Brain, Shield, Database, Heart, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const pillars = [
@@ -12,7 +12,7 @@ const pillars = [
     highlights: ["2-Day Intensive", "Cross-Functional Teams", "Fortune 500 & Government"],
     gradient: "gradient-cq",
     textGradient: "text-gradient-cq",
-    link: "",
+    link: "/collaborative-intelligence",
   },
   {
     icon: Shield,
@@ -23,7 +23,7 @@ const pillars = [
     highlights: ["10-Day Intensive", "CPO Certification", "Defensive Driving", "VVIP Escort"],
     gradient: "gradient-teal",
     textGradient: "text-gradient-teal",
-    link: "",
+    link: "/close-protection",
   },
   {
     icon: Database,
@@ -57,6 +57,17 @@ const pillars = [
     gradient: "gradient-ocean",
     textGradient: "text-gradient-teal",
     link: "/health-wellness",
+  },
+  {
+    icon: TrendingUp,
+    title: "Advanced Sales & Marketing",
+    tag: "GROWTH",
+    description:
+      "Master modern sales strategies, digital marketing, and customer acquisition frameworks for sustainable business growth.",
+    highlights: ["Sales Strategy", "Digital Marketing", "Lead Generation"],
+    gradient: "gradient-cq",
+    textGradient: "text-gradient-cq",
+    link: "/sales-marketing",
   },
 ];
 
