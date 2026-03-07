@@ -175,6 +175,8 @@ const Blockchain = () => {
               Request a Quote
             </a>
           </motion.div>
+        </div>
+      </section>
 
       {/* Course Overview / Learning Objectives */}
       <section className="py-20 bg-background">
@@ -350,7 +352,9 @@ const Blockchain = () => {
           </motion.div>
         </div>
       </section>
-      <section className="py-20 bg-background">
+
+      {/* FAQ */}
+      <section className="py-20 bg-muted/50">
         <div className="container mx-auto px-6">
           <motion.div {...fadeUp} className="text-center mb-14">
             <span className="text-xs tracking-widest uppercase font-semibold text-accent">Support</span>
@@ -374,7 +378,7 @@ const Blockchain = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-muted/50">
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold text-foreground mb-4">Ready to Master Blockchain?</h2>
           <p className="text-muted-foreground mb-8 max-w-lg mx-auto">Join our next cohort and gain industry-recognized certification in blockchain and Web3 technologies.</p>
