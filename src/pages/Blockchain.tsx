@@ -162,8 +162,19 @@ const Blockchain = () => {
               </div>
             ))}
           </motion.div>
-        </div>
-      </section>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center mt-12"
+          >
+            <Link to="/#contact" className="inline-block gradient-cq text-accent-foreground px-8 py-3 rounded-md font-semibold hover:opacity-90 transition-opacity">
+              Enroll Now
+            </Link>
+            <a href="mailto:business@oceangta.com" className="inline-block border border-accent text-accent px-8 py-3 rounded-md font-semibold hover:bg-accent/10 transition-colors">
+              Request a Quote
+            </a>
+          </motion.div>
 
       {/* Course Overview / Learning Objectives */}
       <section className="py-20 bg-background">
