@@ -106,6 +106,7 @@ const audience = [
   { icon: GraduationCap, title: "IT Professionals & Developers", desc: "Software engineers looking to transition into blockchain development and Web3." },
   { icon: Briefcase, title: "Entrepreneurs & Founders", desc: "Startup founders wanting to leverage blockchain for innovative business models." },
   { icon: Users, title: "Finance & Banking Professionals", desc: "Fintech professionals seeking to understand DeFi, digital assets, and CBDCs." },
+  { icon: TrendingUp, title: "Career Changers & Tech Enthusiasts", desc: "Professionals from any background ready to upskill and tap into high-earning Web3 opportunities." },
 ];
 
 const careers = [
