@@ -1,49 +1,121 @@
 import { motion } from "framer-motion";
-import { ArrowLeft, Shield, Globe, Lock, Layers, Code, Zap } from "lucide-react";
+import { ArrowLeft, Shield, Globe, Lock, Layers, Code, Zap, Clock, Users, Award, BookOpen, Target, ChevronDown, Briefcase, GraduationCap, Building2, Landmark } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
-const modules = [
+const fadeUp = {
+  initial: { opacity: 0, y: 25 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { duration: 0.5 },
+};
+
+const highlights = [
+  { icon: Clock, label: "6-Week Program" },
+  { icon: Users, label: "One-on-One Sessions" },
+  { icon: Award, label: "Certification" },
+  { icon: BookOpen, label: "Hands-on Labs" },
+  { icon: Landmark, label: "Government Focus" },
+  { icon: Briefcase, label: "Industry Projects" },
+];
+
+const objectives = [
+  "Understand the foundational architecture of blockchain and distributed ledger technology",
+  "Develop practical skills in smart contract creation, deployment, and auditing",
+  "Explore real-world applications of blockchain across government, finance, and enterprise",
+  "Learn to evaluate and implement blockchain solutions for organizational digital transformation",
+  "Gain proficiency in DeFi protocols, tokenomics, and digital asset management",
+  "Master security best practices for building tamper-proof decentralized systems",
+];
+
+const curriculum = [
   {
+    week: "Week 1–2",
+    title: "Blockchain Foundations & Architecture",
     icon: Globe,
-    title: "Web3 Fundamentals",
-    desc: "Deep dive into decentralized architecture, consensus mechanisms, and distributed ledger technology.",
+    topics: [
+      "Distributed ledger technology & consensus mechanisms",
+      "Public vs private blockchains",
+      "Cryptographic primitives – hashing, digital signatures",
+      "Ethereum architecture deep dive",
+      "Setting up development environments",
+    ],
   },
   {
-    icon: Lock,
+    week: "Week 3",
     title: "Smart Contract Development",
-    desc: "Build, deploy, and audit smart contracts using Solidity and modern development frameworks.",
-  },
-  {
-    icon: Layers,
-    title: "DeFi & Tokenomics",
-    desc: "Understand decentralized finance protocols, token economics, and yield optimization strategies.",
-  },
-  {
-    icon: Shield,
-    title: "Blockchain Security",
-    desc: "Identify vulnerabilities, perform security audits, and implement best practices for secure dApps.",
-  },
-  {
     icon: Code,
-    title: "Enterprise Blockchain",
-    desc: "Implement permissioned blockchains for government and enterprise use cases with Hyperledger and R3 Corda.",
+    topics: [
+      "Solidity programming fundamentals",
+      "Writing, testing & deploying smart contracts",
+      "Development frameworks – Hardhat, Truffle",
+      "Gas optimization techniques",
+      "Contract design patterns & best practices",
+    ],
   },
   {
+    week: "Week 4",
+    title: "DeFi, Tokenomics & Digital Assets",
+    icon: Layers,
+    topics: [
+      "DeFi protocol architecture – AMMs, lending, staking",
+      "Token standards – ERC-20, ERC-721, ERC-1155",
+      "Tokenomics design & valuation models",
+      "NFT ecosystems & use cases",
+      "Regulatory landscape for digital assets",
+    ],
+  },
+  {
+    week: "Week 5",
+    title: "Security & Auditing",
+    icon: Shield,
+    topics: [
+      "Common smart contract vulnerabilities",
+      "Reentrancy, overflow & access control attacks",
+      "Security audit methodology & tools",
+      "Formal verification techniques",
+      "Incident response & post-mortem analysis",
+    ],
+  },
+  {
+    week: "Week 6",
+    title: "Enterprise Blockchain & Capstone",
     icon: Zap,
-    title: "AI & Fintech Integration",
-    desc: "Leverage AI-powered analytics and blockchain for next-gen fintech solutions and digital payments.",
+    topics: [
+      "Hyperledger Fabric & R3 Corda for enterprise",
+      "Government blockchain use cases – identity, land registry, voting",
+      "AI + Blockchain integration for fintech",
+      "Capstone project: end-to-end dApp development",
+      "One-on-one mentorship & career roadmap",
+    ],
   },
 ];
 
-const outcomes = [
-  "Design & deploy smart contracts on Ethereum and Polygon",
-  "Architect enterprise blockchain solutions for government",
-  "Conduct smart contract security audits",
-  "Build decentralized applications (dApps)",
-  "Understand regulatory frameworks for digital assets",
-  "Integrate blockchain with existing IT infrastructure",
+const learnings = [
+  { icon: Code, title: "Build & Deploy Smart Contracts", desc: "Write production-grade Solidity contracts and deploy on Ethereum & Polygon networks." },
+  { icon: Shield, title: "Conduct Security Audits", desc: "Identify vulnerabilities and perform comprehensive smart contract security audits." },
+  { icon: Layers, title: "Architect DeFi Protocols", desc: "Design and implement decentralized finance applications with advanced tokenomics." },
+  { icon: Building2, title: "Enterprise Solutions", desc: "Implement permissioned blockchain solutions for government and enterprise use cases." },
+  { icon: Globe, title: "Build Decentralized Apps", desc: "Create full-stack dApps with modern Web3 front-end frameworks and IPFS storage." },
+  { icon: Zap, title: "AI & Fintech Integration", desc: "Combine AI analytics with blockchain for next-gen financial technology solutions." },
+];
+
+const audience = [
+  { icon: GraduationCap, title: "IT Professionals & Developers", desc: "Software engineers looking to transition into blockchain development and Web3." },
+  { icon: Landmark, title: "Government Officials", desc: "Public sector leaders exploring blockchain for digital governance and transparency." },
+  { icon: Briefcase, title: "Entrepreneurs & Founders", desc: "Startup founders wanting to leverage blockchain for innovative business models." },
+  { icon: Users, title: "Finance & Banking Professionals", desc: "Fintech professionals seeking to understand DeFi, digital assets, and CBDCs." },
+];
+
+const faqs = [
+  { q: "Do I need prior programming experience?", a: "Basic programming knowledge is helpful but not mandatory. The first two weeks cover foundational concepts, and our one-on-one sessions are tailored to your skill level." },
+  { q: "What is the format of the program?", a: "The 6-week program includes live instructor-led sessions, hands-on labs, weekly assignments, one-on-one mentorship sessions, and a capstone project. Sessions are conducted both online and in-person." },
+  { q: "Will I receive a certification?", a: "Yes, upon successful completion of the program and capstone project, you will receive an industry-recognized OceanGTA Blockchain & Web3 Professional Certification." },
+  { q: "What tools and platforms will I work with?", a: "You'll work with Ethereum, Polygon, Solidity, Hardhat, MetaMask, IPFS, Hyperledger Fabric, and various DeFi protocols during hands-on labs." },
+  { q: "Is there post-program support?", a: "Absolutely. Graduates receive 3 months of mentorship access, alumni network membership, and priority access to advanced programs and industry events." },
+  { q: "Can organizations enroll teams?", a: "Yes, we offer customized corporate and government cohorts. Contact us for group pricing and tailored curriculum options." },
 ];
 
 const Blockchain = () => {
@@ -52,7 +124,7 @@ const Blockchain = () => {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
+      <section className="relative pt-32 pb-24 overflow-hidden">
         <div className="absolute inset-0 gradient-ocean opacity-90" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,hsl(var(--sun-orange)/0.15),transparent_60%)]" />
         <div className="container mx-auto px-6 relative z-10">
@@ -60,85 +132,184 @@ const Blockchain = () => {
             <ArrowLeft size={16} /> Back to Home
           </Link>
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <span className="text-xs tracking-widest uppercase font-bold text-accent">Innovation · 2-Day Program</span>
+            <span className="text-xs tracking-widest uppercase font-bold text-accent">Flagship Program · 6 Weeks</span>
             <h1 className="text-4xl md:text-6xl font-bold mt-3 text-primary-foreground leading-tight">
               Blockchain &<br />
               <span className="text-gradient-cq">Web3 Mastery</span>
             </h1>
             <p className="text-primary-foreground/70 mt-6 max-w-xl text-lg leading-relaxed">
-              Master decentralized technologies, smart contracts, and enterprise blockchain solutions for government digital initiatives and fintech innovation.
+              A comprehensive 6-week intensive program with one-on-one mentorship, hands-on labs, and industry certification — designed for professionals ready to master decentralized technologies and enterprise blockchain solutions.
             </p>
-            <div className="flex flex-wrap gap-3 mt-8">
-              {["2-Day Intensive", "Hands-on Labs", "Certification", "Government Focus"].map((t) => (
-                <span key={t} className="px-4 py-2 rounded-full bg-primary-foreground/10 text-primary-foreground text-sm font-medium border border-primary-foreground/20">
-                  {t}
-                </span>
-              ))}
-            </div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mt-10"
+          >
+            {highlights.map((h) => (
+              <div key={h.label} className="flex flex-col items-center gap-2 px-4 py-4 rounded-xl bg-primary-foreground/10 border border-primary-foreground/20 backdrop-blur-sm">
+                <h.icon className="w-5 h-5 text-accent" />
+                <span className="text-primary-foreground text-xs font-semibold text-center">{h.label}</span>
+              </div>
+            ))}
           </motion.div>
         </div>
       </section>
 
-      {/* Modules */}
+      {/* Course Overview / Learning Objectives */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
-          <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-center mb-14">
-            <span className="text-xs tracking-widest uppercase font-semibold text-accent">Curriculum</span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-3 text-foreground">Program Modules</h2>
+          <motion.div {...fadeUp} className="text-center mb-14">
+            <span className="text-xs tracking-widest uppercase font-semibold text-accent">Course Overview</span>
+            <h2 className="text-3xl md:text-4xl font-bold mt-3 text-foreground">Learning Objectives</h2>
+            <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
+              This program equips you with end-to-end blockchain expertise — from foundational concepts to enterprise deployment — through a structured, mentor-guided journey.
+            </p>
           </motion.div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {modules.map((m, i) => (
+          <div className="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+            {objectives.map((obj, i) => (
               <motion.div
-                key={m.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="relative rounded-xl border border-border bg-card p-7 hover:shadow-lg transition-shadow group overflow-hidden"
+                key={i}
+                {...fadeUp}
+                transition={{ delay: i * 0.08 }}
+                className="flex items-start gap-4 p-5 rounded-xl bg-card border border-border hover:shadow-md transition-shadow"
               >
-                <div className="absolute top-0 left-0 right-0 h-1 gradient-cq" />
-                <div className="inline-flex items-center justify-center w-11 h-11 rounded-lg gradient-cq mb-5">
-                  <m.icon className="w-5 h-5 text-accent-foreground" />
+                <div className="w-8 h-8 rounded-full gradient-cq flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <Target className="w-4 h-4 text-accent-foreground" />
                 </div>
-                <h3 className="text-lg font-bold text-foreground mb-2">{m.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{m.desc}</p>
+                <p className="text-sm text-foreground leading-relaxed">{obj}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Outcomes */}
+      {/* Curriculum */}
       <section className="py-20 bg-muted/50">
         <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto">
-            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-center mb-12">
-              <span className="text-xs tracking-widest uppercase font-semibold text-accent">Results</span>
-              <h2 className="text-3xl md:text-4xl font-bold mt-3 text-foreground">Learning Outcomes</h2>
-            </motion.div>
-            <div className="grid sm:grid-cols-2 gap-4">
-              {outcomes.map((o, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, x: -10 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.08 }}
-                  className="flex items-start gap-3 p-4 rounded-lg bg-card border border-border"
-                >
-                  <div className="w-6 h-6 rounded-full gradient-cq flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-accent-foreground text-xs font-bold">{i + 1}</span>
+          <motion.div {...fadeUp} className="text-center mb-14">
+            <span className="text-xs tracking-widest uppercase font-semibold text-accent">Curriculum</span>
+            <h2 className="text-3xl md:text-4xl font-bold mt-3 text-foreground">6-Week Training Roadmap</h2>
+            <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
+              A carefully structured curriculum that takes you from blockchain fundamentals to building production-ready decentralized applications.
+            </p>
+          </motion.div>
+          <div className="max-w-4xl mx-auto space-y-5">
+            {curriculum.map((mod, i) => (
+              <motion.div
+                key={mod.week}
+                {...fadeUp}
+                transition={{ delay: i * 0.1 }}
+                className="rounded-xl border border-border bg-card overflow-hidden hover:shadow-lg transition-shadow"
+              >
+                <div className="flex items-center gap-5 p-6">
+                  <div className="w-12 h-12 rounded-lg gradient-cq flex items-center justify-center flex-shrink-0">
+                    <mod.icon className="w-6 h-6 text-accent-foreground" />
                   </div>
-                  <p className="text-sm text-foreground">{o}</p>
-                </motion.div>
-              ))}
-            </div>
+                  <div className="flex-1">
+                    <span className="text-xs tracking-widest uppercase font-bold text-accent">{mod.week}</span>
+                    <h3 className="text-lg font-bold text-foreground mt-1">{mod.title}</h3>
+                  </div>
+                </div>
+                <div className="px-6 pb-6 pt-0">
+                  <ul className="grid sm:grid-cols-2 gap-2">
+                    {mod.topics.map((topic, j) => (
+                      <li key={j} className="flex items-start gap-2 text-sm text-muted-foreground">
+                        <span className="text-accent mt-0.5">▸</span>
+                        {topic}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* CTA */}
+      {/* What You Will Learn */}
       <section className="py-20 bg-background">
+        <div className="container mx-auto px-6">
+          <motion.div {...fadeUp} className="text-center mb-14">
+            <span className="text-xs tracking-widest uppercase font-semibold text-accent">Skills</span>
+            <h2 className="text-3xl md:text-4xl font-bold mt-3 text-foreground">What You Will Learn</h2>
+          </motion.div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {learnings.map((item, i) => (
+              <motion.div
+                key={item.title}
+                {...fadeUp}
+                transition={{ delay: i * 0.1 }}
+                className="relative rounded-xl border border-border bg-card p-7 hover:shadow-lg transition-shadow group overflow-hidden"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 gradient-cq" />
+                <div className="inline-flex items-center justify-center w-11 h-11 rounded-lg gradient-cq mb-5">
+                  <item.icon className="w-5 h-5 text-accent-foreground" />
+                </div>
+                <h3 className="text-lg font-bold text-foreground mb-2">{item.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Who Is This For */}
+      <section className="py-20 bg-muted/50">
+        <div className="container mx-auto px-6">
+          <motion.div {...fadeUp} className="text-center mb-14">
+            <span className="text-xs tracking-widest uppercase font-semibold text-accent">Audience</span>
+            <h2 className="text-3xl md:text-4xl font-bold mt-3 text-foreground">Who Is This For?</h2>
+            <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
+              This program is designed for ambitious professionals across industries who want to lead in the blockchain space.
+            </p>
+          </motion.div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            {audience.map((a, i) => (
+              <motion.div
+                key={a.title}
+                {...fadeUp}
+                transition={{ delay: i * 0.1 }}
+                className="text-center p-6 rounded-xl bg-card border border-border hover:shadow-lg transition-shadow"
+              >
+                <div className="inline-flex items-center justify-center w-14 h-14 rounded-full gradient-cq mb-5">
+                  <a.icon className="w-6 h-6 text-accent-foreground" />
+                </div>
+                <h3 className="text-base font-bold text-foreground mb-2">{a.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{a.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-6">
+          <motion.div {...fadeUp} className="text-center mb-14">
+            <span className="text-xs tracking-widest uppercase font-semibold text-accent">Support</span>
+            <h2 className="text-3xl md:text-4xl font-bold mt-3 text-foreground">Frequently Asked Questions</h2>
+          </motion.div>
+          <motion.div {...fadeUp} className="max-w-3xl mx-auto">
+            <Accordion type="single" collapsible className="space-y-3">
+              {faqs.map((faq, i) => (
+                <AccordionItem key={i} value={`faq-${i}`} className="rounded-xl border border-border bg-card px-6 overflow-hidden">
+                  <AccordionTrigger className="text-left text-foreground font-semibold hover:no-underline">
+                    {faq.q}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed">
+                    {faq.a}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20 bg-muted/50">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold text-foreground mb-4">Ready to Master Blockchain?</h2>
           <p className="text-muted-foreground mb-8 max-w-lg mx-auto">Join our next cohort and gain industry-recognized certification in blockchain and Web3 technologies.</p>
