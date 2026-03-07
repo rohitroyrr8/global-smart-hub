@@ -307,9 +307,9 @@ const Blockchain = () => {
         <div className="container mx-auto px-6">
           <motion.div {...fadeUp} className="text-center mb-14">
             <span className="text-xs tracking-widest uppercase font-semibold text-accent">Career Growth</span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-3 text-foreground">Web3 & Blockchain Careers</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mt-3 text-foreground">Web3 & Blockchain Salaries</h2>
             <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-              The blockchain industry is experiencing explosive growth with abundant opportunities. Learn in-demand skills that command premium salaries and open doors to high-paying roles globally.
+              The blockchain industry is experiencing explosive growth with abundant opportunities. Learn in-demand skills that command premium <strong>salaries</strong> and open doors to high-paying roles globally.
             </p>
           </motion.div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
