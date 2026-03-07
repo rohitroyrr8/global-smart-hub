@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Brain, Shield, Database, Heart } from "lucide-react";
+import { Brain, Shield, Database, Heart, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const pillars = [
