@@ -13,11 +13,11 @@ const fadeUp = {
 };
 
 const highlights = [
-  { icon: Clock, label: "6-Week Program" },
+  { icon: Clock, label: "8-Week Program" },
   { icon: Users, label: "One-on-One Sessions" },
   { icon: Award, label: "Certification" },
   { icon: BookOpen, label: "Hands-on Labs" },
-  { icon: Landmark, label: "Government Focus" },
+  { icon: Users, label: "Weekly Doubt Clearing" },
   { icon: Briefcase, label: "Industry Projects" },
 ];
 
@@ -104,14 +104,13 @@ const learnings = [
 
 const audience = [
   { icon: GraduationCap, title: "IT Professionals & Developers", desc: "Software engineers looking to transition into blockchain development and Web3." },
-  { icon: Landmark, title: "Government Officials", desc: "Public sector leaders exploring blockchain for digital governance and transparency." },
   { icon: Briefcase, title: "Entrepreneurs & Founders", desc: "Startup founders wanting to leverage blockchain for innovative business models." },
   { icon: Users, title: "Finance & Banking Professionals", desc: "Fintech professionals seeking to understand DeFi, digital assets, and CBDCs." },
 ];
 
 const faqs = [
   { q: "Do I need prior programming experience?", a: "Basic programming knowledge is helpful but not mandatory. The first two weeks cover foundational concepts, and our one-on-one sessions are tailored to your skill level." },
-  { q: "What is the format of the program?", a: "The 6-week program includes live instructor-led sessions, hands-on labs, weekly assignments, one-on-one mentorship sessions, and a capstone project. Sessions are conducted both online and in-person." },
+  { q: "What is the format of the program?", a: "The 8-week program includes live instructor-led sessions, hands-on labs, weekly assignments, one-on-one mentorship sessions, weekly doubt clearing sessions, and a capstone project. Sessions are conducted both online and in-person." },
   { q: "Will I receive a certification?", a: "Yes, upon successful completion of the program and capstone project, you will receive an industry-recognized OceanGTA Blockchain & Web3 Professional Certification." },
   { q: "What tools and platforms will I work with?", a: "You'll work with Ethereum, Polygon, Solidity, Hardhat, MetaMask, IPFS, Hyperledger Fabric, and various DeFi protocols during hands-on labs." },
   { q: "Is there post-program support?", a: "Absolutely. Graduates receive 3 months of mentorship access, alumni network membership, and priority access to advanced programs and industry events." },
@@ -132,13 +131,13 @@ const Blockchain = () => {
             <ArrowLeft size={16} /> Back to Home
           </Link>
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <span className="text-xs tracking-widest uppercase font-bold text-accent">Flagship Program · 6 Weeks</span>
+            <span className="text-xs tracking-widest uppercase font-bold text-accent">Flagship Program · 8 Weeks</span>
             <h1 className="text-4xl md:text-6xl font-bold mt-3 text-primary-foreground leading-tight">
               Blockchain &<br />
               <span className="text-gradient-cq">Web3 Mastery</span>
             </h1>
             <p className="text-primary-foreground/70 mt-6 max-w-xl text-lg leading-relaxed">
-              A comprehensive 6-week intensive program with one-on-one mentorship, hands-on labs, and industry certification — designed for professionals ready to master decentralized technologies and enterprise blockchain solutions.
+              A comprehensive 8-week intensive program with one-on-one mentorship, weekly doubt clearing sessions, hands-on labs, and industry certification — designed for professionals ready to master decentralized technologies and enterprise blockchain solutions.
             </p>
           </motion.div>
           <motion.div
@@ -190,7 +189,7 @@ const Blockchain = () => {
         <div className="container mx-auto px-6">
           <motion.div {...fadeUp} className="text-center mb-14">
             <span className="text-xs tracking-widest uppercase font-semibold text-accent">Curriculum</span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-3 text-foreground">6-Week Training Roadmap</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mt-3 text-foreground">8-Week Training Roadmap</h2>
             <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
               A carefully structured curriculum that takes you from blockchain fundamentals to building production-ready decentralized applications.
             </p>
