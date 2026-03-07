@@ -7,6 +7,9 @@ import Index from "./pages/Index";
 import Blockchain from "./pages/Blockchain";
 import DataScience from "./pages/DataScience";
 import HealthWellness from "./pages/HealthWellness";
+import CollaborativeIntelligence from "./pages/CollaborativeIntelligence";
+import CloseProtection from "./pages/CloseProtection";
+import SalesMarketing from "./pages/SalesMarketing";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +25,9 @@ const App = () => (
           <Route path="/blockchain" element={<Blockchain />} />
           <Route path="/data-science" element={<DataScience />} />
           <Route path="/health-wellness" element={<HealthWellness />} />
+          <Route path="/collaborative-intelligence" element={<CollaborativeIntelligence />} />
+          <Route path="/close-protection" element={<CloseProtection />} />
+          <Route path="/sales-marketing" element={<SalesMarketing />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
