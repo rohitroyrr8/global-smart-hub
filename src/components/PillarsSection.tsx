@@ -58,6 +58,17 @@ const pillars = [
     textGradient: "text-gradient-teal",
     link: "/health-wellness",
   },
+  {
+    icon: TrendingUp,
+    title: "Advanced Sales & Marketing",
+    tag: "GROWTH",
+    description:
+      "Master modern sales strategies, digital marketing, and customer acquisition frameworks for sustainable business growth.",
+    highlights: ["Sales Strategy", "Digital Marketing", "Lead Generation"],
+    gradient: "gradient-cq",
+    textGradient: "text-gradient-cq",
+    link: "/sales-marketing",
+  },
 ];
 
 const container = {
