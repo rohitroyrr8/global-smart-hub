@@ -59,7 +59,7 @@ const trainers = [
 
 const FacultySection = () => {
   return (
-    <section id="faculty" className="py-24 bg-background">
+    <section id="faculty" className="pt-16 pb-24 bg-background">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0 }}
