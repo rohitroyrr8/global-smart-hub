@@ -12,7 +12,7 @@ const pillars = [
     highlights: ["2-Day Intensive", "Cross-Functional Teams", "Fortune 500 & Government"],
     gradient: "gradient-cq",
     textGradient: "text-gradient-cq",
-    link: "",
+    link: "/collaborative-intelligence",
   },
   {
     icon: Shield,
@@ -23,7 +23,7 @@ const pillars = [
     highlights: ["10-Day Intensive", "CPO Certification", "Defensive Driving", "VVIP Escort"],
     gradient: "gradient-teal",
     textGradient: "text-gradient-teal",
-    link: "",
+    link: "/close-protection",
   },
   {
     icon: Database,
