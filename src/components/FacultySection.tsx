@@ -4,6 +4,7 @@ import trainerVijay from "@/assets/trainer-vijay.jpg";
 import trainerTaco from "@/assets/trainer-taco.jpg";
 import trainerRohit from "@/assets/trainer-rohit.jpg";
 import trainerData from "@/assets/trainer-data.jpg";
+import trainerArvind from "@/assets/trainer-arvind.png";
 
 const trainers = [
   {
@@ -31,12 +32,12 @@ const trainers = [
     accent: "gradient-cq",
   },
   {
-    name: "Rohit Roy",
-    role: "Co-founder & CTO | Web3 & Fintech",
-    exp: "10+ Years",
-    desc: "Visionary technologist building at the intersection of Web3, AI, and financial technology. Background with NPCI, IBM, and IIT Hyderabad.",
-    image: trainerRohit,
-    accent: "gradient-ocean",
+    name: "Dr. Arvind O. Singh",
+    role: "Ayurveda Consultant & Wellness Coach",
+    exp: "17+ Years",
+    desc: "M.D. Medicine (Ayurveda) specialist in chronic and lifestyle disorder management. Integrates authentic Ayurveda with personalized wellness guidance across India and internationally.",
+    image: trainerArvind,
+    accent: "gradient-teal",
   },
   {
     name: "Saurabh Gupta",
