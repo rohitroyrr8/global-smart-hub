@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowLeft, Shield, Globe, Lock, Layers, Code, Zap, Clock, Users, Award, BookOpen, Target, ChevronDown, Briefcase, GraduationCap, Building2, Landmark } from "lucide-react";
+import { ArrowLeft, Shield, Globe, Lock, Layers, Code, Zap, Clock, Users, Award, BookOpen, Target, ChevronDown, Briefcase, GraduationCap, Building2, Landmark, TrendingUp, Wallet, Lightbulb } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -106,6 +106,15 @@ const audience = [
   { icon: GraduationCap, title: "IT Professionals & Developers", desc: "Software engineers looking to transition into blockchain development and Web3." },
   { icon: Briefcase, title: "Entrepreneurs & Founders", desc: "Startup founders wanting to leverage blockchain for innovative business models." },
   { icon: Users, title: "Finance & Banking Professionals", desc: "Fintech professionals seeking to understand DeFi, digital assets, and CBDCs." },
+];
+
+const careers = [
+  { icon: Code, title: "Blockchain Developer", salary: "$120k–$180k+/yr", desc: "Build smart contracts, dApps, and blockchain infrastructure. High demand across startups and enterprises." },
+  { icon: Shield, title: "Security Auditor", salary: "$130k–$200k+/yr", desc: "Conduct smart contract audits and penetration testing. Critical role ensuring protocol safety." },
+  { icon: TrendingUp, title: "DeFi Analyst", salary: "$100k–$160k+/yr", desc: "Analyze token economics, trading strategies, and protocol performance. Work with data-driven teams." },
+  { icon: Briefcase, title: "Product Manager", salary: "$110k–$170k+/yr", desc: "Lead Web3 product strategy at protocols, exchanges, and fintech companies building next-gen solutions." },
+  { icon: Lightbulb, title: "Startup Founder", salary: "$0–Unlimited", desc: "Build your own Web3 project. Access venture funding, grants, and community support for blockchain startups." },
+  { icon: Wallet, title: "Freelance Consultant", salary: "$100–$500+/hr", desc: "Offer blockchain expertise as an independent consultant. Help enterprises adopt Web3 solutions." },
 ];
 
 const faqs = [
@@ -283,7 +292,53 @@ const Blockchain = () => {
         </div>
       </section>
 
-      {/* FAQ */}
+      {/* Web3 Career Opportunities */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-6">
+          <motion.div {...fadeUp} className="text-center mb-14">
+            <span className="text-xs tracking-widest uppercase font-semibold text-accent">Career Growth</span>
+            <h2 className="text-3xl md:text-4xl font-bold mt-3 text-foreground">Web3 & Blockchain Careers</h2>
+            <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
+              The blockchain industry is experiencing explosive growth with abundant opportunities. Learn in-demand skills that command premium salaries and open doors to high-paying roles globally.
+            </p>
+          </motion.div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
+            {careers.map((career, i) => (
+              <motion.div
+                key={career.title}
+                {...fadeUp}
+                transition={{ delay: i * 0.1 }}
+                className="relative rounded-xl border border-border bg-card p-7 hover:shadow-lg transition-shadow group overflow-hidden"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 gradient-cq" />
+                <div className="inline-flex items-center justify-center w-11 h-11 rounded-lg gradient-cq mb-4">
+                  <career.icon className="w-5 h-5 text-accent-foreground" />
+                </div>
+                <h3 className="text-lg font-bold text-foreground mb-1">{career.title}</h3>
+                <p className="text-sm font-semibold text-accent mb-3">{career.salary}</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">{career.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+          <motion.div {...fadeUp} className="max-w-3xl mx-auto p-8 rounded-xl bg-muted/50 border border-border text-center">
+            <h3 className="text-xl font-bold text-foreground mb-4">Why Choose a Web3 Career?</h3>
+            <div className="grid sm:grid-cols-3 gap-6">
+              <div>
+                <p className="text-2xl font-bold text-accent mb-2">↗ 50%+</p>
+                <p className="text-sm text-muted-foreground">Higher salaries compared to traditional tech roles</p>
+              </div>
+              <div>
+                <p className="text-2xl font-bold text-accent mb-2">🌍</p>
+                <p className="text-sm text-muted-foreground">Remote opportunities with companies worldwide</p>
+              </div>
+              <div>
+                <p className="text-2xl font-bold text-accent mb-2">⚡</p>
+                <p className="text-sm text-muted-foreground">Work on cutting-edge technology transforming finance</p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
       <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
           <motion.div {...fadeUp} className="text-center mb-14">
