@@ -40,6 +40,14 @@ const trainers = [
     accent: "gradient-teal",
   },
   {
+    name: "Rohit Roy",
+    role: "Co-founder & CTO | Web3 & Fintech",
+    exp: "10+ Years",
+    desc: "Visionary technologist building at the intersection of Web3, AI, and financial technology. Background with NPCI, IBM, and IIT Hyderabad.",
+    image: trainerRohit,
+    accent: "gradient-ocean",
+  },
+  {
     name: "Saurabh Gupta",
     role: "Senior Data Engineer | Finance & Logistics",
     exp: "8+ Years",
