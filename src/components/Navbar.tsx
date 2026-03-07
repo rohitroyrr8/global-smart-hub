@@ -5,7 +5,7 @@ import { Link, useLocation } from "react-router-dom";
 
 const programLinks = [
   { label: "Collaborative Intelligence", href: "/collaborative-intelligence" },
-  { label: "Blockchain", href: "/blockchain" },
+  { label: "Blockchain & Web3", href: "/blockchain" },
   { label: "Data Science", href: "/data-science" },
   { label: "Health & Wellness", href: "/health-wellness" },
   { label: "Close Protection Officer", href: "/close-protection" },
