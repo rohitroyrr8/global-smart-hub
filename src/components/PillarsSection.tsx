@@ -83,7 +83,7 @@ const item = {
 
 const PillarsSection = () => {
   return (
-    <section id="programs" className="py-24 bg-background">
+    <section id="programs" className="pt-24 pb-16 bg-background">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0 }}
