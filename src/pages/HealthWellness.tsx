@@ -430,12 +430,12 @@ const HealthWellness = () => {
               Transform your relationship with stress and sleep. Discover the ancient wisdom of
               Ayurveda and build a life of lasting wellness.
             </p>
-            <Link
-              to="/#contact"
+            <a
+              href="mailto:business@oceangta.com"
               className="inline-block gradient-ocean text-primary-foreground px-10 py-4 rounded-lg font-semibold text-lg border border-primary-foreground/20 hover:opacity-90 transition-opacity shadow-xl"
             >
-              Enroll Now
-            </Link>
+              Request a Quote
+            </a>
           </motion.div>
         </div>
       </section>
