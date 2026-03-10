@@ -5,12 +5,12 @@ import { useToast } from "@/hooks/use-toast";
 
 const ContactSection = () => {
   const { toast } = useToast();
-  const [form, setForm] = useState({ name: "", email: "", org: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", whatsapp: "", org: "", message: "" });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({ title: "Inquiry Sent", description: "We'll get back to you within 24 hours." });
-    setForm({ name: "", email: "", org: "", message: "" });
+    setForm({ name: "", email: "", whatsapp: "", org: "", message: "" });
   };
 
   return (
