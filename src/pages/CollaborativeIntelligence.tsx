@@ -3,9 +3,12 @@ import {
   Layers, Heart, Target, Handshake, Sparkles, FileCheck,
   Brain, Users, ShieldCheck, ArrowRight, CheckCircle2,
   Headphones, MessageSquare, BookOpen, PlayCircle, Link2, Zap,
-  ChevronRight, ArrowLeft, Star, Award, Globe
+  ChevronRight, ArrowLeft, Star, Award, Globe,
+  Building2, Landmark, GraduationCap, Hospital, Rocket, Globe2,
+  TrendingUp, Quote, BarChart3, ChevronDown
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
