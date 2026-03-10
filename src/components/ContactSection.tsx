@@ -32,29 +32,48 @@ const ContactSection = () => {
               Whether you're a government agency, PSU, or corporate enterprise, our programs are tailored to transform your teams. Join an elite network of sovereign agencies and global enterprises. Our master consultants are ready to architect a customized transformation for your leadership, security, or technical teams.
             </p>
 
-            <div className="mt-6 sm:mt-8 space-y-3 sm:space-y-4">
-              <a
-                href="mailto:business@oceangta.com"
-                className="flex items-center gap-3 text-foreground hover:text-accent transition-colors min-h-[44px]"
-              >
-                <Mail className="w-5 h-5 shrink-0" />
-                <span className="text-sm">business@oceangta.com</span>
-              </a>
-              <a
-                href="https://www.oceangta.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 text-foreground hover:text-accent transition-colors min-h-[44px]"
-              >
+            {/* Location Cards */}
+            <div className="mt-6 sm:mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {/* Dubai HQ */}
+              <div className="rounded-xl border border-border bg-card p-5 shadow-sm">
+                <p className="text-2xl mb-2">🌍</p>
+                <h3 className="text-base font-bold text-accent">Global Headquarters</h3>
+                <p className="text-xs text-muted-foreground mb-3">Dubai, UAE</p>
+                <p className="text-sm text-foreground leading-relaxed">
+                  #336, Seasons Community, JVC, Dubai, United Arab Emirates
+                </p>
+                <a href="mailto:business@oceangta.com" className="flex items-center gap-2 mt-3 text-sm text-foreground hover:text-accent transition-colors">
+                  <Mail className="w-4 h-4 shrink-0" /> business@oceangta.com
+                </a>
+                <p className="text-xs text-muted-foreground mt-3">Available Mon–Fri, 9AM–6PM GST</p>
+              </div>
+
+              {/* India Office */}
+              <div className="rounded-xl border border-border bg-card p-5 shadow-sm">
+                <p className="text-2xl mb-2">🇮🇳</p>
+                <h3 className="text-base font-bold text-accent">India Office</h3>
+                <p className="text-xs text-muted-foreground mb-3">Gurugram, India</p>
+                <p className="text-sm text-foreground leading-relaxed">
+                  4th Floor, The Galaxy Hotel, Behind 32nd Milestone, off NH 8, Sector 15, Gurugram, Haryana — 122001
+                </p>
+                <a
+                  href="https://wa.me/919319165254?text=Hi%20OceanGTA!%20I%20would%20like%20to%20know%20more%20about%20your%20training%20programs."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 mt-3 text-sm text-foreground hover:text-accent transition-colors"
+                >
+                  <MessageCircle className="w-4 h-4 shrink-0" /> +91 93191 65254
+                </a>
+                <p className="text-xs text-muted-foreground mt-3">Available Mon–Fri, 10AM–6PM IST</p>
+              </div>
+            </div>
+
+            <div className="mt-6 space-y-3">
+              <a href="https://www.oceangta.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-foreground hover:text-accent transition-colors min-h-[44px]">
                 <Globe className="w-5 h-5 shrink-0" />
                 <span className="text-sm">www.oceangta.com</span>
               </a>
-              <a
-                href="https://www.instagram.com/oceangta"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 text-foreground hover:text-accent transition-colors min-h-[44px]"
-              >
+              <a href="https://www.instagram.com/oceangta" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-foreground hover:text-accent transition-colors min-h-[44px]">
                 <Instagram className="w-5 h-5 shrink-0" />
                 <span className="text-sm">@oceangta</span>
               </a>

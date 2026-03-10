@@ -102,37 +102,49 @@ const Footer = () => {
               <h4 className="text-[hsl(32,90%,50%)] font-semibold text-sm uppercase tracking-wider mb-4 sm:mb-5">
                 Contact Us
               </h4>
-              <ul className="space-y-3 sm:space-y-4 text-sm">
-                <li className="flex items-start gap-3">
-                  <MapPin size={16} className="text-[hsl(32,90%,50%)] mt-0.5 shrink-0" />
-                  <span className="text-[hsl(220,10%,65%)]">
-                    #336, Seasons Community, JVC, Dubai, United Arab Emirates
-                  </span>
-                </li>
-                <li className="flex items-center gap-3 min-h-[44px]">
-                  <Mail size={16} className="text-[hsl(32,90%,50%)] shrink-0" />
-                  <a
-                    href="mailto:business@oceangta.com"
-                    className="text-[hsl(220,10%,65%)] hover:text-[hsl(32,90%,50%)] transition-colors"
-                  >
-                    business@oceangta.com
-                  </a>
-                </li>
-                <li className="flex items-center gap-3 min-h-[44px]">
-                  <MessageCircle size={16} className="text-[hsl(32,90%,50%)] shrink-0" />
-                  <a
-                    href="https://wa.me/919319165254?text=Hi%20OceanGTA!%20I%20would%20like%20to%20know%20more%20about%20your%20training%20programs."
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-[hsl(220,10%,65%)] hover:text-[hsl(32,90%,50%)] transition-colors"
-                  >
-                    Chat on WhatsApp
-                  </a>
-                </li>
-              </ul>
-              <p className="text-xs text-[hsl(220,10%,50%)] mt-4 sm:mt-5">
-                Available Mon–Fri, 9AM–6PM GST
-              </p>
+
+              {/* Dubai HQ */}
+              <div className="mb-5">
+                <p className="text-white font-semibold text-sm mb-1.5">🌍 Global Headquarters</p>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex items-start gap-3">
+                    <MapPin size={16} className="text-[hsl(32,90%,50%)] mt-0.5 shrink-0" />
+                    <span className="text-[hsl(220,10%,65%)]">
+                      #336, Seasons Community, JVC,<br />Dubai, United Arab Emirates
+                    </span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <Mail size={16} className="text-[hsl(32,90%,50%)] shrink-0" />
+                    <a href="mailto:business@oceangta.com" className="text-[hsl(220,10%,65%)] hover:text-[hsl(32,90%,50%)] transition-colors">
+                      business@oceangta.com
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              {/* India Office */}
+              <div>
+                <p className="text-white font-semibold text-sm mb-1.5">🇮🇳 India Office</p>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex items-start gap-3">
+                    <MapPin size={16} className="text-[hsl(32,90%,50%)] mt-0.5 shrink-0" />
+                    <span className="text-[hsl(220,10%,65%)]">
+                      4th Floor, The Galaxy Hotel,<br />Behind 32nd Milestone, off NH 8,<br />Sector 15, Gurugram, Haryana — 122001, India
+                    </span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <MessageCircle size={16} className="text-[hsl(32,90%,50%)] shrink-0" />
+                    <a
+                      href="https://wa.me/919319165254?text=Hi%20OceanGTA!%20I%20would%20like%20to%20know%20more%20about%20your%20training%20programs."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[hsl(220,10%,65%)] hover:text-[hsl(32,90%,50%)] transition-colors"
+                    >
+                      +91 93191 65254
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
