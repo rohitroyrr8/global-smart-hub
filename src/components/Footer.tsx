@@ -141,9 +141,6 @@ const Footer = () => {
         <div className="border-t border-white/10">
           <div className="container mx-auto px-6 py-5 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-[hsl(220,10%,50%)]">
             <p>© {new Date().getFullYear()} OceanGTA. All rights reserved.</p>
-            <p className="flex items-center gap-1">
-              Made with <Heart size={12} className="text-[hsl(0,84%,60%)] fill-[hsl(0,84%,60%)]" /> in Dubai
-            </p>
             <div className="flex gap-4">
               <span className="hover:text-[hsl(32,90%,50%)] cursor-pointer transition-colors">Privacy Policy</span>
               <span className="text-white/20">|</span>
