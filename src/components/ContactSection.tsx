@@ -5,12 +5,12 @@ import { useToast } from "@/hooks/use-toast";
 
 const ContactSection = () => {
   const { toast } = useToast();
-  const [form, setForm] = useState({ name: "", email: "", org: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", whatsapp: "", org: "", message: "" });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({ title: "Inquiry Sent", description: "We'll get back to you within 24 hours." });
-    setForm({ name: "", email: "", org: "", message: "" });
+    setForm({ name: "", email: "", whatsapp: "", org: "", message: "" });
   };
 
   return (
@@ -88,6 +88,17 @@ const ContactSection = () => {
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
                 className="w-full mt-1 px-4 py-3 rounded-md bg-muted border border-border text-foreground text-sm focus:ring-2 focus:ring-accent focus:outline-none"
                 placeholder="your@email.com"
+              />
+            </div>
+            <div>
+              <label className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">WhatsApp Number</label>
+              <input
+                type="tel"
+                required
+                value={form.whatsapp}
+                onChange={(e) => setForm({ ...form, whatsapp: e.target.value })}
+                className="w-full mt-1 px-4 py-3 rounded-md bg-muted border border-border text-foreground text-sm focus:ring-2 focus:ring-accent focus:outline-none"
+                placeholder="Your WhatsApp number with country code"
               />
             </div>
             <div>
