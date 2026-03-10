@@ -16,7 +16,7 @@ const navLinks = [
   { label: "Programs", href: "/#programs" },
   { label: "Faculty", href: "/#faculty" },
   { label: "Partnerships", href: "/#partnerships" },
-  { label: "Connect", href: "/#contact" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 const Navbar = () => {
@@ -133,7 +133,7 @@ const Navbar = () => {
             to="/#contact"
             className="gradient-cq text-accent-foreground px-5 py-2.5 rounded-md text-sm font-semibold hover:opacity-90 transition-opacity"
           >
-            Schedule Consultation
+            Book a Free Call
           </Link>
         </div>
 
@@ -208,7 +208,7 @@ const Navbar = () => {
               onClick={() => setMobileOpen(false)}
               className="gradient-cq text-accent-foreground px-5 py-2.5 rounded-md text-sm font-semibold text-center"
             >
-              Schedule Consultation
+              Book a Free Call
             </Link>
           </div>
         </motion.div>

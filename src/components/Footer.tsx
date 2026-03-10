@@ -1,31 +1,155 @@
+import { Link } from "react-router-dom";
+import { Linkedin, Instagram, MessageCircle, MapPin, Mail, Heart } from "lucide-react";
+
+const quickLinks = [
+  { label: "Programs", href: "/#programs" },
+  { label: "Faculty", href: "/#faculty" },
+  { label: "Partnerships", href: "/#partnerships" },
+  { label: "Contact", href: "/#contact" },
+  { label: "Book a Free Call", href: "/#contact" },
+];
+
+const centerLinks = [
+  { label: "Collaborative Intelligence", href: "/collaborative-intelligence" },
+  { label: "Blockchain & Web3", href: "/blockchain" },
+  { label: "Data Science", href: "/data-science" },
+  { label: "Health & Wellness", href: "/health-wellness" },
+  { label: "Close Protection Officer", href: "/close-protection" },
+  { label: "Sales & Marketing", href: "/sales-marketing" },
+];
+
 const Footer = () => {
   return (
-    <footer className="gradient-ocean py-12">
-      <div className="container mx-auto px-6">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <div>
-            <span className="text-xl font-sans font-bold text-primary-foreground tracking-tight">
-              Ocean<span className="text-gradient-cq">GTA</span>
-            </span>
-            <p className="text-xs text-primary-foreground/50 mt-1 mb-3">
-              Ocean Global Training Academy
-            </p>
-            <p className="text-xs text-primary-foreground/50 mt-2">
-              Address: #336, Seasons Community, JVC, Dubai, United Arab Emirates
-            </p>
-            <a href="mailto:business@oceangta.com" className="text-xs text-primary-foreground/50 hover:text-primary-foreground transition-colors">
-              business@oceangta.com
-            </a>
+    <footer className="relative">
+      {/* Orange top border */}
+      <div className="h-1 bg-gradient-to-r from-[hsl(18,72%,42%)] to-[hsl(32,90%,50%)]" />
+
+      <div className="bg-[hsl(220,30%,8%)] text-[hsl(220,10%,80%)]">
+        <div className="container mx-auto px-6 py-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+            {/* Column 1 — Brand */}
+            <div className="space-y-5">
+              <Link to="/" className="inline-block">
+                <span className="text-2xl font-sans font-bold text-white tracking-tight">
+                  Ocean<span className="text-gradient-cq">GTA</span>
+                </span>
+              </Link>
+              <p className="text-sm leading-relaxed text-[hsl(220,10%,65%)]">
+                Transforming Teams. Elevating Leaders. Changing the World.
+              </p>
+              <div className="flex gap-4 pt-2">
+                <a
+                  href="https://www.linkedin.com/company/ocean-global-training-academy/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/70 hover:text-[hsl(32,90%,50%)] transition-colors"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin size={20} />
+                </a>
+                <a
+                  href="https://www.instagram.com/oceangta?igsh=cjd5bDE4cWk0aGkx&utm_source=qr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/70 hover:text-[hsl(32,90%,50%)] transition-colors"
+                  aria-label="Instagram"
+                >
+                  <Instagram size={20} />
+                </a>
+              </div>
+            </div>
+
+            {/* Column 2 — Quick Links */}
+            <div>
+              <h4 className="text-[hsl(32,90%,50%)] font-semibold text-sm uppercase tracking-wider mb-5">
+                Quick Links
+              </h4>
+              <ul className="space-y-3">
+                {quickLinks.map((link) => (
+                  <li key={link.label}>
+                    <Link
+                      to={link.href}
+                      className="text-sm text-[hsl(220,10%,65%)] hover:text-[hsl(32,90%,50%)] transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Column 3 — Centers of Excellence */}
+            <div>
+              <h4 className="text-[hsl(32,90%,50%)] font-semibold text-sm uppercase tracking-wider mb-5">
+                Centers of Excellence
+              </h4>
+              <ul className="space-y-3">
+                {centerLinks.map((link) => (
+                  <li key={link.label}>
+                    <Link
+                      to={link.href}
+                      className="text-sm text-[hsl(220,10%,65%)] hover:text-[hsl(32,90%,50%)] transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Column 4 — Contact Us */}
+            <div>
+              <h4 className="text-[hsl(32,90%,50%)] font-semibold text-sm uppercase tracking-wider mb-5">
+                Contact Us
+              </h4>
+              <ul className="space-y-4 text-sm">
+                <li className="flex items-start gap-3">
+                  <MapPin size={16} className="text-[hsl(32,90%,50%)] mt-0.5 shrink-0" />
+                  <span className="text-[hsl(220,10%,65%)]">
+                    #336, Seasons Community, JVC, Dubai, United Arab Emirates
+                  </span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Mail size={16} className="text-[hsl(32,90%,50%)] shrink-0" />
+                  <a
+                    href="mailto:business@oceangta.com"
+                    className="text-[hsl(220,10%,65%)] hover:text-[hsl(32,90%,50%)] transition-colors"
+                  >
+                    business@oceangta.com
+                  </a>
+                </li>
+                <li className="flex items-center gap-3">
+                  <MessageCircle size={16} className="text-[hsl(32,90%,50%)] shrink-0" />
+                  <a
+                    href="https://wa.me/message/oceangta"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-[hsl(220,10%,65%)] hover:text-[hsl(32,90%,50%)] transition-colors"
+                  >
+                    Chat on WhatsApp
+                  </a>
+                </li>
+              </ul>
+              <p className="text-xs text-[hsl(220,10%,50%)] mt-5">
+                Available Mon–Fri, 9AM–6PM GST
+              </p>
+            </div>
           </div>
-          <div className="flex gap-6 text-xs text-primary-foreground/50">
-            <a href="#programs" className="hover:text-primary-foreground transition-colors">Programs</a>
-            <a href="#cq" className="hover:text-primary-foreground transition-colors">CQ Framework</a>
-            <a href="#faculty" className="hover:text-primary-foreground transition-colors">Faculty</a>
-            <a href="#contact" className="hover:text-primary-foreground transition-colors">Contact</a>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="border-t border-white/10">
+          <div className="container mx-auto px-6 py-5 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-[hsl(220,10%,50%)]">
+            <p>© {new Date().getFullYear()} OceanGTA. All rights reserved.</p>
+            <p className="flex items-center gap-1">
+              Made with <Heart size={12} className="text-[hsl(0,84%,60%)] fill-[hsl(0,84%,60%)]" /> in Dubai
+            </p>
+            <div className="flex gap-4">
+              <span className="hover:text-[hsl(32,90%,50%)] cursor-pointer transition-colors">Privacy Policy</span>
+              <span className="text-white/20">|</span>
+              <span className="hover:text-[hsl(32,90%,50%)] cursor-pointer transition-colors">Terms of Service</span>
+            </div>
           </div>
-          <p className="text-xs text-primary-foreground/40">
-            © {new Date().getFullYear()} OceanGTA. All rights reserved.
-          </p>
         </div>
       </div>
     </footer>
