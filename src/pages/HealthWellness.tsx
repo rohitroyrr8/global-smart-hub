@@ -210,7 +210,7 @@ const HealthWellness = () => {
           </motion.div>
 
           {/* Stats row */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mt-12 sm:mt-16 max-w-4xl mx-auto">
             {[
               { val: "8", label: "Expert Modules" },
               { val: "21", label: "Day Action Plan" },
