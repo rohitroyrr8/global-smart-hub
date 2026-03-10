@@ -171,7 +171,7 @@ const CollaborativeIntelligence = () => {
 
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="max-w-3xl">
             <span className="inline-block px-4 py-1.5 rounded-full bg-accent-foreground/20 text-accent-foreground text-xs tracking-widest uppercase font-bold mb-5">
-              Flagship Program — A Game Changer
+              Internationally Certified Program — A Game Changer
             </span>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-sans font-bold text-accent-foreground leading-tight">
               Collaborative Intelligence{" "}
