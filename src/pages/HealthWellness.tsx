@@ -268,7 +268,7 @@ const HealthWellness = () => {
                 {/* Top accent bar */}
                 <div className="absolute top-0 left-0 right-0 h-[3px] gradient-ocean opacity-60 group-hover:opacity-100 transition-opacity" />
 
-                <div className="p-6 md:p-8">
+                <div className="p-4 sm:p-6 md:p-8">
                   <div className="flex items-start gap-5">
                     {/* Module number & icon */}
                     <div className="flex-shrink-0">
