@@ -121,7 +121,7 @@ const Footer = () => {
                 <li className="flex items-center gap-3">
                   <MessageCircle size={16} className="text-[hsl(32,90%,50%)] shrink-0" />
                   <a
-                    href="https://wa.me/message/oceangta"
+                    href="https://wa.me/919319165254?text=Hi%20OceanGTA!%20I%20would%20like%20to%20know%20more%20about%20your%20training%20programs."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-[hsl(220,10%,65%)] hover:text-[hsl(32,90%,50%)] transition-colors"
