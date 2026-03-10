@@ -13,10 +13,10 @@ const programLinks = [
 ];
 
 const navLinks = [
-  { label: "Programs", href: "#programs" },
-  { label: "Faculty", href: "#faculty" },
-  { label: "Partnerships", href: "#partnerships" },
-  { label: "Connect", href: "#contact" },
+  { label: "Programs", href: "/#programs" },
+  { label: "Faculty", href: "/#faculty" },
+  { label: "Partnerships", href: "/#partnerships" },
+  { label: "Connect", href: "/#contact" },
 ];
 
 const Navbar = () => {
