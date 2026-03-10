@@ -14,7 +14,17 @@ const ContactSection = () => {
     setSubmitting(true);
 
     try {
-      // 1. Post to Formspree
+      // 1. Open WhatsApp FIRST (must be synchronous from user gesture to avoid popup blocker)
+      const whatsappMessage = encodeURIComponent(
+        `New Inquiry from OceanGTA Website:\n\nName: ${form.name}\nEmail: ${form.email}\nWhatsApp: ${form.whatsapp}\nOrganization: ${form.org}\nMessage: ${form.message}`
+      );
+      const link = document.createElement("a");
+      link.href = `https://wa.me/919319165254?text=${whatsappMessage}`;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.click();
+
+      // 2. Post to Formspree
       await fetch("https://formspree.io/f/mreyplrv", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -26,12 +36,6 @@ const ContactSection = () => {
           message: form.message,
         }),
       });
-
-      // 2. Send details to WhatsApp
-      const whatsappMessage = encodeURIComponent(
-        `New Inquiry from OceanGTA Website:\n\nName: ${form.name}\nEmail: ${form.email}\nWhatsApp: ${form.whatsapp}\nOrganization: ${form.org}\nMessage: ${form.message}`
-      );
-      window.open(`https://wa.me/919319165254?text=${whatsappMessage}`, "_blank");
 
       toast({ title: "Inquiry Sent", description: "We'll get back to you within 24 hours." });
       setForm({ name: "", email: "", whatsapp: "", org: "", message: "" });
