@@ -285,7 +285,7 @@ const HealthWellness = () => {
 
                     {/* Content */}
                     <div className="flex-1 min-w-0">
-                      <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4">
+                      <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-3 sm:mb-4">
                         {m.title}
                       </h3>
 
