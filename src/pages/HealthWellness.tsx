@@ -198,7 +198,7 @@ const HealthWellness = () => {
             <span className="text-xs tracking-[0.25em] uppercase font-semibold text-accent">
               Course Objective
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-4 text-foreground">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-4 text-foreground">
               Restore Balance. Reclaim Your Peace.
             </h2>
             <p className="text-muted-foreground mt-6 text-lg leading-relaxed max-w-3xl mx-auto">
