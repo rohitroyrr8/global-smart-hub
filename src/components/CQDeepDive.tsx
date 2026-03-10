@@ -99,12 +99,12 @@ const fadeUp = { initial: { opacity: 0, y: 24 }, whileInView: { opacity: 1, y: 0
 
 /* ── Module card ── */
 const ModuleCard = ({ m, orange }: { m: typeof day1[0]; orange?: boolean }) => (
-  <motion.div {...fadeUp} className="flex gap-4 p-4 rounded-xl bg-background/60 backdrop-blur border border-border/50 hover:shadow-lg transition-shadow">
-    <div className={`flex-shrink-0 w-12 h-12 rounded-lg flex items-center justify-center font-sans font-bold text-lg ${orange ? "bg-[hsl(var(--rust-orange))] text-accent-foreground" : "bg-primary text-primary-foreground"}`}>
+  <motion.div {...fadeUp} className="flex gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl bg-background/60 backdrop-blur border border-border/50 hover:shadow-lg transition-shadow">
+    <div className={`flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-lg flex items-center justify-center font-sans font-bold text-base sm:text-lg ${orange ? "bg-[hsl(var(--rust-orange))] text-accent-foreground" : "bg-primary text-primary-foreground"}`}>
       {m.num}
     </div>
     <div className="flex-1 min-w-0">
-      <h4 className="font-sans text-base font-bold text-foreground">{m.title}</h4>
+      <h4 className="font-sans text-sm sm:text-base font-bold text-foreground">{m.title}</h4>
       <ul className="mt-1.5 space-y-1">
         {m.bullets.map((b, i) => (
           <li key={i} className="flex gap-2 text-xs text-muted-foreground leading-relaxed">
@@ -122,28 +122,28 @@ const CQDeepDive = () => {
   return (
     <section id="cq" className="relative overflow-hidden">
       {/* ──── 1. Hero / Intro ──── */}
-      <div className="gradient-cq py-20 md:py-28 relative">
+      <div className="gradient-cq py-14 sm:py-20 md:py-28 relative">
         <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-[hsl(var(--sun-orange))] opacity-20 blur-3xl" />
         <div className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-[hsl(var(--rust-orange))] opacity-20 blur-3xl" />
 
-        <div className="container mx-auto px-6 relative">
+        <div className="container mx-auto px-4 sm:px-6 relative">
           <motion.div {...fadeUp} className="text-center max-w-3xl mx-auto">
-            <span className="inline-block px-4 py-1.5 rounded-full bg-accent-foreground/20 text-accent-foreground text-xs tracking-widest uppercase font-bold mb-4">
+            <span className="inline-block px-3 sm:px-4 py-1.5 rounded-full bg-accent-foreground/20 text-accent-foreground text-[10px] sm:text-xs tracking-widest uppercase font-bold mb-4">
               Flagship Program — A Game Changer
             </span>
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-sans font-bold text-accent-foreground leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-sans font-bold text-accent-foreground leading-tight">
               Collaborative Intelligence <span className="text-gradient-teal">(CQ)</span>
             </h2>
-            <p className="text-accent-foreground/90 text-lg md:text-xl mt-4">
+            <p className="text-accent-foreground/90 text-base sm:text-lg md:text-xl mt-4">
               The Missing Link to High-Performance Teams
             </p>
           </motion.div>
 
           {/* The Gap */}
-          <motion.div {...fadeUp} className="mt-14 max-w-4xl mx-auto grid md:grid-cols-2 gap-8 items-center">
-            <div className="glass-card rounded-2xl p-8">
-              <h3 className="font-sans font-bold text-xl text-accent-foreground mb-4">Why Smart Teams Still Fail to Sync</h3>
-              <div className="space-y-4 text-sm text-accent-foreground/80">
+          <motion.div {...fadeUp} className="mt-10 sm:mt-14 max-w-4xl mx-auto grid md:grid-cols-2 gap-6 sm:gap-8 items-center">
+            <div className="glass-card rounded-2xl p-5 sm:p-8">
+              <h3 className="font-sans font-bold text-lg sm:text-xl text-accent-foreground mb-3 sm:mb-4">Why Smart Teams Still Fail to Sync</h3>
+              <div className="space-y-3 sm:space-y-4 text-sm text-accent-foreground/80">
                 <div>
                   <p className="font-bold text-accent-foreground">The Current Landscape:</p>
                   <p>Companies invest heavily in Intellectual Intelligence (IQ) and Emotional Intelligence (EQ).</p>
@@ -160,25 +160,25 @@ const CQDeepDive = () => {
             </div>
 
             {/* CQ Bridge Diagram */}
-            <div className="glass-card rounded-2xl p-8 flex flex-col items-center">
-              <h3 className="font-sans font-bold text-lg text-accent-foreground mb-6">The Missing Link</h3>
-              <div className="flex items-end justify-center gap-3 w-full">
+            <div className="glass-card rounded-2xl p-5 sm:p-8 flex flex-col items-center">
+              <h3 className="font-sans font-bold text-base sm:text-lg text-accent-foreground mb-4 sm:mb-6">The Missing Link</h3>
+              <div className="flex items-end justify-center gap-2 sm:gap-3 w-full">
                 <div className="flex flex-col items-center">
-                  <div className="w-20 h-20 rounded-xl bg-accent-foreground/20 flex items-center justify-center">
-                    <span className="font-sans text-lg text-accent-foreground font-bold">IQ</span>
+                  <div className="w-16 sm:w-20 h-16 sm:h-20 rounded-xl bg-accent-foreground/20 flex items-center justify-center">
+                    <span className="font-sans text-base sm:text-lg text-accent-foreground font-bold">IQ</span>
                   </div>
                   <span className="text-[10px] text-accent-foreground/60 mt-1">Intellect</span>
                 </div>
-                <div className="flex flex-col items-center -mt-6">
-                  <div className="w-24 h-28 rounded-xl bg-[hsl(var(--rust-orange))] flex items-center justify-center shadow-lg shadow-[hsl(var(--rust-orange))]/40 relative">
-                    <span className="font-sans text-xl text-white font-bold">CQ</span>
+                <div className="flex flex-col items-center -mt-4 sm:-mt-6">
+                  <div className="w-20 sm:w-24 h-24 sm:h-28 rounded-xl bg-[hsl(var(--rust-orange))] flex items-center justify-center shadow-lg shadow-[hsl(var(--rust-orange))]/40 relative">
+                    <span className="font-sans text-lg sm:text-xl text-white font-bold">CQ</span>
                   </div>
                   <ArrowRight className="w-4 h-4 text-accent-foreground/60 rotate-90 my-1" />
-                  <span className="text-[10px] text-accent-foreground font-semibold">Bridge to Peak Performance</span>
+                  <span className="text-[10px] text-accent-foreground font-semibold text-center">Bridge to Peak Performance</span>
                 </div>
                 <div className="flex flex-col items-center">
-                  <div className="w-20 h-20 rounded-xl bg-accent-foreground/20 flex items-center justify-center">
-                    <span className="font-sans text-lg text-accent-foreground font-bold">EQ</span>
+                  <div className="w-16 sm:w-20 h-16 sm:h-20 rounded-xl bg-accent-foreground/20 flex items-center justify-center">
+                    <span className="font-sans text-base sm:text-lg text-accent-foreground font-bold">EQ</span>
                   </div>
                   <span className="text-[10px] text-accent-foreground/60 mt-1">Emotion</span>
                 </div>
@@ -187,9 +187,9 @@ const CQDeepDive = () => {
           </motion.div>
 
           {/* CQ Definition + Synergy Formula */}
-          <motion.div {...fadeUp} className="mt-14 max-w-4xl mx-auto glass-card rounded-2xl p-8 md:p-10">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <blockquote className="text-lg md:text-xl font-sans italic text-accent-foreground leading-relaxed">
+          <motion.div {...fadeUp} className="mt-10 sm:mt-14 max-w-4xl mx-auto glass-card rounded-2xl p-5 sm:p-8 md:p-10">
+            <div className="grid md:grid-cols-2 gap-6 sm:gap-8 items-center">
+              <blockquote className="text-base sm:text-lg md:text-xl font-sans italic text-accent-foreground leading-relaxed">
                 "CQ magically rewires the chemistry of team members, transforming a working group into a unified entity."
                 <footer className="mt-3 text-sm not-italic text-accent-foreground/60">— G. Vasu Thevan, CQ Founder</footer>
               </blockquote>
@@ -198,18 +198,18 @@ const CQDeepDive = () => {
                 <p className="text-sm text-accent-foreground/80 mb-4">
                   CQ is the latest discovery in team development — a transformational program that shifts the working chemistry of team members. The goal: to make team members more open, understanding, cooperative, forgiving, and trusting within a short period.
                 </p>
-                <div className="flex items-center gap-3 flex-wrap">
+                <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
                   {synergyFormula.map((s, i) => (
-                    <div key={s.label} className="flex items-center gap-2">
-                      <div className="w-12 h-12 rounded-lg bg-accent-foreground/15 flex flex-col items-center justify-center">
-                        <s.icon className="w-4 h-4 text-accent-foreground" />
-                        <span className="text-xs font-extrabold tracking-wide text-accent-foreground">{s.label}</span>
+                    <div key={s.label} className="flex items-center gap-1.5 sm:gap-2">
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-accent-foreground/15 flex flex-col items-center justify-center">
+                        <s.icon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-accent-foreground" />
+                        <span className="text-[10px] sm:text-xs font-extrabold tracking-wide text-accent-foreground">{s.label}</span>
                       </div>
-                      {i < synergyFormula.length - 1 && <span className="text-accent-foreground font-extrabold text-lg">+</span>}
+                      {i < synergyFormula.length - 1 && <span className="text-accent-foreground font-extrabold text-base sm:text-lg">+</span>}
                     </div>
                   ))}
-                  <span className="text-accent-foreground font-extrabold text-lg">=</span>
-                  <span className="font-sans font-extrabold text-xl px-2 text-primary-foreground">Total Synergy</span>
+                  <span className="text-accent-foreground font-extrabold text-base sm:text-lg">=</span>
+                  <span className="font-sans font-extrabold text-base sm:text-xl px-2 text-primary-foreground">Total Synergy</span>
                 </div>
               </div>
             </div>
@@ -218,50 +218,50 @@ const CQDeepDive = () => {
       </div>
 
       {/* ──── 2. Two-Day Curriculum ──── */}
-      <div className="py-20 md:py-28 bg-background">
-        <div className="container mx-auto px-6">
+      <div className="py-14 sm:py-20 md:py-28 bg-background">
+        <div className="container mx-auto px-4 sm:px-6">
           {/* Flight Path Header */}
-          <motion.div {...fadeUp} className="text-center mb-14">
+          <motion.div {...fadeUp} className="text-center mb-10 sm:mb-14">
             <span className="text-xs tracking-widest uppercase font-bold text-muted-foreground">Two-Day Strategic Intervention</span>
-            <h3 className="text-2xl md:text-4xl font-sans font-bold mt-3 text-foreground">Transformation Journey</h3>
-            <p className="text-muted-foreground mt-2 text-sm">Trainer: Vasudev &nbsp;|&nbsp; Duration: 2 Days &nbsp;|&nbsp; Audience: All Levels (Cross-Functional)</p>
+            <h3 className="text-xl sm:text-2xl md:text-4xl font-sans font-bold mt-3 text-foreground">Transformation Journey</h3>
+            <p className="text-muted-foreground mt-2 text-xs sm:text-sm">Trainer: Vasudev &nbsp;|&nbsp; Duration: 2 Days &nbsp;|&nbsp; Audience: All Levels (Cross-Functional)</p>
 
             {/* Phase pills */}
-            <div className="flex items-center justify-center gap-4 mt-8">
-              <div className="flex items-center gap-2 bg-primary/10 rounded-full px-5 py-2">
-                <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-sans font-bold text-sm">01</div>
-                <span className="text-sm font-semibold text-foreground">Phase 01</span>
+            <div className="flex items-center justify-center gap-3 sm:gap-4 mt-6 sm:mt-8">
+              <div className="flex items-center gap-2 bg-primary/10 rounded-full px-3 sm:px-5 py-1.5 sm:py-2">
+                <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-sans font-bold text-xs sm:text-sm">01</div>
+                <span className="text-xs sm:text-sm font-semibold text-foreground">Phase 01</span>
               </div>
-              <ArrowRight className="w-5 h-5 text-[hsl(var(--rust-orange))]" />
-              <div className="flex items-center gap-2 bg-[hsl(var(--rust-orange))]/10 rounded-full px-5 py-2">
-                <div className="w-8 h-8 rounded-full bg-[hsl(var(--rust-orange))] text-white flex items-center justify-center font-sans font-bold text-sm">02</div>
-                <span className="text-sm font-semibold text-foreground">Phase 02</span>
+              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-[hsl(var(--rust-orange))]" />
+              <div className="flex items-center gap-2 bg-[hsl(var(--rust-orange))]/10 rounded-full px-3 sm:px-5 py-1.5 sm:py-2">
+                <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[hsl(var(--rust-orange))] text-white flex items-center justify-center font-sans font-bold text-xs sm:text-sm">02</div>
+                <span className="text-xs sm:text-sm font-semibold text-foreground">Phase 02</span>
               </div>
             </div>
           </motion.div>
 
           {/* Day 1 */}
-          <div className="mb-16">
-            <motion.div {...fadeUp} className="mb-6">
-              <h4 className="text-xl md:text-2xl font-sans font-bold text-foreground">
+          <div className="mb-12 sm:mb-16">
+            <motion.div {...fadeUp} className="mb-4 sm:mb-6">
+              <h4 className="text-lg sm:text-xl md:text-2xl font-sans font-bold text-foreground">
                 Day 1: The Mechanics of Alignment
               </h4>
-              <p className="text-sm text-muted-foreground">Building the Foundation: Structural Tools for High-Performance Teams</p>
+              <p className="text-xs sm:text-sm text-muted-foreground">Building the Foundation: Structural Tools for High-Performance Teams</p>
             </motion.div>
-            <div className="grid sm:grid-cols-2 gap-4">
+            <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
               {day1.map((m) => <ModuleCard key={m.num} m={m} />)}
             </div>
           </div>
 
           {/* Day 2 */}
           <div>
-            <motion.div {...fadeUp} className="mb-6">
-              <h4 className="text-xl md:text-2xl font-sans font-bold text-foreground">
+            <motion.div {...fadeUp} className="mb-4 sm:mb-6">
+              <h4 className="text-lg sm:text-xl md:text-2xl font-sans font-bold text-foreground">
                 Day 2: The Mindset of Oneness
               </h4>
-              <p className="text-sm text-muted-foreground">Cultivating Connection: Psychological Safety and Long-Term Continuity</p>
+              <p className="text-xs sm:text-sm text-muted-foreground">Cultivating Connection: Psychological Safety and Long-Term Continuity</p>
             </motion.div>
-            <div className="grid sm:grid-cols-2 gap-4">
+            <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
               {day2.map((m) => <ModuleCard key={m.num} m={m} orange />)}
             </div>
           </div>
@@ -269,22 +269,22 @@ const CQDeepDive = () => {
       </div>
 
       {/* ──── 3. Immersive Methodology ──── */}
-      <div className="py-20 md:py-24 bg-muted/50">
-        <div className="container mx-auto px-6">
-          <motion.div {...fadeUp} className="text-center mb-12">
-            <h3 className="text-2xl md:text-4xl font-sans font-bold text-foreground">An Immersive Methodology</h3>
-            <p className="text-muted-foreground mt-2 max-w-xl mx-auto text-sm">
+      <div className="py-14 sm:py-20 md:py-24 bg-muted/50">
+        <div className="container mx-auto px-4 sm:px-6">
+          <motion.div {...fadeUp} className="text-center mb-8 sm:mb-12">
+            <h3 className="text-xl sm:text-2xl md:text-4xl font-sans font-bold text-foreground">An Immersive Methodology</h3>
+            <p className="text-muted-foreground mt-2 max-w-xl mx-auto text-xs sm:text-sm">
               Blending experiential learning and multi-sensory engagement to ensure deep learning.
             </p>
           </motion.div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 max-w-5xl mx-auto">
             {methodology.map((m) => (
-              <motion.div key={m.title} {...fadeUp} className="bg-background rounded-2xl p-6 border border-border/50 text-center hover:shadow-lg transition-shadow">
-                <div className="w-14 h-14 rounded-xl bg-[hsl(var(--rust-orange))]/10 flex items-center justify-center mx-auto mb-4">
-                  <m.icon className="w-7 h-7 text-[hsl(var(--rust-orange))]" />
+              <motion.div key={m.title} {...fadeUp} className="bg-background rounded-2xl p-4 sm:p-6 border border-border/50 text-center hover:shadow-lg transition-shadow">
+                <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-xl bg-[hsl(var(--rust-orange))]/10 flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                  <m.icon className="w-5 h-5 sm:w-7 sm:h-7 text-[hsl(var(--rust-orange))]" />
                 </div>
-                <h4 className="font-sans text-sm font-bold text-foreground mb-1">{m.title}</h4>
-                <p className="text-xs text-muted-foreground leading-relaxed">{m.desc}</p>
+                <h4 className="font-sans text-xs sm:text-sm font-bold text-foreground mb-1">{m.title}</h4>
+                <p className="text-[10px] sm:text-xs text-muted-foreground leading-relaxed">{m.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -292,13 +292,13 @@ const CQDeepDive = () => {
       </div>
 
       {/* ──── 4. Transformation Outcomes ──── */}
-      <div className="py-20 md:py-24 bg-background">
-        <div className="container mx-auto px-6">
-          <motion.div {...fadeUp} className="max-w-4xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+      <div className="py-14 sm:py-20 md:py-24 bg-background">
+        <div className="container mx-auto px-4 sm:px-6">
+          <motion.div {...fadeUp} className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 sm:gap-10 items-center">
             <div>
-              <h3 className="text-2xl md:text-3xl font-sans font-bold text-foreground mb-2">Transformation Outcomes</h3>
-              <p className="text-sm text-muted-foreground mb-6">Tangible benefits for the organization.</p>
-              <div className="space-y-4">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-sans font-bold text-foreground mb-2">Transformation Outcomes</h3>
+              <p className="text-sm text-muted-foreground mb-4 sm:mb-6">Tangible benefits for the organization.</p>
+              <div className="space-y-3 sm:space-y-4">
                 {outcomes.map((o) => (
                   <div key={o.title} className="flex gap-3 items-start">
                     <CheckCircle2 className="w-5 h-5 text-[hsl(var(--rust-orange))] mt-0.5 flex-shrink-0" />
@@ -310,11 +310,11 @@ const CQDeepDive = () => {
                 ))}
               </div>
             </div>
-            <motion.div {...fadeUp} className="rounded-2xl overflow-hidden border border-border/50 bg-muted/30 p-8 flex flex-col items-center justify-center text-center">
-              <Zap className="w-16 h-16 text-[hsl(var(--rust-orange))] mb-4" />
-              <p className="font-sans font-bold text-xl text-foreground">From Working Group</p>
+            <motion.div {...fadeUp} className="rounded-2xl overflow-hidden border border-border/50 bg-muted/30 p-6 sm:p-8 flex flex-col items-center justify-center text-center">
+              <Zap className="w-12 h-12 sm:w-16 sm:h-16 text-[hsl(var(--rust-orange))] mb-3 sm:mb-4" />
+              <p className="font-sans font-bold text-lg sm:text-xl text-foreground">From Working Group</p>
               <ArrowRight className="w-5 h-5 text-[hsl(var(--rust-orange))] my-2 rotate-90" />
-              <p className="font-sans text-xl text-gradient-cq font-bold">To Unified Entity</p>
+              <p className="font-sans text-lg sm:text-xl text-gradient-cq font-bold">To Unified Entity</p>
               <p className="text-xs text-muted-foreground mt-3 max-w-xs">
                 CQ rewires team chemistry in just 2 days — creating lasting bonds, trust, and collaborative excellence.
               </p>

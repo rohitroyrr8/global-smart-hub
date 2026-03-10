@@ -129,24 +129,24 @@ const faqs = [
 
 const Blockchain = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-x-hidden">
       <Navbar />
 
       {/* Hero */}
-      <section className="relative pt-32 pb-24 overflow-hidden">
+      <section className="relative pt-24 sm:pt-32 pb-16 sm:pb-24 overflow-hidden">
         <div className="absolute inset-0 gradient-ocean opacity-90" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,hsl(var(--sun-orange)/0.15),transparent_60%)]" />
-        <div className="container mx-auto px-6 relative z-10">
-          <Link to="/" className="inline-flex items-center gap-2 text-primary-foreground/70 hover:text-primary-foreground mb-8 transition-colors">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
+          <Link to="/" className="inline-flex items-center gap-2 text-primary-foreground/70 hover:text-primary-foreground mb-6 sm:mb-8 transition-colors">
             <ArrowLeft size={16} /> Back to Home
           </Link>
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <span className="text-xs tracking-widest uppercase font-bold text-accent">Flagship Program · 8 Weeks</span>
-            <h1 className="text-4xl md:text-6xl font-bold mt-3 text-primary-foreground leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mt-3 text-primary-foreground leading-tight">
               Blockchain &<br />
               <span className="text-gradient-cq">Web3 Mastery</span>
             </h1>
-            <p className="text-primary-foreground/70 mt-6 max-w-xl text-lg leading-relaxed">
+            <p className="text-primary-foreground/70 mt-4 sm:mt-6 max-w-xl text-base sm:text-lg leading-relaxed">
               A comprehensive 8-week intensive program with one-on-one mentorship, weekly doubt clearing sessions, hands-on labs, and industry certification — designed for professionals ready to master decentralized technologies and enterprise blockchain solutions.
             </p>
           </motion.div>
@@ -154,12 +154,12 @@ const Blockchain = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mt-10"
+            className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 mt-8 sm:mt-10"
           >
             {highlights.map((h) => (
-              <div key={h.label} className="flex flex-col items-center gap-2 px-4 py-4 rounded-xl bg-primary-foreground/10 border border-primary-foreground/20 backdrop-blur-sm">
+              <div key={h.label} className="flex flex-col items-center gap-2 px-3 sm:px-4 py-3 sm:py-4 rounded-xl bg-primary-foreground/10 border border-primary-foreground/20 backdrop-blur-sm">
                 <h.icon className="w-5 h-5 text-accent" />
-                <span className="text-primary-foreground text-xs font-semibold text-center">{h.label}</span>
+                <span className="text-primary-foreground text-[10px] sm:text-xs font-semibold text-center">{h.label}</span>
               </div>
             ))}
           </motion.div>
@@ -167,9 +167,9 @@ const Blockchain = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center mt-12"
+            className="flex flex-col sm:flex-row gap-4 justify-center mt-10 sm:mt-12"
           >
-            <a href="mailto:business@oceangta.com" className="inline-block border border-accent text-accent px-8 py-3 rounded-md font-semibold hover:bg-accent/10 transition-colors">
+            <a href="mailto:business@oceangta.com" className="inline-block border border-accent text-accent px-6 sm:px-8 py-3 rounded-md font-semibold hover:bg-accent/10 transition-colors min-h-[48px] text-center">
               Request a Quote
             </a>
           </motion.div>
@@ -177,25 +177,25 @@ const Blockchain = () => {
       </section>
 
       {/* Course Overview / Learning Objectives */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-6">
-          <motion.div {...fadeUp} className="text-center mb-14">
+      <section className="py-14 sm:py-20 bg-background">
+        <div className="container mx-auto px-4 sm:px-6">
+          <motion.div {...fadeUp} className="text-center mb-10 sm:mb-14">
             <span className="text-xs tracking-widest uppercase font-semibold text-accent">Course Overview</span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-3 text-foreground">Learning Objectives</h2>
-            <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-3 text-foreground">Learning Objectives</h2>
+            <p className="text-sm sm:text-base text-muted-foreground mt-4 max-w-2xl mx-auto">
               This program equips you with end-to-end blockchain expertise — from foundational concepts to enterprise deployment — through a structured, mentor-guided journey.
             </p>
           </motion.div>
-          <div className="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-3 sm:gap-4 max-w-4xl mx-auto">
             {objectives.map((obj, i) => (
               <motion.div
                 key={i}
                 {...fadeUp}
                 transition={{ delay: i * 0.08 }}
-                className="flex items-start gap-4 p-5 rounded-xl bg-card border border-border hover:shadow-md transition-shadow"
+                className="flex items-start gap-3 sm:gap-4 p-4 sm:p-5 rounded-xl bg-card border border-border hover:shadow-md transition-shadow"
               >
-                <div className="w-8 h-8 rounded-full gradient-cq flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <Target className="w-4 h-4 text-accent-foreground" />
+                <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full gradient-cq flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <Target className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-accent-foreground" />
                 </div>
                 <p className="text-sm text-foreground leading-relaxed">{obj}</p>
               </motion.div>
@@ -205,16 +205,16 @@ const Blockchain = () => {
       </section>
 
       {/* Curriculum */}
-      <section className="py-20 bg-muted/50">
-        <div className="container mx-auto px-6">
-          <motion.div {...fadeUp} className="text-center mb-14">
+      <section className="py-14 sm:py-20 bg-muted/50">
+        <div className="container mx-auto px-4 sm:px-6">
+          <motion.div {...fadeUp} className="text-center mb-10 sm:mb-14">
             <span className="text-xs tracking-widest uppercase font-semibold text-accent">Curriculum</span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-3 text-foreground">8-Week Training Roadmap</h2>
-            <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-3 text-foreground">8-Week Training Roadmap</h2>
+            <p className="text-sm sm:text-base text-muted-foreground mt-4 max-w-2xl mx-auto">
               A carefully structured curriculum that takes you from blockchain fundamentals to building production-ready decentralized applications.
             </p>
           </motion.div>
-          <div className="max-w-4xl mx-auto space-y-5">
+          <div className="max-w-4xl mx-auto space-y-4 sm:space-y-5">
             {curriculum.map((mod, i) => (
               <motion.div
                 key={mod.week}
@@ -222,16 +222,16 @@ const Blockchain = () => {
                 transition={{ delay: i * 0.1 }}
                 className="rounded-xl border border-border bg-card overflow-hidden hover:shadow-lg transition-shadow"
               >
-                <div className="flex items-center gap-5 p-6">
-                  <div className="w-12 h-12 rounded-lg gradient-cq flex items-center justify-center flex-shrink-0">
-                    <mod.icon className="w-6 h-6 text-accent-foreground" />
+                <div className="flex items-center gap-3 sm:gap-5 p-4 sm:p-6">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg gradient-cq flex items-center justify-center flex-shrink-0">
+                    <mod.icon className="w-5 h-5 sm:w-6 sm:h-6 text-accent-foreground" />
                   </div>
-                  <div className="flex-1">
-                    <span className="text-xs tracking-widest uppercase font-bold text-accent">{mod.week}</span>
-                    <h3 className="text-lg font-bold text-foreground mt-1">{mod.title}</h3>
+                  <div className="flex-1 min-w-0">
+                    <span className="text-[10px] sm:text-xs tracking-widest uppercase font-bold text-accent">{mod.week}</span>
+                    <h3 className="text-base sm:text-lg font-bold text-foreground mt-0.5 sm:mt-1">{mod.title}</h3>
                   </div>
                 </div>
-                <div className="px-6 pb-6 pt-0">
+                <div className="px-4 sm:px-6 pb-4 sm:pb-6 pt-0">
                   <ul className="grid sm:grid-cols-2 gap-2">
                     {mod.topics.map((topic, j) => (
                       <li key={j} className="flex items-start gap-2 text-sm text-muted-foreground">
@@ -248,25 +248,25 @@ const Blockchain = () => {
       </section>
 
       {/* What You Will Learn */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-6">
-          <motion.div {...fadeUp} className="text-center mb-14">
+      <section className="py-14 sm:py-20 bg-background">
+        <div className="container mx-auto px-4 sm:px-6">
+          <motion.div {...fadeUp} className="text-center mb-10 sm:mb-14">
             <span className="text-xs tracking-widest uppercase font-semibold text-accent">Skills</span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-3 text-foreground">What You Will Learn</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-3 text-foreground">What You Will Learn</h2>
           </motion.div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-5xl mx-auto">
             {learnings.map((item, i) => (
               <motion.div
                 key={item.title}
                 {...fadeUp}
                 transition={{ delay: i * 0.1 }}
-                className="relative rounded-xl border border-border bg-card p-7 hover:shadow-lg transition-shadow group overflow-hidden"
+                className="relative rounded-xl border border-border bg-card p-5 sm:p-7 hover:shadow-lg transition-shadow group overflow-hidden"
               >
                 <div className="absolute top-0 left-0 right-0 h-1 gradient-cq" />
-                <div className="inline-flex items-center justify-center w-11 h-11 rounded-lg gradient-cq mb-5">
+                <div className="inline-flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg gradient-cq mb-4 sm:mb-5">
                   <item.icon className="w-5 h-5 text-accent-foreground" />
                 </div>
-                <h3 className="text-lg font-bold text-foreground mb-2">{item.title}</h3>
+                <h3 className="text-base sm:text-lg font-bold text-foreground mb-2">{item.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
@@ -275,28 +275,28 @@ const Blockchain = () => {
       </section>
 
       {/* Who Is This For */}
-      <section className="py-20 bg-muted/50">
-        <div className="container mx-auto px-6">
-          <motion.div {...fadeUp} className="text-center mb-14">
+      <section className="py-14 sm:py-20 bg-muted/50">
+        <div className="container mx-auto px-4 sm:px-6">
+          <motion.div {...fadeUp} className="text-center mb-10 sm:mb-14">
             <span className="text-xs tracking-widest uppercase font-semibold text-accent">Audience</span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-3 text-foreground">Who Is This For?</h2>
-            <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-3 text-foreground">Who Is This For?</h2>
+            <p className="text-sm sm:text-base text-muted-foreground mt-4 max-w-2xl mx-auto">
               This program is designed for ambitious professionals across industries who want to lead in the blockchain space.
             </p>
           </motion.div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-5xl mx-auto">
             {audience.map((a, i) => (
               <motion.div
                 key={a.title}
                 {...fadeUp}
                 transition={{ delay: i * 0.1 }}
-                className="text-center p-6 rounded-xl bg-card border border-border hover:shadow-lg transition-shadow"
+                className="text-center p-4 sm:p-6 rounded-xl bg-card border border-border hover:shadow-lg transition-shadow"
               >
-                <div className="inline-flex items-center justify-center w-14 h-14 rounded-full gradient-cq mb-5">
-                  <a.icon className="w-6 h-6 text-accent-foreground" />
+                <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full gradient-cq mb-3 sm:mb-5">
+                  <a.icon className="w-5 h-5 sm:w-6 sm:h-6 text-accent-foreground" />
                 </div>
-                <h3 className="text-base font-bold text-foreground mb-2">{a.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{a.desc}</p>
+                <h3 className="text-sm sm:text-base font-bold text-foreground mb-1 sm:mb-2">{a.title}</h3>
+                <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{a.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -304,47 +304,47 @@ const Blockchain = () => {
       </section>
 
       {/* Web3 Career Opportunities */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-6">
-          <motion.div {...fadeUp} className="text-center mb-14">
+      <section className="py-14 sm:py-20 bg-background">
+        <div className="container mx-auto px-4 sm:px-6">
+          <motion.div {...fadeUp} className="text-center mb-10 sm:mb-14">
             <span className="text-xs tracking-widest uppercase font-semibold text-accent">Career Growth</span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-3 text-foreground">Web3 & Blockchain Salaries</h2>
-            <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-3 text-foreground">Web3 & Blockchain Salaries</h2>
+            <p className="text-sm sm:text-base text-muted-foreground mt-4 max-w-2xl mx-auto">
               The blockchain industry is experiencing explosive growth with abundant opportunities. Learn in-demand skills that command <strong>premium salaries</strong> and open doors to high-paying roles globally.
             </p>
           </motion.div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-5xl mx-auto mb-8 sm:mb-12">
             {careers.map((career, i) => (
               <motion.div
                 key={career.title}
                 {...fadeUp}
                 transition={{ delay: i * 0.1 }}
-                className="relative rounded-xl border border-border bg-card p-7 hover:shadow-lg transition-shadow group overflow-hidden"
+                className="relative rounded-xl border border-border bg-card p-5 sm:p-7 hover:shadow-lg transition-shadow group overflow-hidden"
               >
                 <div className="absolute top-0 left-0 right-0 h-1 gradient-cq" />
-                <div className="inline-flex items-center justify-center w-11 h-11 rounded-lg gradient-cq mb-4">
+                <div className="inline-flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg gradient-cq mb-3 sm:mb-4">
                   <career.icon className="w-5 h-5 text-accent-foreground" />
                 </div>
-                <h3 className="text-lg font-bold text-foreground mb-1">{career.title}</h3>
-                <p className="text-sm font-semibold text-accent mb-3">{career.salary}</p>
+                <h3 className="text-base sm:text-lg font-bold text-foreground mb-1">{career.title}</h3>
+                <p className="text-sm font-semibold text-accent mb-2 sm:mb-3">{career.salary}</p>
                 <p className="text-sm text-muted-foreground leading-relaxed">{career.desc}</p>
               </motion.div>
             ))}
           </div>
-          <motion.div {...fadeUp} className="max-w-3xl mx-auto p-8 rounded-xl bg-muted/50 border border-border text-center">
-            <h3 className="text-xl font-bold text-foreground mb-4">Why Choose a Web3 Career?</h3>
-            <div className="grid sm:grid-cols-3 gap-6">
+          <motion.div {...fadeUp} className="max-w-3xl mx-auto p-5 sm:p-8 rounded-xl bg-muted/50 border border-border text-center">
+            <h3 className="text-lg sm:text-xl font-bold text-foreground mb-4">Why Choose a Web3 Career?</h3>
+            <div className="grid sm:grid-cols-3 gap-4 sm:gap-6">
               <div>
-                <p className="text-2xl font-bold text-accent mb-2">↗ 50%+</p>
-                <p className="text-sm text-muted-foreground">Higher salaries compared to traditional tech roles</p>
+                <p className="text-xl sm:text-2xl font-bold text-accent mb-2">↗ 50%+</p>
+                <p className="text-xs sm:text-sm text-muted-foreground">Higher salaries compared to traditional tech roles</p>
               </div>
               <div>
-                <p className="text-2xl font-bold text-accent mb-2">🌍</p>
-                <p className="text-sm text-muted-foreground">Remote opportunities with companies worldwide</p>
+                <p className="text-xl sm:text-2xl font-bold text-accent mb-2">🌍</p>
+                <p className="text-xs sm:text-sm text-muted-foreground">Remote opportunities with companies worldwide</p>
               </div>
               <div>
-                <p className="text-2xl font-bold text-accent mb-2">⚡</p>
-                <p className="text-sm text-muted-foreground">Work on cutting-edge technology transforming finance</p>
+                <p className="text-xl sm:text-2xl font-bold text-accent mb-2">⚡</p>
+                <p className="text-xs sm:text-sm text-muted-foreground">Work on cutting-edge technology transforming finance</p>
               </div>
             </div>
           </motion.div>
@@ -352,20 +352,20 @@ const Blockchain = () => {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 bg-muted/50">
-        <div className="container mx-auto px-6">
-          <motion.div {...fadeUp} className="text-center mb-14">
+      <section className="py-14 sm:py-20 bg-muted/50">
+        <div className="container mx-auto px-4 sm:px-6">
+          <motion.div {...fadeUp} className="text-center mb-10 sm:mb-14">
             <span className="text-xs tracking-widest uppercase font-semibold text-accent">Support</span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-3 text-foreground">Frequently Asked Questions</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-3 text-foreground">Frequently Asked Questions</h2>
           </motion.div>
           <motion.div {...fadeUp} className="max-w-3xl mx-auto">
             <Accordion type="single" collapsible className="space-y-3">
               {faqs.map((faq, i) => (
-                <AccordionItem key={i} value={`faq-${i}`} className="rounded-xl border border-border bg-card px-6 overflow-hidden">
-                  <AccordionTrigger className="text-left text-foreground font-semibold hover:no-underline">
+                <AccordionItem key={i} value={`faq-${i}`} className="rounded-xl border border-border bg-card px-4 sm:px-6 overflow-hidden">
+                  <AccordionTrigger className="text-left text-foreground font-semibold hover:no-underline text-sm sm:text-base">
                     {faq.q}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground leading-relaxed">
+                  <AccordionContent className="text-muted-foreground leading-relaxed text-sm">
                     {faq.a}
                   </AccordionContent>
                 </AccordionItem>
@@ -376,12 +376,12 @@ const Blockchain = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-foreground mb-4">Ready to Master Blockchain?</h2>
-          <p className="text-muted-foreground mb-8 max-w-lg mx-auto">Join our next cohort and gain industry-recognized certification in blockchain and Web3 technologies.</p>
+      <section className="py-14 sm:py-20 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 text-center">
+          <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4">Ready to Master Blockchain?</h2>
+          <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-8 max-w-lg mx-auto">Join our next cohort and gain industry-recognized certification in blockchain and Web3 technologies.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="mailto:business@oceangta.com" className="inline-block border border-accent text-accent px-8 py-3 rounded-md font-semibold hover:bg-accent/10 transition-colors">
+            <a href="mailto:business@oceangta.com" className="inline-block border border-accent text-accent px-6 sm:px-8 py-3 rounded-md font-semibold hover:bg-accent/10 transition-colors min-h-[48px]">
               Request a Quote
             </a>
           </div>

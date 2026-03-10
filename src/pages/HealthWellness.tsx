@@ -130,16 +130,16 @@ const whoIsThisFor = [
 
 const HealthWellness = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-x-hidden">
       <Navbar />
 
       {/* ─── Hero ─── */}
-      <section className="relative pt-32 pb-24 overflow-hidden">
+      <section className="relative pt-24 sm:pt-32 pb-16 sm:pb-24 overflow-hidden">
         <div className="absolute inset-0 gradient-ocean opacity-90" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,hsl(var(--warm-gold)/0.18),transparent_60%)]" />
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-[1]" />
 
-        <div className="container mx-auto px-6 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <Link
             to="/"
             className="inline-flex items-center gap-2 text-primary-foreground/70 hover:text-primary-foreground mb-8 transition-colors"
@@ -156,26 +156,26 @@ const HealthWellness = () => {
             <span className="inline-block text-xs tracking-[0.25em] uppercase font-bold text-accent mb-4 bg-accent/10 px-4 py-1.5 rounded-full border border-accent/20">
               Online Wellness Training Program
             </span>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-[1.1]">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-[1.1]">
               Ayurveda for
               <br />
               <span className="text-gradient-cq">Stress, Sleep &</span>
               <br />
               Mind Balance
             </h1>
-            <p className="text-primary-foreground/75 mt-8 max-w-2xl text-lg md:text-xl leading-relaxed">
+            <p className="text-primary-foreground/75 mt-6 sm:mt-8 max-w-2xl text-base sm:text-lg md:text-xl leading-relaxed">
               A transformative program to help you understand how Ayurveda explains
               stress, anxiety, and sleep disturbances — with{" "}
               <strong className="text-primary-foreground">practical lifestyle, diet, and herbal tools</strong>{" "}
               to restore mental balance and improve sleep quality.
             </p>
 
-            <div className="flex flex-wrap gap-3 mt-10">
+            <div className="flex flex-wrap gap-2 sm:gap-3 mt-8 sm:mt-10">
               {["8 Expert Modules", "21-Day Action Plan", "Self-Healing Practices", "Herbal Guidance"].map(
                 (t) => (
                   <span
                     key={t}
-                    className="px-5 py-2.5 rounded-full bg-primary-foreground/10 text-primary-foreground text-sm font-medium border border-primary-foreground/20 backdrop-blur-sm"
+                    className="px-3 sm:px-5 py-2 sm:py-2.5 rounded-full bg-primary-foreground/10 text-primary-foreground text-xs sm:text-sm font-medium border border-primary-foreground/20 backdrop-blur-sm"
                   >
                     {t}
                   </span>
@@ -187,8 +187,8 @@ const HealthWellness = () => {
       </section>
 
       {/* ─── Course Objective ─── */}
-      <section className="py-20 bg-background relative">
-        <div className="container mx-auto px-6">
+      <section className="py-14 sm:py-20 bg-background relative">
+        <div className="container mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -198,7 +198,7 @@ const HealthWellness = () => {
             <span className="text-xs tracking-[0.25em] uppercase font-semibold text-accent">
               Course Objective
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-4 text-foreground">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-4 text-foreground">
               Restore Balance. Reclaim Your Peace.
             </h2>
             <p className="text-muted-foreground mt-6 text-lg leading-relaxed max-w-3xl mx-auto">
@@ -210,7 +210,7 @@ const HealthWellness = () => {
           </motion.div>
 
           {/* Stats row */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mt-12 sm:mt-16 max-w-4xl mx-auto">
             {[
               { val: "8", label: "Expert Modules" },
               { val: "21", label: "Day Action Plan" },
@@ -234,8 +234,8 @@ const HealthWellness = () => {
       </section>
 
       {/* ─── Curriculum Modules ─── */}
-      <section className="py-20 bg-muted/40">
-        <div className="container mx-auto px-6">
+      <section className="py-14 sm:py-20 bg-muted/40">
+        <div className="container mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -245,7 +245,7 @@ const HealthWellness = () => {
             <span className="text-xs tracking-[0.25em] uppercase font-semibold text-accent">
               Curriculum Roadmap
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-4 text-foreground">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-4 text-foreground">
               8 Modules of Transformation
             </h2>
             <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
@@ -268,7 +268,7 @@ const HealthWellness = () => {
                 {/* Top accent bar */}
                 <div className="absolute top-0 left-0 right-0 h-[3px] gradient-ocean opacity-60 group-hover:opacity-100 transition-opacity" />
 
-                <div className="p-6 md:p-8">
+                <div className="p-4 sm:p-6 md:p-8">
                   <div className="flex items-start gap-5">
                     {/* Module number & icon */}
                     <div className="flex-shrink-0">
@@ -285,7 +285,7 @@ const HealthWellness = () => {
 
                     {/* Content */}
                     <div className="flex-1 min-w-0">
-                      <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4">
+                      <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-3 sm:mb-4">
                         {m.title}
                       </h3>
 
@@ -315,8 +315,8 @@ const HealthWellness = () => {
       </section>
 
       {/* ─── Who Is This For ─── */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-6">
+      <section className="py-14 sm:py-20 bg-background">
+        <div className="container mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -326,12 +326,12 @@ const HealthWellness = () => {
             <span className="text-xs tracking-[0.25em] uppercase font-semibold text-accent">
               Ideal Participants
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-4 text-foreground">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-4 text-foreground">
               Who Is This Program For?
             </h2>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-5xl mx-auto">
             {whoIsThisFor.map((item, i) => (
               <motion.div
                 key={i}
@@ -353,8 +353,8 @@ const HealthWellness = () => {
       </section>
 
       {/* ─── FAQ ─── */}
-      <section className="py-20 bg-muted/40">
-        <div className="container mx-auto px-6">
+      <section className="py-14 sm:py-20 bg-muted/40">
+        <div className="container mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -364,7 +364,7 @@ const HealthWellness = () => {
             <span className="text-xs tracking-[0.25em] uppercase font-semibold text-accent">
               Common Questions
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-4 text-foreground">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-4 text-foreground">
               Frequently Asked Questions
             </h2>
           </motion.div>
@@ -412,16 +412,16 @@ const HealthWellness = () => {
       </section>
 
       {/* ─── CTA ─── */}
-      <section className="py-24 relative overflow-hidden">
+      <section className="py-16 sm:py-24 relative overflow-hidden">
         <div className="absolute inset-0 gradient-ocean opacity-90" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,hsl(var(--warm-gold)/0.2),transparent_60%)]" />
-        <div className="container mx-auto px-6 relative z-10 text-center">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-5xl font-bold text-primary-foreground mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-primary-foreground mb-4 sm:mb-6">
               Begin Your Journey to
               <br />
               <span className="text-gradient-cq">Inner Balance</span>

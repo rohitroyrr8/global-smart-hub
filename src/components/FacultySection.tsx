@@ -59,26 +59,26 @@ const trainers = [
 
 const FacultySection = () => {
   return (
-    <section id="faculty" className="pt-16 pb-24 bg-background">
-      <div className="container mx-auto px-6">
+    <section id="faculty" className="pt-12 sm:pt-16 pb-16 sm:pb-24 bg-background">
+      <div className="container mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-16"
         >
           <span className="text-xs tracking-widest uppercase font-semibold text-accent">
             International Faculty
           </span>
-          <h2 className="text-3xl md:text-5xl font-sans font-bold mt-3 text-foreground">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-sans font-bold mt-3 text-foreground">
             Meet Our Elite Trainers
           </h2>
-          <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base text-muted-foreground mt-4 max-w-2xl mx-auto">
             All trainers are international experts with 10–30+ years of experience from outside India, bringing world-class methodologies to every program.
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8">
           {trainers.map((t, i) => (
             <motion.div
               key={t.name}
@@ -93,14 +93,15 @@ const FacultySection = () => {
                 <img
                   src={t.image}
                   alt={t.name}
+                  loading="lazy"
                   className="w-full h-full object-cover object-top"
                 />
               </div>
-              <div className="p-6 flex flex-col items-center text-center">
+              <div className="p-4 sm:p-6 flex flex-col items-center text-center">
                 <span className="text-xs font-bold text-accent tracking-wider">{t.exp}</span>
-                <h3 className="font-sans font-bold text-lg mt-1 text-foreground">{t.name}</h3>
+                <h3 className="font-sans font-bold text-base sm:text-lg mt-1 text-foreground">{t.name}</h3>
                 <p className="text-xs text-muted-foreground font-medium">{t.role}</p>
-                <p className="text-sm text-muted-foreground mt-3 leading-relaxed">{t.desc}</p>
+                <p className="text-sm text-muted-foreground mt-2 sm:mt-3 leading-relaxed">{t.desc}</p>
               </div>
             </motion.div>
           ))}

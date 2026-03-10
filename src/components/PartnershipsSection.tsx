@@ -26,23 +26,23 @@ const partnerships = [
 
 const PartnershipsSection = () => {
   return (
-    <section id="partnerships" className="py-24 gradient-ocean">
-      <div className="container mx-auto px-6">
+    <section id="partnerships" className="py-16 sm:py-24 gradient-ocean">
+      <div className="container mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-16"
         >
           <span className="text-xs tracking-widest uppercase font-semibold text-accent">
             Trust & Partnerships
           </span>
-          <h2 className="text-3xl md:text-5xl font-sans font-bold mt-3 text-primary-foreground">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-sans font-bold mt-3 text-primary-foreground">
             Global Reach & Government Partnerships
           </h2>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {partnerships.map((p, i) => (
             <motion.div
               key={p.title}
@@ -50,13 +50,13 @@ const PartnershipsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="glass-card rounded-xl p-6 text-center"
+              className="glass-card rounded-xl p-5 sm:p-6 text-center"
             >
-              <div className="w-12 h-12 rounded-lg gradient-teal mx-auto mb-4 flex items-center justify-center">
+              <div className="w-12 h-12 rounded-lg gradient-teal mx-auto mb-3 sm:mb-4 flex items-center justify-center">
                 <p.icon className="w-6 h-6 text-primary-foreground" />
               </div>
-              <h3 className="font-sans font-bold text-lg text-primary-foreground mb-2">{p.title}</h3>
-              <p className="text-sm text-primary-foreground/60">{p.desc}</p>
+              <h3 className="font-sans font-bold text-base sm:text-lg text-primary-foreground mb-2">{p.title}</h3>
+              <p className="text-xs sm:text-sm text-primary-foreground/60">{p.desc}</p>
             </motion.div>
           ))}
         </div>
