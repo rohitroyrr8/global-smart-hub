@@ -23,6 +23,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
+        <WhatsAppBubble />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/blockchain" element={<Blockchain />} />
