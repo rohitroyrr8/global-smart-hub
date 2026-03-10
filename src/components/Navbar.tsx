@@ -155,14 +155,14 @@ const Navbar = () => {
         >
           <div className="flex flex-col px-6 py-4 gap-4">
             {navLinks.map((l) => (
-              <a
+              <Link
                 key={l.label}
-                href={l.href}
+                to={l.href}
                 onClick={() => setMobileOpen(false)}
                 className="text-primary-foreground/80 hover:text-primary-foreground text-sm font-medium"
               >
                 {l.label}
-              </a>
+              </Link>
             ))}
 
             {/* Mobile Centers of Excellence */}
