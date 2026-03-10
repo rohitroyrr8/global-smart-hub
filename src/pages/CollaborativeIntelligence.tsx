@@ -567,7 +567,7 @@ const CollaborativeIntelligence = () => {
           <motion.div {...fadeUp}>
             <h2 className="text-3xl md:text-5xl font-sans font-bold text-accent-foreground mb-5">Ready to Elevate Your CQ?</h2>
             <p className="text-accent-foreground/80 mb-10 max-w-lg mx-auto text-lg leading-relaxed">
-              Join our flagship Collaborative Intelligence program and transform how your teams collaborate and perform.
+              Join our internationally certified Collaborative Intelligence program — trusted by leaders across Asia — and transform how your teams collaborate, communicate and perform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
