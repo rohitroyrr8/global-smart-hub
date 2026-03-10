@@ -91,6 +91,17 @@ const ContactSection = () => {
               />
             </div>
             <div>
+              <label className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">WhatsApp Number</label>
+              <input
+                type="tel"
+                required
+                value={form.whatsapp}
+                onChange={(e) => setForm({ ...form, whatsapp: e.target.value })}
+                className="w-full mt-1 px-4 py-3 rounded-md bg-muted border border-border text-foreground text-sm focus:ring-2 focus:ring-accent focus:outline-none"
+                placeholder="Your WhatsApp number with country code"
+              />
+            </div>
+            <div>
               <label className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Organization</label>
               <input
                 type="text"

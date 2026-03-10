@@ -124,13 +124,14 @@ const PillarsSection = () => {
                   {/* Top gradient bar */}
                   <div className={`absolute top-0 left-0 right-0 h-1 ${p.gradient}`} />
 
-                  <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg ${p.gradient} mb-6`}>
-                    <p.icon className="w-6 h-6 text-accent-foreground" />
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg ${p.gradient} shrink-0`}>
+                      <p.icon className="w-6 h-6 text-accent-foreground" />
+                    </div>
+                    <span className="text-[10px] tracking-widest uppercase font-bold text-accent">
+                      {p.tag}
+                    </span>
                   </div>
-
-                  <span className="text-[10px] tracking-widest uppercase font-bold text-accent">
-                    {p.tag}
-                  </span>
 
                   <h3 className={`text-xl font-sans font-bold mt-2 mb-3 ${p.textGradient}`}>{p.title}</h3>
 
