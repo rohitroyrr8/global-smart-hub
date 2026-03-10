@@ -156,7 +156,7 @@ const HealthWellness = () => {
             <span className="inline-block text-xs tracking-[0.25em] uppercase font-bold text-accent mb-4 bg-accent/10 px-4 py-1.5 rounded-full border border-accent/20">
               Online Wellness Training Program
             </span>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-[1.1]">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-[1.1]">
               Ayurveda for
               <br />
               <span className="text-gradient-cq">Stress, Sleep &</span>
