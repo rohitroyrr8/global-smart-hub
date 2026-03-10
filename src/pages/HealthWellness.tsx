@@ -163,7 +163,7 @@ const HealthWellness = () => {
               <br />
               Mind Balance
             </h1>
-            <p className="text-primary-foreground/75 mt-8 max-w-2xl text-lg md:text-xl leading-relaxed">
+            <p className="text-primary-foreground/75 mt-6 sm:mt-8 max-w-2xl text-base sm:text-lg md:text-xl leading-relaxed">
               A transformative program to help you understand how Ayurveda explains
               stress, anxiety, and sleep disturbances — with{" "}
               <strong className="text-primary-foreground">practical lifestyle, diet, and herbal tools</strong>{" "}
