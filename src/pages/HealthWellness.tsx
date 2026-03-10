@@ -412,10 +412,10 @@ const HealthWellness = () => {
       </section>
 
       {/* ─── CTA ─── */}
-      <section className="py-24 relative overflow-hidden">
+      <section className="py-16 sm:py-24 relative overflow-hidden">
         <div className="absolute inset-0 gradient-ocean opacity-90" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,hsl(var(--warm-gold)/0.2),transparent_60%)]" />
-        <div className="container mx-auto px-6 relative z-10 text-center">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
