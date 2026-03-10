@@ -71,13 +71,13 @@ const Navbar = () => {
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-8 ml-auto">
           {navLinks.map((l) => (
-            <a
+            <Link
               key={l.label}
-              href={l.href}
+              to={l.href}
               className="text-sm font-medium text-primary-foreground/80 hover:text-primary-foreground transition-colors"
             >
               {l.label}
-            </a>
+            </Link>
           ))}
 
           {/* Centers of Excellence Dropdown */}
