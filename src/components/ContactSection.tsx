@@ -14,9 +14,9 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-background">
-      <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+    <section id="contact" className="py-16 sm:py-24 bg-background">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="grid lg:grid-cols-2 gap-10 sm:gap-16 items-start">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -25,37 +25,37 @@ const ContactSection = () => {
             <span className="text-xs tracking-widest uppercase font-semibold text-accent">
               Get In Touch
             </span>
-            <h2 className="text-3xl md:text-5xl font-sans font-bold mt-3 text-foreground">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-sans font-bold mt-3 text-foreground">
               Ready to Rewire Your Organization?
             </h2>
-            <p className="text-muted-foreground mt-4 leading-relaxed">
+            <p className="text-sm sm:text-base text-muted-foreground mt-4 leading-relaxed">
               Whether you're a government agency, PSU, or corporate enterprise, our programs are tailored to transform your teams. Join an elite network of sovereign agencies and global enterprises. Our master consultants are ready to architect a customized transformation for your leadership, security, or technical teams.
             </p>
 
-            <div className="mt-8 space-y-4">
+            <div className="mt-6 sm:mt-8 space-y-3 sm:space-y-4">
               <a
                 href="mailto:business@oceangta.com"
-                className="flex items-center gap-3 text-foreground hover:text-accent transition-colors"
+                className="flex items-center gap-3 text-foreground hover:text-accent transition-colors min-h-[44px]"
               >
-                <Mail className="w-5 h-5" />
+                <Mail className="w-5 h-5 shrink-0" />
                 <span className="text-sm">business@oceangta.com</span>
               </a>
               <a
                 href="https://www.oceangta.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 text-foreground hover:text-accent transition-colors"
+                className="flex items-center gap-3 text-foreground hover:text-accent transition-colors min-h-[44px]"
               >
-                <Globe className="w-5 h-5" />
+                <Globe className="w-5 h-5 shrink-0" />
                 <span className="text-sm">www.oceangta.com</span>
               </a>
               <a
                 href="https://www.instagram.com/oceangta"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 text-foreground hover:text-accent transition-colors"
+                className="flex items-center gap-3 text-foreground hover:text-accent transition-colors min-h-[44px]"
               >
-                <Instagram className="w-5 h-5" />
+                <Instagram className="w-5 h-5 shrink-0" />
                 <span className="text-sm">@oceangta</span>
               </a>
             </div>
@@ -66,7 +66,7 @@ const ContactSection = () => {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="rounded-xl border border-border bg-card p-8 space-y-5"
+            className="rounded-xl border border-border bg-card p-5 sm:p-8 space-y-4 sm:space-y-5"
           >
             <div>
               <label className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Full Name</label>
@@ -75,7 +75,7 @@ const ContactSection = () => {
                 required
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
-                className="w-full mt-1 px-4 py-3 rounded-md bg-muted border border-border text-foreground text-sm focus:ring-2 focus:ring-accent focus:outline-none"
+                className="w-full mt-1 px-4 py-3 rounded-md bg-muted border border-border text-foreground text-base focus:ring-2 focus:ring-accent focus:outline-none min-h-[48px]"
                 placeholder="Your name"
               />
             </div>
@@ -86,7 +86,7 @@ const ContactSection = () => {
                 required
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
-                className="w-full mt-1 px-4 py-3 rounded-md bg-muted border border-border text-foreground text-sm focus:ring-2 focus:ring-accent focus:outline-none"
+                className="w-full mt-1 px-4 py-3 rounded-md bg-muted border border-border text-foreground text-base focus:ring-2 focus:ring-accent focus:outline-none min-h-[48px]"
                 placeholder="your@email.com"
               />
             </div>
@@ -97,7 +97,7 @@ const ContactSection = () => {
                 required
                 value={form.whatsapp}
                 onChange={(e) => setForm({ ...form, whatsapp: e.target.value })}
-                className="w-full mt-1 px-4 py-3 rounded-md bg-muted border border-border text-foreground text-sm focus:ring-2 focus:ring-accent focus:outline-none"
+                className="w-full mt-1 px-4 py-3 rounded-md bg-muted border border-border text-foreground text-base focus:ring-2 focus:ring-accent focus:outline-none min-h-[48px]"
                 placeholder="Your WhatsApp number with country code"
               />
             </div>
@@ -107,7 +107,7 @@ const ContactSection = () => {
                 type="text"
                 value={form.org}
                 onChange={(e) => setForm({ ...form, org: e.target.value })}
-                className="w-full mt-1 px-4 py-3 rounded-md bg-muted border border-border text-foreground text-sm focus:ring-2 focus:ring-accent focus:outline-none"
+                className="w-full mt-1 px-4 py-3 rounded-md bg-muted border border-border text-foreground text-base focus:ring-2 focus:ring-accent focus:outline-none min-h-[48px]"
                 placeholder="Company or government agency"
               />
             </div>
@@ -118,13 +118,13 @@ const ContactSection = () => {
                 rows={4}
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
-                className="w-full mt-1 px-4 py-3 rounded-md bg-muted border border-border text-foreground text-sm focus:ring-2 focus:ring-accent focus:outline-none resize-none"
+                className="w-full mt-1 px-4 py-3 rounded-md bg-muted border border-border text-foreground text-base focus:ring-2 focus:ring-accent focus:outline-none resize-none"
                 placeholder="Tell us about your training needs..."
               />
             </div>
             <button
               type="submit"
-              className="w-full gradient-cq text-accent-foreground py-3 rounded-md font-semibold flex items-center justify-center gap-2 hover:opacity-90 transition-opacity"
+              className="w-full gradient-cq text-accent-foreground py-3 rounded-md font-semibold flex items-center justify-center gap-2 hover:opacity-90 transition-opacity min-h-[48px]"
             >
               <Send className="w-4 h-4" />
               Send Inquiry

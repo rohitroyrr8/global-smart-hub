@@ -39,6 +39,16 @@ const Navbar = () => {
     setMobileDropdownOpen(false);
   }, [location]);
 
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => { document.body.style.overflow = ""; };
+  }, [mobileOpen]);
+
   const handleMouseEnter = () => {
     clearTimeout(timeoutRef.current);
     setDropdownOpen(true);
@@ -61,20 +71,20 @@ const Navbar = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto flex items-center justify-between px-6 py-4">
-        <Link to="/" className="flex items-center gap-2">
-          <span className="text-2xl font-sans font-bold text-primary-foreground tracking-tight">
+      <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4">
+        <Link to="/" className="flex items-center gap-2 shrink-0">
+          <span className="text-xl sm:text-2xl font-sans font-bold text-primary-foreground tracking-tight">
             Ocean<span className="text-gradient-cq">GTA</span>
           </span>
         </Link>
 
         {/* Desktop */}
-        <div className="hidden md:flex items-center gap-8 ml-auto">
+        <div className="hidden lg:flex items-center gap-6 xl:gap-8 ml-auto">
           {navLinks.map((l) => (
             <Link
               key={l.label}
               to={l.href}
-              className="text-sm font-medium text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+              className="text-sm font-medium text-primary-foreground/80 hover:text-primary-foreground transition-colors whitespace-nowrap"
             >
               {l.label}
             </Link>
@@ -88,7 +98,7 @@ const Navbar = () => {
             onMouseLeave={handleMouseLeave}
           >
             <button
-              className="flex items-center gap-1 text-sm font-medium text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+              className="flex items-center gap-1 text-sm font-medium text-primary-foreground/80 hover:text-primary-foreground transition-colors whitespace-nowrap"
               onClick={() => setDropdownOpen(!dropdownOpen)}
             >
               Centers of Excellence
@@ -133,7 +143,7 @@ const Navbar = () => {
             href="https://wa.me/919319165254?text=Hi%20OceanGTA!%20I%20am%20interested%20in%20the%20CQ%20Training%20for%20my%20team.%20Please%20share%20more%20details."
             target="_blank"
             rel="noopener noreferrer"
-            className="gradient-cq text-accent-foreground px-5 py-2.5 rounded-md text-sm font-semibold hover:opacity-90 transition-opacity"
+            className="gradient-cq text-accent-foreground px-4 xl:px-5 py-2.5 rounded-md text-sm font-semibold hover:opacity-90 transition-opacity whitespace-nowrap min-h-[44px] flex items-center"
           >
             Book a Free Call
           </a>
@@ -141,82 +151,86 @@ const Navbar = () => {
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden text-primary-foreground"
+          className="lg:hidden text-primary-foreground p-2 min-h-[44px] min-w-[44px] flex items-center justify-center"
           onClick={() => setMobileOpen(!mobileOpen)}
+          aria-label={mobileOpen ? "Close menu" : "Open menu"}
         >
           {mobileOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
       {/* Mobile menu */}
-      {mobileOpen && (
-        <motion.div
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: "auto" }}
-          className="md:hidden gradient-ocean border-t border-primary-foreground/10"
-        >
-          <div className="flex flex-col px-6 py-4 gap-4">
-            {navLinks.map((l) => (
-              <Link
-                key={l.label}
-                to={l.href}
-                onClick={() => setMobileOpen(false)}
-                className="text-primary-foreground/80 hover:text-primary-foreground text-sm font-medium"
-              >
-                {l.label}
-              </Link>
-            ))}
-
-            {/* Mobile Centers of Excellence */}
-            <button
-              onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
-              className="flex items-center justify-between text-primary-foreground/80 hover:text-primary-foreground text-sm font-medium"
-            >
-              Centers of Excellence
-              <ChevronDown
-                size={14}
-                className={`transition-transform duration-200 ${mobileDropdownOpen ? "rotate-180" : ""}`}
-              />
-            </button>
-
-            <AnimatePresence>
-              {mobileDropdownOpen && (
-                <motion.div
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: "auto" }}
-                  exit={{ opacity: 0, height: 0 }}
-                  className="flex flex-col gap-2 pl-4 border-l-2 border-accent/40"
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="lg:hidden gradient-ocean border-t border-primary-foreground/10 max-h-[calc(100vh-60px)] overflow-y-auto"
+          >
+            <div className="flex flex-col px-4 sm:px-6 py-4 gap-1">
+              {navLinks.map((l) => (
+                <Link
+                  key={l.label}
+                  to={l.href}
+                  onClick={() => setMobileOpen(false)}
+                  className="text-primary-foreground/80 hover:text-primary-foreground text-base font-medium py-3 min-h-[48px] flex items-center"
                 >
-                  {programLinks.map((p) => (
-                    <Link
-                      key={p.label}
-                      to={p.href}
-                      onClick={() => setMobileOpen(false)}
-                      className={`text-sm font-medium py-1 transition-colors ${
-                        isActive(p.href)
-                          ? "text-accent"
-                          : "text-primary-foreground/70 hover:text-primary-foreground"
-                      }`}
-                    >
-                      {p.label}
-                    </Link>
-                  ))}
-                </motion.div>
-              )}
-            </AnimatePresence>
+                  {l.label}
+                </Link>
+              ))}
 
-            <a
-              href="https://wa.me/919319165254?text=Hi%20OceanGTA!%20I%20am%20interested%20in%20the%20CQ%20Training%20for%20my%20team.%20Please%20share%20more%20details."
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setMobileOpen(false)}
-              className="gradient-cq text-accent-foreground px-5 py-2.5 rounded-md text-sm font-semibold text-center"
-            >
-              Book a Free Call
-            </a>
-          </div>
-        </motion.div>
-      )}
+              {/* Mobile Centers of Excellence */}
+              <button
+                onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
+                className="flex items-center justify-between text-primary-foreground/80 hover:text-primary-foreground text-base font-medium py-3 min-h-[48px]"
+              >
+                Centers of Excellence
+                <ChevronDown
+                  size={14}
+                  className={`transition-transform duration-200 ${mobileDropdownOpen ? "rotate-180" : ""}`}
+                />
+              </button>
+
+              <AnimatePresence>
+                {mobileDropdownOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    className="flex flex-col gap-0 pl-4 border-l-2 border-accent/40"
+                  >
+                    {programLinks.map((p) => (
+                      <Link
+                        key={p.label}
+                        to={p.href}
+                        onClick={() => setMobileOpen(false)}
+                        className={`text-sm font-medium py-2.5 min-h-[44px] flex items-center transition-colors ${
+                          isActive(p.href)
+                            ? "text-accent"
+                            : "text-primary-foreground/70 hover:text-primary-foreground"
+                        }`}
+                      >
+                        {p.label}
+                      </Link>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+
+              <a
+                href="https://wa.me/919319165254?text=Hi%20OceanGTA!%20I%20am%20interested%20in%20the%20CQ%20Training%20for%20my%20team.%20Please%20share%20more%20details."
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileOpen(false)}
+                className="gradient-cq text-accent-foreground px-5 py-3 rounded-md text-sm font-semibold text-center mt-2 min-h-[48px] flex items-center justify-center"
+              >
+                Book a Free Call
+              </a>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.nav>
   );
 };

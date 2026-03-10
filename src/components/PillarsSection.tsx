@@ -83,21 +83,21 @@ const item = {
 
 const PillarsSection = () => {
   return (
-    <section id="programs" className="pt-24 pb-16 bg-background">
-      <div className="container mx-auto px-6">
+    <section id="programs" className="pt-16 sm:pt-24 pb-12 sm:pb-16 bg-background">
+      <div className="container mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-16"
         >
           <span className="text-xs tracking-widest uppercase font-semibold text-accent">
             Training Excellence
           </span>
-          <h2 className="text-3xl md:text-5xl font-sans font-bold mt-3 text-foreground">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-sans font-bold mt-3 text-foreground">
             Pillars of Excellence
           </h2>
-          <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base text-muted-foreground mt-4 max-w-2xl mx-auto">
             Government-certified programs designed to empower leaders, protect dignitaries, and drive digital innovation.
           </p>
         </motion.div>
@@ -107,7 +107,7 @@ const PillarsSection = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="grid md:grid-cols-3 gap-8"
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8"
         >
           {pillars.map((p) => {
             const CardWrapper = p.link ? Link : 'div';
@@ -119,23 +119,23 @@ const PillarsSection = () => {
               >
                 <CardWrapper
                   {...wrapperProps as any}
-                  className={`group relative rounded-xl border border-border bg-card p-8 hover:shadow-xl transition-shadow duration-300 overflow-hidden block h-full ${p.link ? 'cursor-pointer' : ''}`}
+                  className={`group relative rounded-xl border border-border bg-card p-5 sm:p-8 hover:shadow-xl transition-shadow duration-300 overflow-hidden block h-full ${p.link ? 'cursor-pointer' : ''}`}
                 >
                   {/* Top gradient bar */}
                   <div className={`absolute top-0 left-0 right-0 h-1 ${p.gradient}`} />
 
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg ${p.gradient} shrink-0`}>
-                      <p.icon className="w-6 h-6 text-accent-foreground" />
+                  <div className="flex items-center gap-3 mb-4 sm:mb-6">
+                    <div className={`inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-lg ${p.gradient} shrink-0`}>
+                      <p.icon className="w-5 h-5 sm:w-6 sm:h-6 text-accent-foreground" />
                     </div>
                     <span className="text-xs tracking-widest uppercase font-extrabold text-accent">
                       {p.tag}
                     </span>
                   </div>
 
-                  <h3 className={`text-xl font-sans font-bold mt-2 mb-3 ${p.textGradient}`}>{p.title}</h3>
+                  <h3 className={`text-lg sm:text-xl font-sans font-bold mt-2 mb-2 sm:mb-3 ${p.textGradient}`}>{p.title}</h3>
 
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-4 sm:mb-6">
                     {p.description}
                   </p>
 
@@ -143,7 +143,7 @@ const PillarsSection = () => {
                     {p.highlights.map((h) => (
                       <span
                         key={h}
-                        className="text-xs px-3 py-1 rounded-full bg-muted text-muted-foreground font-medium"
+                        className="text-[10px] sm:text-xs px-2.5 sm:px-3 py-1 rounded-full bg-muted text-muted-foreground font-medium"
                       >
                         {h}
                       </span>
