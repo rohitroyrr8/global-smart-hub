@@ -513,7 +513,7 @@ const CollaborativeIntelligence = () => {
               { quote: "We all agree that only by coordinating our actions can we stop the devastation… Bringing together countries with competing interests is hard work — but cooperation is vital.", author: "John Kerry", role: "Former U.S. Secretary of State, WEF" },
               { quote: "The disjointed global response to COVID-19 showed cooperation cannot be taken for granted, even when our interests are shared.", author: "World Economic Forum", role: "Global Cooperation Report 2023" },
               { quote: "Given the rise in humanitarian catastrophes and wars, you need to find a way to collaborate — or face the consequences.", author: "Dr. Comfort Ero", role: "President & CEO, Crisis Group, WEF 2025" },
-              { quote: "Collaboration is not a skill you learn — it is a chemistry you build. When team members stop competing for significance and start contributing to a shared identity, ordinary people produce extraordinary results.", author: "G. Vasu Thevan", role: "Founder, Ocean GTA" },
+              { quote: "Collaboration is not a skill you learn — it is a chemistry you build. When team members stop competing for significance and start contributing to a shared identity, ordinary people produce extraordinary results.", author: "G. Vasu Thevan", role: "Trainer, OceanGTA" },
             ].map((item, i) => (
               <motion.div
                 key={i}
