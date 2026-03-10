@@ -171,7 +171,7 @@ const CollaborativeIntelligence = () => {
 
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="max-w-3xl">
             <span className="inline-block px-4 py-1.5 rounded-full bg-accent-foreground/20 text-accent-foreground text-xs tracking-widest uppercase font-bold mb-5">
-              Flagship Program — A Game Changer
+              Internationally Certified Program — A Game Changer
             </span>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-sans font-bold text-accent-foreground leading-tight">
               Collaborative Intelligence{" "}
@@ -567,7 +567,7 @@ const CollaborativeIntelligence = () => {
           <motion.div {...fadeUp}>
             <h2 className="text-3xl md:text-5xl font-sans font-bold text-accent-foreground mb-5">Ready to Elevate Your CQ?</h2>
             <p className="text-accent-foreground/80 mb-10 max-w-lg mx-auto text-lg leading-relaxed">
-              Join our flagship Collaborative Intelligence program and transform how your teams collaborate and perform.
+              Join our internationally certified Collaborative Intelligence program — trusted by leaders across Asia — and transform how your teams collaborate, communicate and perform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
