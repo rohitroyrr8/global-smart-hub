@@ -193,15 +193,14 @@ const CollaborativeIntelligence = () => {
               ))}
             </div>
             <div className="flex flex-col sm:flex-row gap-4 mt-10">
-              <a
-                href="#contact"
-                onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}
+              <Link
+                to="/#contact"
                 className="inline-block gradient-ocean text-primary-foreground px-10 py-4 rounded-xl font-bold text-lg text-center hover:opacity-90 transition-opacity shadow-xl border border-primary-foreground/20"
               >
                 Rewire Your Team
-              </a>
+              </Link>
               <a
-                href="https://wa.me/9319165254?text=Hi%20OceanGTA!%20I%20am%20interested%20in%20the%20CQ%20Training%20for%20my%20team.%20Please%20share%20more%20details."
+                href="https://wa.me/919319165254?text=Hi%20OceanGTA!%20I%20am%20interested%20in%20the%20CQ%20Training%20for%20my%20team.%20Please%20share%20more%20details."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block px-10 py-4 rounded-xl font-bold text-lg text-center border-2 border-accent-foreground text-accent-foreground hover:bg-accent-foreground/10 transition-all"

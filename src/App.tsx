@@ -12,6 +12,7 @@ import CloseProtection from "./pages/CloseProtection";
 import SalesMarketing from "./pages/SalesMarketing";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
+import WhatsAppBubble from "./components/WhatsAppBubble";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
+        <WhatsAppBubble />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/blockchain" element={<Blockchain />} />

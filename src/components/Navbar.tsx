@@ -129,12 +129,14 @@ const Navbar = () => {
             </AnimatePresence>
           </div>
 
-          <Link
-            to="/#contact"
+          <a
+            href="https://wa.me/919319165254?text=Hi%20OceanGTA!%20I%20am%20interested%20in%20the%20CQ%20Training%20for%20my%20team.%20Please%20share%20more%20details."
+            target="_blank"
+            rel="noopener noreferrer"
             className="gradient-cq text-accent-foreground px-5 py-2.5 rounded-md text-sm font-semibold hover:opacity-90 transition-opacity"
           >
             Book a Free Call
-          </Link>
+          </a>
         </div>
 
         {/* Mobile toggle */}
@@ -203,13 +205,15 @@ const Navbar = () => {
               )}
             </AnimatePresence>
 
-            <Link
-              to="/#contact"
+            <a
+              href="https://wa.me/919319165254?text=Hi%20OceanGTA!%20I%20am%20interested%20in%20the%20CQ%20Training%20for%20my%20team.%20Please%20share%20more%20details."
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setMobileOpen(false)}
               className="gradient-cq text-accent-foreground px-5 py-2.5 rounded-md text-sm font-semibold text-center"
             >
               Book a Free Call
-            </Link>
+            </a>
           </div>
         </motion.div>
       )}
