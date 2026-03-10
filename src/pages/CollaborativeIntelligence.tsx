@@ -371,6 +371,146 @@ const CollaborativeIntelligence = () => {
         </div>
       </section>
 
+      {/* ──── Who Benefits from CQ ──── */}
+      <section className="py-20 md:py-28 bg-muted/30">
+        <div className="container mx-auto px-6">
+          <motion.div {...fadeUp} className="text-center mb-14">
+            <span className="text-xs tracking-widest uppercase font-bold text-muted-foreground">Who Benefits from CQ?</span>
+            <h2 className="text-2xl md:text-4xl font-sans font-bold mt-3 text-foreground">Industries That Need CQ Most</h2>
+            <p className="text-muted-foreground mt-2 max-w-2xl mx-auto text-sm leading-relaxed">
+              Collaborative Intelligence transforms team dynamics across every sector — from boardrooms to hospitals.
+            </p>
+          </motion.div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {[
+              { icon: Building2, title: "Corporates & MNCs", desc: "Cross-functional teams, sales & operations, leadership cohorts, and project teams gain faster alignment, reduced friction, and measurable output gains. CQ rewires competitive silos into collaborative units." },
+              { icon: Landmark, title: "Government & Public Sector", desc: "Departments dealing with inter-agency coordination, policy execution, and citizen-facing teams benefit from CQ's \"Dependency Agreements\" and shared goal-setting frameworks — transforming bureaucratic friction into unified public service delivery." },
+              { icon: GraduationCap, title: "Universities & Academic Institutions", desc: "Faculty departments, student leadership bodies, and administrative teams gain tools for psychological safety and relationship-first culture — critical for academic excellence and institutional harmony." },
+              { icon: Hospital, title: "Healthcare & Hospital Systems", desc: "Multi-disciplinary medical teams (doctors, nurses, admin) need seamless collaboration under pressure. CQ installs empathetic communication and conflict reset tools that save lives and reduce burnout." },
+              { icon: Rocket, title: "Startups & Scale-ups", desc: "Fast-growth teams often fracture under pressure. CQ creates the \"Oneness\" mindset that keeps founding teams and growing workforces aligned through change." },
+              { icon: Globe2, title: "International & Multicultural Teams", desc: "Global teams across time zones, cultures, and languages benefit from CQ's sincerity-first framework and unconditional relationship model — turning diversity into genuine synergy." },
+            ].map((item, i) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08 }}
+                className="bg-card rounded-2xl p-8 border border-border/50 hover:shadow-xl hover:border-[hsl(var(--rust-orange))]/30 transition-all duration-300 group"
+              >
+                <div className="w-14 h-14 rounded-xl bg-[hsl(var(--rust-orange))]/10 flex items-center justify-center mb-5 group-hover:bg-[hsl(var(--rust-orange))]/20 transition-colors">
+                  <item.icon className="w-7 h-7 text-[hsl(var(--rust-orange))]" />
+                </div>
+                <h4 className="font-sans text-base font-bold text-foreground mb-2">{item.title}</h4>
+                <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ──── Global Statistics ──── */}
+      <section className="py-20 md:py-28 bg-background">
+        <div className="container mx-auto px-6">
+          <motion.div {...fadeUp} className="text-center mb-14">
+            <span className="text-xs tracking-widest uppercase font-bold text-muted-foreground">Global Research</span>
+            <h2 className="text-2xl md:text-4xl font-sans font-bold mt-3 text-foreground">The Global Case for Collaborative Intelligence</h2>
+            <p className="text-muted-foreground mt-2 max-w-2xl mx-auto text-sm leading-relaxed">
+              The world's leading research institutions prove what we teach — collaboration isn't optional, it's the ultimate competitive advantage.
+            </p>
+          </motion.div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 max-w-7xl mx-auto">
+            {[
+              { stat: "86%", label: "of business leaders say lack of collaboration is the #1 cause of workplace failure", source: "Fierce Inc." },
+              { stat: "5×", label: "more likely to be high-performing — companies with strong collaborative cultures", source: "i4cp" },
+              { stat: "$1T+", label: "lost annually by U.S. companies due to poor communication & collaboration", source: "Gallup" },
+              { stat: "64%", label: "longer focus time for employees engaged in collaborative work vs. solo", source: "Stanford University" },
+              { stat: "20–25%", label: "productivity boost from effective collaboration practices", source: "McKinsey & Company" },
+              { stat: "50%", label: "lower turnover in companies that foster genuine teamwork and trust", source: "Gallup Research" },
+              { stat: "87%", label: "of the time, teams make better decisions than individuals", source: "Harvard Business Review" },
+              { stat: "Only 20%", label: "of executives believe their teams are truly high-performing", source: "Gartner Research" },
+              { stat: "$18.2B", label: "global collaboration tools market size in 2024", source: "Industry Research" },
+              { stat: "70%", label: "of organizational change initiatives fail — collaboration breakdown is a top reason", source: "McKinsey & Company" },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.05 }}
+                className="bg-card rounded-2xl p-6 border border-border/50 text-center hover:shadow-lg hover:border-[hsl(var(--rust-orange))]/20 transition-all duration-300"
+              >
+                <div className="text-3xl md:text-4xl font-sans font-extrabold text-[hsl(var(--rust-orange))] mb-2">{item.stat}</div>
+                <p className="text-xs text-muted-foreground leading-relaxed mb-3">{item.label}</p>
+                <span className="text-[10px] uppercase tracking-wider font-bold text-muted-foreground/60">{item.source}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ──── World Leaders Quote Wall ──── */}
+      <section className="py-20 md:py-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[hsl(var(--ocean-deep))]" />
+        <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-[hsl(var(--rust-orange))] opacity-10 blur-[100px]" />
+        <div className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-[hsl(var(--sun-orange))] opacity-10 blur-[100px]" />
+        <div className="container mx-auto px-6 relative z-10">
+          <motion.div {...fadeUp} className="text-center mb-14">
+            <span className="text-xs tracking-widest uppercase font-bold text-white/50">The World is Talking</span>
+            <h2 className="text-2xl md:text-4xl font-sans font-bold mt-3 text-white">World Leaders on Collaboration</h2>
+          </motion.div>
+          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            {[
+              { quote: "The only viable path forward is to connect leaders across sectors, regions, ideologies and generations to make sense of global challenges and move the world forward together.", author: "World Economic Forum", role: "Institutional Framework, Davos" },
+              { quote: "Only when all sides treat each other with sincerity and work in the same direction can there be a stronger foundation of trust and more fruits of cooperation.", author: "H.E. Li Qiang", role: "Premier of China, Davos 2024" },
+              { quote: "We all agree that only by coordinating our actions can we stop the devastation… Bringing together countries with competing interests is hard work — but cooperation is vital.", author: "John Kerry", role: "Former U.S. Secretary of State, WEF" },
+              { quote: "The disjointed global response to COVID-19 showed cooperation cannot be taken for granted, even when our interests are shared.", author: "World Economic Forum", role: "Global Cooperation Report 2023" },
+              { quote: "Given the rise in humanitarian catastrophes and wars, you need to find a way to collaborate — or face the consequences.", author: "Dr. Comfort Ero", role: "President & CEO, Crisis Group, WEF 2025" },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300"
+              >
+                <Quote className="w-8 h-8 text-[hsl(var(--rust-orange))] mb-4 opacity-60" />
+                <p className="text-white/90 text-sm leading-relaxed italic mb-5">"{item.quote}"</p>
+                <div className="border-t border-white/10 pt-4">
+                  <p className="text-white font-bold text-sm">{item.author}</p>
+                  <p className="text-white/50 text-xs">{item.role}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ──── FAQ ──── */}
+      <section className="py-20 md:py-28 bg-muted/30">
+        <div className="container mx-auto px-6">
+          <motion.div {...fadeUp} className="text-center mb-14">
+            <span className="text-xs tracking-widest uppercase font-bold text-muted-foreground">FAQ</span>
+            <h2 className="text-2xl md:text-4xl font-sans font-bold mt-3 text-foreground">Got Questions? We've Got Answers.</h2>
+          </motion.div>
+          <div className="max-w-3xl mx-auto space-y-3">
+            {[
+              { q: "What exactly is Collaborative Intelligence (CQ)?", a: "CQ is a structured, experiential intelligence framework that trains teams to shift from competitive or siloed behavior to genuine, trust-based collaboration. Unlike soft-skills workshops, CQ works at the level of team chemistry — rewiring how people feel about and respond to each other at work. It sits at the intersection of behavioral psychology, team dynamics, and mindset transformation." },
+              { q: "How is CQ different from team-building activities or EQ training?", a: "Team-building activities are often one-time fun events with no lasting impact. EQ trains individuals emotionally. CQ is unique because it works at the team system level — transforming group dynamics, setting structural agreements, and building a collective \"oneness\" mindset that survives the pressure of real work. Results are felt within Day 1 and designed to last." },
+              { q: "Who should attend this program?", a: "CQ is designed for ALL levels — from frontline staff to C-suite executives. It works best when cross-functional or cross-departmental groups attend together, because the transformation happens in the room, between real people who actually work with each other. Both new teams and long-standing teams benefit significantly." },
+              { q: "Can this program be customized for our industry or organization?", a: "Yes. While the core CQ framework remains consistent, Ocean GTA tailors the examples, case studies, role-plays, and dependency agreements to your specific organizational context — whether you're in healthcare, government, education, manufacturing, or services. Contact us to discuss a bespoke design." },
+              { q: "What results can we realistically expect after 2 days?", a: "Participants consistently report immediate shifts in how they relate to teammates. Within 2 days, teams experience: reduced interpersonal friction, clearer role agreements, shared language for conflict resolution, and a concrete Action Plan. Organizational outcomes — including reduced silos, improved morale, and better cross-team performance — typically show within 30–60 days post-program." },
+              { q: "Is there post-program support or certification?", a: "Yes. Participants receive CQ Certification upon completion. Additionally, Ocean GTA provides follow-up tools including CQ Busters & Boosters frameworks, action plan templates, and optional refresher sessions to sustain the transformation and embed CQ into your organizational culture." },
+              { q: "How do we measure ROI from a CQ program?", a: "Global research shows companies with strong collaboration cultures are 5x more likely to be high-performing (i4cp), have 50% lower turnover (Gallup), and achieve 20–25% productivity gains (McKinsey). We work with your HR and leadership team to identify pre/post metrics — such as team engagement scores, project delivery speed, conflict incidents, and employee retention — so you can measure the real business impact of your CQ investment." },
+              { q: "How do we get started or enroll our team?", a: "Simply reach out to us at business@oceangta.com or use the Request a Quote button on this page. Our team will schedule a discovery call to understand your team's challenges, size, and goals — and propose the best CQ delivery format (in-person, hybrid, or virtual) for your organization." },
+            ].map((item, i) => (
+              <FAQItem key={i} question={item.q} answer={item.a} index={i} />
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ──── CTA ──── */}
       <section className="py-20 md:py-24 relative overflow-hidden">
         <div className="absolute inset-0 gradient-cq" />
@@ -381,12 +521,12 @@ const CollaborativeIntelligence = () => {
             <p className="text-accent-foreground/80 mb-10 max-w-lg mx-auto text-lg leading-relaxed">
               Join our flagship Collaborative Intelligence program and transform how your teams collaborate and perform.
             </p>
-            <Link
-              to="/#contact"
+            <a
+              href="mailto:business@oceangta.com?subject=CQ%20Program%20Inquiry"
               className="inline-block bg-accent-foreground text-primary px-10 py-4 rounded-xl font-bold text-lg hover:opacity-90 transition-opacity shadow-xl"
             >
-              Enroll Now
-            </Link>
+              Request a Quote
+            </a>
           </motion.div>
         </div>
       </section>
