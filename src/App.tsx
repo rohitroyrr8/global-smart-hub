@@ -11,6 +11,7 @@ import CollaborativeIntelligence from "./pages/CollaborativeIntelligence";
 import CloseProtection from "./pages/CloseProtection";
 import SalesMarketing from "./pages/SalesMarketing";
 import NotFound from "./pages/NotFound";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -20,6 +21,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/blockchain" element={<Blockchain />} />

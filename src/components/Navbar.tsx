@@ -13,10 +13,10 @@ const programLinks = [
 ];
 
 const navLinks = [
-  { label: "Programs", href: "#programs" },
-  { label: "Faculty", href: "#faculty" },
-  { label: "Partnerships", href: "#partnerships" },
-  { label: "Connect", href: "#contact" },
+  { label: "Programs", href: "/#programs" },
+  { label: "Faculty", href: "/#faculty" },
+  { label: "Partnerships", href: "/#partnerships" },
+  { label: "Connect", href: "/#contact" },
 ];
 
 const Navbar = () => {
@@ -71,13 +71,13 @@ const Navbar = () => {
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-8 ml-auto">
           {navLinks.map((l) => (
-            <a
+            <Link
               key={l.label}
-              href={l.href}
+              to={l.href}
               className="text-sm font-medium text-primary-foreground/80 hover:text-primary-foreground transition-colors"
             >
               {l.label}
-            </a>
+            </Link>
           ))}
 
           {/* Centers of Excellence Dropdown */}
@@ -155,14 +155,14 @@ const Navbar = () => {
         >
           <div className="flex flex-col px-6 py-4 gap-4">
             {navLinks.map((l) => (
-              <a
+              <Link
                 key={l.label}
-                href={l.href}
+                to={l.href}
                 onClick={() => setMobileOpen(false)}
                 className="text-primary-foreground/80 hover:text-primary-foreground text-sm font-medium"
               >
                 {l.label}
-              </a>
+              </Link>
             ))}
 
             {/* Mobile Centers of Excellence */}
