@@ -234,8 +234,8 @@ const HealthWellness = () => {
       </section>
 
       {/* ─── Curriculum Modules ─── */}
-      <section className="py-20 bg-muted/40">
-        <div className="container mx-auto px-6">
+      <section className="py-14 sm:py-20 bg-muted/40">
+        <div className="container mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
