@@ -208,7 +208,7 @@ const Navbar = () => {
               onClick={() => setMobileOpen(false)}
               className="gradient-cq text-accent-foreground px-5 py-2.5 rounded-md text-sm font-semibold text-center"
             >
-              Schedule Consultation
+              Book a Free Call
             </Link>
           </div>
         </motion.div>
