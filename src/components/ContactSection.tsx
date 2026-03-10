@@ -56,14 +56,6 @@ const ContactSection = () => {
                 <p className="text-sm text-foreground leading-relaxed">
                   4th Floor, The Galaxy Hotel, Behind 32nd Milestone, off NH 8, Sector 15, Gurugram, Haryana — 122001
                 </p>
-                <a
-                  href="https://wa.me/919319165254?text=Hi%20OceanGTA!%20I%20would%20like%20to%20know%20more%20about%20your%20training%20programs."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 mt-3 text-sm text-foreground hover:text-accent transition-colors"
-                >
-                  <MessageCircle className="w-4 h-4 shrink-0" /> +91 93191 65254
-                </a>
                 <p className="text-xs text-muted-foreground mt-3">Available Mon–Fri, 10AM–6PM IST</p>
               </div>
             </div>
