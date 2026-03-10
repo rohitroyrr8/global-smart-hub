@@ -123,6 +123,36 @@ const ModuleCard = ({ m, orange }: { m: typeof day1[0]; orange?: boolean }) => (
   </motion.div>
 );
 
+/* ── FAQ Item ── */
+const FAQItem = ({ question, answer, index }: { question: string; answer: string; index: number }) => {
+  const [open, setOpen] = useState(false);
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 12 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: index * 0.05 }}
+      className="bg-card rounded-xl border border-border/50 overflow-hidden"
+    >
+      <button
+        onClick={() => setOpen(!open)}
+        className="w-full flex items-center justify-between p-6 text-left gap-4 hover:bg-muted/30 transition-colors"
+      >
+        <span className="font-sans font-bold text-sm text-foreground">{question}</span>
+        <ChevronDown className={`w-5 h-5 text-muted-foreground flex-shrink-0 transition-transform duration-300 ${open ? "rotate-180" : ""}`} />
+      </button>
+      <motion.div
+        initial={false}
+        animate={{ height: open ? "auto" : 0, opacity: open ? 1 : 0 }}
+        transition={{ duration: 0.3 }}
+        className="overflow-hidden"
+      >
+        <p className="px-6 pb-6 text-sm text-muted-foreground leading-relaxed">{answer}</p>
+      </motion.div>
+    </motion.div>
+  );
+};
+
 const CollaborativeIntelligence = () => {
   return (
     <div className="min-h-screen bg-background">
