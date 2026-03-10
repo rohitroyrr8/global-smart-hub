@@ -326,7 +326,7 @@ const HealthWellness = () => {
             <span className="text-xs tracking-[0.25em] uppercase font-semibold text-accent">
               Ideal Participants
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-4 text-foreground">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-4 text-foreground">
               Who Is This Program For?
             </h2>
           </motion.div>
