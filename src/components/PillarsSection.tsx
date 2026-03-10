@@ -128,7 +128,7 @@ const PillarsSection = () => {
                     <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg ${p.gradient} shrink-0`}>
                       <p.icon className="w-6 h-6 text-accent-foreground" />
                     </div>
-                    <span className="text-[10px] tracking-widest uppercase font-bold text-accent">
+                    <span className="text-xs tracking-widest uppercase font-extrabold text-accent">
                       {p.tag}
                     </span>
                   </div>
