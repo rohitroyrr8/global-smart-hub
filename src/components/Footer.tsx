@@ -132,17 +132,6 @@ const Footer = () => {
                       4th Floor, The Galaxy Hotel,<br />Behind 32nd Milestone, off NH 8,<br />Sector 15, Gurugram, Haryana — 122001, India
                     </span>
                   </li>
-                  <li className="flex items-center gap-3">
-                    <MessageCircle size={16} className="text-[hsl(32,90%,50%)] shrink-0" />
-                    <a
-                      href="https://wa.me/919319165254?text=Hi%20OceanGTA!%20I%20would%20like%20to%20know%20more%20about%20your%20training%20programs."
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-[hsl(220,10%,65%)] hover:text-[hsl(32,90%,50%)] transition-colors"
-                    >
-                      +91 93191 65254
-                    </a>
-                  </li>
                 </ul>
               </div>
             </div>
