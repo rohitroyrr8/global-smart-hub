@@ -7,10 +7,39 @@ const ContactSection = () => {
   const { toast } = useToast();
   const [form, setForm] = useState({ name: "", email: "", whatsapp: "", org: "", message: "" });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({ title: "Inquiry Sent", description: "We'll get back to you within 24 hours." });
-    setForm({ name: "", email: "", whatsapp: "", org: "", message: "" });
+    setSubmitting(true);
+
+    try {
+      // 1. Post to Formspree
+      await fetch("https://formspree.io/f/mreyplrv", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          whatsapp: form.whatsapp,
+          organization: form.org,
+          message: form.message,
+        }),
+      });
+
+      // 2. Send details to WhatsApp
+      const whatsappMessage = encodeURIComponent(
+        `New Inquiry from OceanGTA Website:\n\nName: ${form.name}\nEmail: ${form.email}\nWhatsApp: ${form.whatsapp}\nOrganization: ${form.org}\nMessage: ${form.message}`
+      );
+      window.open(`https://wa.me/919319165254?text=${whatsappMessage}`, "_blank");
+
+      toast({ title: "Inquiry Sent", description: "We'll get back to you within 24 hours." });
+      setForm({ name: "", email: "", whatsapp: "", org: "", message: "" });
+    } catch {
+      toast({ title: "Error", description: "Something went wrong. Please try again.", variant: "destructive" });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -135,10 +164,11 @@ const ContactSection = () => {
             </div>
             <button
               type="submit"
-              className="w-full gradient-cq text-accent-foreground py-3 rounded-md font-semibold flex items-center justify-center gap-2 hover:opacity-90 transition-opacity min-h-[48px]"
+              disabled={submitting}
+              className="w-full gradient-cq text-accent-foreground py-3 rounded-md font-semibold flex items-center justify-center gap-2 hover:opacity-90 transition-opacity min-h-[48px] disabled:opacity-60"
             >
               <Send className="w-4 h-4" />
-              Send Inquiry
+              {submitting ? "Sending..." : "Send Inquiry"}
             </button>
           </motion.form>
         </div>
