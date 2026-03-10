@@ -170,12 +170,12 @@ const HealthWellness = () => {
               to restore mental balance and improve sleep quality.
             </p>
 
-            <div className="flex flex-wrap gap-3 mt-10">
+            <div className="flex flex-wrap gap-2 sm:gap-3 mt-8 sm:mt-10">
               {["8 Expert Modules", "21-Day Action Plan", "Self-Healing Practices", "Herbal Guidance"].map(
                 (t) => (
                   <span
                     key={t}
-                    className="px-5 py-2.5 rounded-full bg-primary-foreground/10 text-primary-foreground text-sm font-medium border border-primary-foreground/20 backdrop-blur-sm"
+                    className="px-3 sm:px-5 py-2 sm:py-2.5 rounded-full bg-primary-foreground/10 text-primary-foreground text-xs sm:text-sm font-medium border border-primary-foreground/20 backdrop-blur-sm"
                   >
                     {t}
                   </span>
