@@ -164,10 +164,11 @@ const ContactSection = () => {
             </div>
             <button
               type="submit"
-              className="w-full gradient-cq text-accent-foreground py-3 rounded-md font-semibold flex items-center justify-center gap-2 hover:opacity-90 transition-opacity min-h-[48px]"
+              disabled={submitting}
+              className="w-full gradient-cq text-accent-foreground py-3 rounded-md font-semibold flex items-center justify-center gap-2 hover:opacity-90 transition-opacity min-h-[48px] disabled:opacity-60"
             >
               <Send className="w-4 h-4" />
-              Send Inquiry
+              {submitting ? "Sending..." : "Send Inquiry"}
             </button>
           </motion.form>
         </div>
