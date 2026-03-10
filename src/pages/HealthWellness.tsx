@@ -139,7 +139,7 @@ const HealthWellness = () => {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,hsl(var(--warm-gold)/0.18),transparent_60%)]" />
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-[1]" />
 
-        <div className="container mx-auto px-6 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <Link
             to="/"
             className="inline-flex items-center gap-2 text-primary-foreground/70 hover:text-primary-foreground mb-8 transition-colors"
