@@ -133,7 +133,7 @@ const Navbar = () => {
             to="/#contact"
             className="gradient-cq text-accent-foreground px-5 py-2.5 rounded-md text-sm font-semibold hover:opacity-90 transition-opacity"
           >
-            Schedule Consultation
+            Book a Free Call
           </Link>
         </div>
 
