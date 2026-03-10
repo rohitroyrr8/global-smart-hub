@@ -421,7 +421,7 @@ const HealthWellness = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-5xl font-bold text-primary-foreground mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-primary-foreground mb-4 sm:mb-6">
               Begin Your Journey to
               <br />
               <span className="text-gradient-cq">Inner Balance</span>
