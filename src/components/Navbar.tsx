@@ -76,8 +76,10 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4">
         <Link to="/" className="flex items-center gap-2 shrink-0">
-          <span className="text-xl sm:text-2xl font-sans font-bold text-primary-foreground tracking-tight">
-            Ocean<span className="text-gradient-cq">GTA</span>
+          <span className={`text-xl sm:text-2xl font-sans font-bold tracking-tight ${
+            !scrolled && isLightPage ? "text-[hsl(220,30%,8%)]" : "text-primary-foreground"
+          }`}>
+            Ocean<span className={!scrolled && isLightPage ? "text-[hsl(32,90%,50%)]" : "text-gradient-cq"}>GTA</span>
           </span>
         </Link>
 
