@@ -35,7 +35,7 @@ const comparisonRows = [
   { feature: "Interview Prep", typical: "None or basic", ocean: "Full mock interviews with feedback" },
   { feature: "Projects", typical: "Generic datasets", ocean: "Real industry datasets" },
   { feature: "Duration", typical: "Self-paced (often abandoned)", ocean: "Structured 3 or 6 months" },
-  { feature: "Certification", typical: "Platform certificate only", ocean: "Internationally recognized" },
+  { feature: "Certification", typical: "Platform certificate only", ocean: "Industry recognized" },
   { feature: "Career Support", typical: "None", ocean: "Placement support + global network" },
   { feature: "Mentorship", typical: "Forum Q&A", ocean: "Direct trainer access" },
 ];
