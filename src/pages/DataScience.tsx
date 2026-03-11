@@ -141,7 +141,7 @@ const DataScience = () => {
       <CTAModal
         open={modalOpen}
         onClose={() => setModalOpen(false)}
-        whatsappUrl="https://wa.me/919319165254?text=Hi%20OceanGTA!%20I%20am%20interested%20in%20the%20Data%20Science%20Training.%20Please%20share%20more%20details."
+        whatsappUrl="https://wa.me/919319165254?text=Hi%20OceanGTA!%20I%20am%20interested%20in%20the%20Data%20Engineering%20%2F%20Big%20Data%20Training.%20Please%20share%20more%20details."
       />
 
       <Footer />
