@@ -530,7 +530,7 @@ const CollaborativeIntelligence = () => {
               <h2 className="text-2xl md:text-4xl font-sans font-bold text-foreground mb-1">G. Vasu Thevan</h2>
               <p className="text-sm font-semibold text-[hsl(var(--rust-orange))] mb-4">Founder & Master Trainer — Collaborative Intelligence (CQ)</p>
               <p className="text-sm text-muted-foreground leading-relaxed mb-6">
-                With over 30 years of transformational leadership coaching experience across Southeast Asia and beyond, G. Vasu Thevan is the visionary founder of the Collaborative Intelligence (CQ) framework. He has empowered government leaders, Fortune 500 executives, and cross-functional teams to build high-performing, trust-based organizations. His expertise in cross-cultural dynamics, conflict management and human chemistry has made him one of Asia's most sought-after organizational transformation experts.
+                G. Vasu Thevan is a transformational coach, corporate consultant and the visionary founder of the Collaborative Intelligence (CQ) framework. With 30+ years of experience, he has coached CEOs, top management and cross-functional teams across Southeast Asia and beyond. He is the author of nearly 20 training manuals covering leadership, emotional intelligence, conflict resolution and human performance. His CQ framework — born from a profound 2005 breakthrough experience — has transformed how organizations build trust, reduce friction and unlock collective potential. Vasu is widely respected as one of Asia's most sought-after organizational transformation experts and a solution guide to corporations globally.
               </p>
 
               {/* Credential badges */}
