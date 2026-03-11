@@ -41,8 +41,8 @@ const DataScience = () => {
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <span className="text-xs tracking-widest uppercase font-bold text-accent">Innovation · 2-Day Program</span>
             <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mt-3 text-primary-foreground leading-tight">
-              Data Science &<br />
-              <span className="text-gradient-cq">Engineering</span>
+              Data Engineering /<br />
+              <span className="text-gradient-cq">Big Data</span>
             </h1>
             <p className="text-primary-foreground/70 mt-4 sm:mt-6 max-w-xl text-base sm:text-lg leading-relaxed">
               Master data engineering, machine learning, and AI-powered analytics to drive digital transformation in government and enterprise.
