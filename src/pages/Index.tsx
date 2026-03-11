@@ -13,8 +13,7 @@ const Index = () => {
   const location = useLocation();
 
   useEffect(() => {
-    const params = new URLSearchParams(location.search);
-    if (params.get("scrollTo") === "send-inquiry") {
+    if (location.hash === "#send-inquiry") {
       setTimeout(() => {
         const el = document.getElementById("send-inquiry");
         if (el) el.scrollIntoView({ behavior: "smooth" });
