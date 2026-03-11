@@ -230,7 +230,7 @@ const CollaborativeIntelligence = () => {
             </span>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-sans text-white leading-tight" style={{ fontWeight: 800, textShadow: '0px 2px 8px rgba(0,0,0,0.4)' }}>
               Collaborative Intelligence{" "}
-              <span className="text-gradient-teal">(CQ)</span>
+              <span className="text-white">(CQ)</span>
             </h1>
             <p className="text-white text-lg md:text-xl mt-5 max-w-2xl leading-relaxed" style={{ fontWeight: 500, textShadow: '0px 1px 6px rgba(0,0,0,0.5)' }}>
               The Missing Link to High-Performance Teams — A transformational 2-day program that rewires team chemistry and unlocks peak collaborative performance.
