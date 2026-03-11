@@ -13,7 +13,7 @@ const CTAModal = ({ open, onClose, whatsappUrl }: CTAModalProps) => {
 
   const handleInquiry = () => {
     onClose();
-    navigate("/?scrollTo=send-inquiry");
+    navigate("/#send-inquiry");
   };
 
   return (

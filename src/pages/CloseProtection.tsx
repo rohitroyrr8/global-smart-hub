@@ -73,7 +73,7 @@ const CloseProtection = () => {
             <a href="https://wa.me/919319165254?text=Hi%20OceanGTA!%20I%20want%20to%20reserve%20my%20seat%20for%20the%20CPO%20training.%20Please%20share%20details." target="_blank" rel="noopener noreferrer" className="gradient-cq text-accent-foreground px-8 py-3.5 rounded-lg font-bold text-base hover:opacity-90 transition-opacity min-h-[48px] text-center">
               Reserve Your Seat Now
             </a>
-            <Link to="/?scrollTo=contact" className="border-2 border-primary-foreground/40 text-primary-foreground px-8 py-3.5 rounded-lg font-bold text-base hover:bg-primary-foreground/10 transition-colors min-h-[48px] text-center">
+            <Link to="/#send-inquiry" className="border-2 border-primary-foreground/40 text-primary-foreground px-8 py-3.5 rounded-lg font-bold text-base hover:bg-primary-foreground/10 transition-colors min-h-[48px] text-center">
               Send Inquiry
             </Link>
           </motion.div>
@@ -301,7 +301,7 @@ const CloseProtection = () => {
               <a href="https://wa.me/919319165254?text=Hi%20OceanGTA!%20I%20want%20to%20reserve%20my%20seat%20for%20the%20CPO%20training.%20Please%20share%20batch%20dates%20and%20details." target="_blank" rel="noopener noreferrer" className="gradient-cq text-accent-foreground px-8 py-4 rounded-lg font-bold text-base sm:text-lg hover:opacity-90 transition-opacity min-h-[48px] text-center">
                 Reserve Your Seat on WhatsApp
               </a>
-              <Link to="/?scrollTo=contact" className="border-2 border-primary-foreground/30 text-primary-foreground px-8 py-4 rounded-lg font-bold text-base hover:bg-primary-foreground/10 transition-colors min-h-[48px] text-center">
+              <Link to="/#send-inquiry" className="border-2 border-primary-foreground/30 text-primary-foreground px-8 py-4 rounded-lg font-bold text-base hover:bg-primary-foreground/10 transition-colors min-h-[48px] text-center">
                 Send Detailed Inquiry
               </Link>
             </div>

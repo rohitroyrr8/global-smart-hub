@@ -122,7 +122,7 @@ const SalesMarketing = () => {
   const navigate = useNavigate();
 
   const goToInquiry = () => {
-    navigate("/?scrollTo=contact");
+    navigate("/#send-inquiry");
   };
 
   return (

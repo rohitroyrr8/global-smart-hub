@@ -5,8 +5,8 @@ const quickLinks = [
   { label: "Programs", href: "/#programs" },
   { label: "Faculty", href: "/#faculty" },
   { label: "Partnerships", href: "/#partnerships" },
-  { label: "Contact", href: "/#contact" },
-  { label: "Book a Free Call", href: "/#contact" },
+  { label: "Contact", href: "/#send-inquiry" },
+  { label: "Book a Free Call", href: "/#send-inquiry" },
 ];
 
 const centerLinks = [
