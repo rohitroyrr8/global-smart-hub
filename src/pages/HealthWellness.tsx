@@ -430,12 +430,22 @@ const HealthWellness = () => {
               Transform your relationship with stress and sleep. Discover the ancient wisdom of
               Ayurveda and build a life of lasting wellness.
             </p>
-            <a
-              href="mailto:business@oceangta.com"
-              className="inline-block gradient-ocean text-primary-foreground px-10 py-4 rounded-lg font-semibold text-lg border border-primary-foreground/20 hover:opacity-90 transition-opacity shadow-xl"
-            >
-              Request a Quote
-            </a>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/?scrollTo=send-inquiry"
+                className="gradient-cq text-accent-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:opacity-90 transition-opacity shadow-xl min-h-[48px] flex items-center justify-center"
+              >
+                Discover Your Wellness Journey
+              </Link>
+              <a
+                href="https://wa.me/919319165254?text=Hi%20OceanGTA!%20I%20am%20interested%20in%20the%20Health%20%26%20Wellness%20Program.%20Please%20share%20more%20details."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border border-primary-foreground/40 text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary-foreground/10 transition-colors min-h-[48px] flex items-center justify-center"
+              >
+                Book Your Health Expert Now
+              </a>
+            </div>
           </motion.div>
         </div>
       </section>

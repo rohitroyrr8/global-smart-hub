@@ -130,6 +130,7 @@ const faqs = [
 ];
 
 const Blockchain = () => {
+  const [modalOpen, setModalOpen] = useState(false);
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
       <Navbar />

@@ -121,11 +121,28 @@ const DataScience = () => {
         <div className="container mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4">Ready to Transform with Data?</h2>
           <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-8 max-w-lg mx-auto">Join our next cohort and become a certified data science and engineering professional.</p>
-          <Link to="/#contact" className="inline-block gradient-teal text-accent-foreground px-6 sm:px-8 py-3 rounded-md font-semibold hover:opacity-90 transition-opacity min-h-[48px]">
-            Enroll Now
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/?scrollTo=send-inquiry"
+              className="gradient-cq text-accent-foreground px-6 sm:px-8 py-3 rounded-md font-semibold hover:opacity-90 transition-opacity min-h-[48px] flex items-center justify-center"
+            >
+              Book Your Data Science Training Now
+            </Link>
+            <button
+              onClick={() => setModalOpen(true)}
+              className="border border-accent text-accent px-6 sm:px-8 py-3 rounded-md font-semibold hover:bg-accent/10 transition-colors min-h-[48px]"
+            >
+              Join the Future of Data
+            </button>
+          </div>
         </div>
       </section>
+
+      <CTAModal
+        open={modalOpen}
+        onClose={() => setModalOpen(false)}
+        whatsappUrl="https://wa.me/919319165254?text=Hi%20OceanGTA!%20I%20am%20interested%20in%20the%20Data%20Science%20Training.%20Please%20share%20more%20details."
+      />
 
       <Footer />
     </div>
