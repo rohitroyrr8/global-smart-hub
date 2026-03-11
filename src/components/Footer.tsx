@@ -12,7 +12,7 @@ const quickLinks = [
 const centerLinks = [
   { label: "Collaborative Intelligence", href: "/collaborative-intelligence" },
   { label: "Blockchain & Web3", href: "/blockchain" },
-  { label: "Data Science", href: "/data-science" },
+  { label: "Data Engineering / Big Data", href: "/data-science" },
   { label: "Health & Wellness", href: "/health-wellness" },
   { label: "Close Protection Officer", href: "/close-protection" },
   { label: "Sales & Marketing", href: "/sales-marketing" },

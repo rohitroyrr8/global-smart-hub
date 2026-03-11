@@ -41,8 +41,8 @@ const DataScience = () => {
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <span className="text-xs tracking-widest uppercase font-bold text-accent">Innovation · 2-Day Program</span>
             <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mt-3 text-primary-foreground leading-tight">
-              Data Science &<br />
-              <span className="text-gradient-cq">Engineering</span>
+              Data Engineering /<br />
+              <span className="text-gradient-cq">Big Data</span>
             </h1>
             <p className="text-primary-foreground/70 mt-4 sm:mt-6 max-w-xl text-base sm:text-lg leading-relaxed">
               Master data engineering, machine learning, and AI-powered analytics to drive digital transformation in government and enterprise.
@@ -120,13 +120,13 @@ const DataScience = () => {
       <section className="py-14 sm:py-20 bg-background">
         <div className="container mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4">Ready to Transform with Data?</h2>
-          <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-8 max-w-lg mx-auto">Join our next cohort and become a certified data science and engineering professional.</p>
+          <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-8 max-w-lg mx-auto">Join our next cohort and become a certified data engineering and big data professional.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/?scrollTo=send-inquiry"
               className="gradient-cq text-accent-foreground px-6 sm:px-8 py-3 rounded-md font-semibold hover:opacity-90 transition-opacity min-h-[48px] flex items-center justify-center"
             >
-              Book Your Data Science Training Now
+              Book Your Data Engineering Training Now
             </Link>
             <button
               onClick={() => setModalOpen(true)}
@@ -141,7 +141,7 @@ const DataScience = () => {
       <CTAModal
         open={modalOpen}
         onClose={() => setModalOpen(false)}
-        whatsappUrl="https://wa.me/919319165254?text=Hi%20OceanGTA!%20I%20am%20interested%20in%20the%20Data%20Science%20Training.%20Please%20share%20more%20details."
+        whatsappUrl="https://wa.me/919319165254?text=Hi%20OceanGTA!%20I%20am%20interested%20in%20the%20Data%20Engineering%20%2F%20Big%20Data%20Training.%20Please%20share%20more%20details."
       />
 
       <Footer />
