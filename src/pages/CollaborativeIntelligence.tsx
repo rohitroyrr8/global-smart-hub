@@ -826,7 +826,7 @@ const CollaborativeIntelligence = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/#contact"
+                to="/#send-inquiry"
                 className="inline-flex items-center justify-center bg-white text-foreground px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/90 transition-all shadow-xl min-h-[48px]"
               >
                 Start the Transformation

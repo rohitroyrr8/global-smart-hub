@@ -432,7 +432,7 @@ const HealthWellness = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/?scrollTo=send-inquiry"
+                to="/#send-inquiry"
                 className="gradient-cq text-accent-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:opacity-90 transition-opacity shadow-xl min-h-[48px] flex items-center justify-center"
               >
                 Discover Your Wellness Journey
