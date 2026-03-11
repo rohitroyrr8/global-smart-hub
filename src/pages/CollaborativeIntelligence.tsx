@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import cqHero from "@/assets/cq-hero.jpg";
 import {
   Layers, Heart, Target, Handshake, Sparkles, FileCheck,
   Brain, Users, ShieldCheck, ArrowRight, CheckCircle2,
