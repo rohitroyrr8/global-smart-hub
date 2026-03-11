@@ -417,7 +417,7 @@ const SalesMarketing = () => {
             {/* Trainer Image */}
             <motion.div {...fadeUp} className="flex-shrink-0">
               <div className="w-48 h-48 sm:w-56 sm:h-56 rounded-full border-4 border-[hsl(32,90%,50%)] overflow-hidden shadow-2xl">
-                <img src={salesTrainer} alt="International Sales & Marketing Trainer" className="w-full h-full object-cover" />
+                <img src={salesTrainer} alt="International Sales & Marketing Trainer" className="w-full h-full object-cover object-top" />
               </div>
             </motion.div>
             {/* Content */}
