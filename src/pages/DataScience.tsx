@@ -31,7 +31,7 @@ const roleTiles = [
 
 const comparisonRows = [
   { feature: "Learning Style", typical: "Pre-recorded videos", ocean: "Live interactive sessions" },
-  { feature: "Trainer", typical: "Unknown content creator", ocean: "International certified trainer" },
+  { feature: "Trainer", typical: "Unknown content creator", ocean: "Experienced Industry Trainer" },
   { feature: "Interview Prep", typical: "None or basic", ocean: "Full mock interviews with feedback" },
   { feature: "Projects", typical: "Generic datasets", ocean: "Real industry datasets" },
   { feature: "Duration", typical: "Self-paced (often abandoned)", ocean: "Structured 3 or 6 months" },
