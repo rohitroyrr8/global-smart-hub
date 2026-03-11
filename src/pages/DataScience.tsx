@@ -25,6 +25,7 @@ const outcomes = [
 ];
 
 const DataScience = () => {
+  const [modalOpen, setModalOpen] = useState(false);
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
       <Navbar />
