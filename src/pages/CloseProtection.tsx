@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import CountUpNumber from "@/components/CountUpNumber";
 import cpoHero from "@/assets/cpo-hero.jpg";
 import cpoTeam from "@/assets/cpo-team.jpg";
-import cpoTrainer from "@/assets/cpo-trainer.jpg";
+
 
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } };
 
@@ -202,39 +202,6 @@ const CloseProtection = () => {
         </div>
       </section>
 
-      {/* SECTION 6 — TRAINER SPOTLIGHT */}
-      <section className="py-16 sm:py-24 bg-background">
-        <div className="container mx-auto px-4 sm:px-6">
-          <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center mb-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground">Learn From <span className="text-gradient-cq">The Best</span></h2>
-          </motion.div>
-          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center max-w-5xl mx-auto">
-            <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-              <img src={cpoTrainer} alt="Retired Military Commander - CPO Trainer" className="rounded-2xl shadow-2xl w-full max-w-md mx-auto object-cover aspect-[3/4]" />
-            </motion.div>
-            <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ delay: 0.2 }}>
-              <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4">Your Trainer</h3>
-              <p className="text-muted-foreground text-sm sm:text-base leading-relaxed mb-4">
-                Your CPO trainer is a decorated Retired Military Commander with over 20 years of active service and operational experience across 50+ nations. He has trained Close Protection Officers for governments, diplomatic missions, corporate VIP details and private security organizations across Southeast Asia, the Middle East and South Asia.
-              </p>
-              <p className="text-muted-foreground text-sm sm:text-base leading-relaxed mb-8">
-                His training methodology combines real battlefield experience with international CPO certification standards — producing graduates who are deployment-ready from Day 1.
-              </p>
-              <div className="flex flex-wrap gap-3">
-                {[
-                  { emoji: "🎖️", label: "Retired Military Commander" },
-                  { emoji: "🌍", label: "Active in 50+ Nations" },
-                  { emoji: "📜", label: "SEA Certified Trainer & Examiner" },
-                ].map((b) => (
-                  <span key={b.label} className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-accent/10 border border-accent/20 text-foreground text-xs sm:text-sm font-semibold">
-                    {b.emoji} {b.label}
-                  </span>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
 
       {/* SECTION 7 — INDIA OPPORTUNITY STRIP */}
       <section className="py-16 sm:py-24 gradient-cq">
