@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import CountUpNumber from "@/components/CountUpNumber";
 import cpoHero from "@/assets/cpo-hero.jpg";
 import cpoTeam from "@/assets/cpo-team.jpg";
-import cpoTrainer from "@/assets/cpo-trainer.jpg";
+
 
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } };
 
