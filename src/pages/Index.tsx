@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import PillarsSection from "@/components/PillarsSection";
-import SendInquirySection from "@/components/SendInquirySection";
+
 import FacultySection from "@/components/FacultySection";
 import PartnershipsSection from "@/components/PartnershipsSection";
 import ContactSection from "@/components/ContactSection";
