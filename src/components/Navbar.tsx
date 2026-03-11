@@ -107,7 +107,11 @@ const Navbar = () => {
             onMouseLeave={handleMouseLeave}
           >
             <button
-              className="flex items-center gap-1 text-sm font-medium text-primary-foreground/80 hover:text-primary-foreground transition-colors whitespace-nowrap"
+              className={`flex items-center gap-1 text-sm font-medium transition-colors whitespace-nowrap ${
+                !scrolled && isLightPage
+                  ? "text-[hsl(220,30%,8%)]/80 hover:text-[hsl(220,30%,8%)]"
+                  : "text-primary-foreground/80 hover:text-primary-foreground"
+              }`}
               onClick={() => setDropdownOpen(!dropdownOpen)}
             >
               Centers of Excellence
