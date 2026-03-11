@@ -59,6 +59,7 @@ const Navbar = () => {
   };
 
   const isActive = (href: string) => location.pathname === href;
+  const isLightPage = location.pathname === "/sales-marketing";
 
   return (
     <motion.nav
@@ -68,13 +69,17 @@ const Navbar = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
           ? "gradient-ocean shadow-lg backdrop-blur-md"
-          : "bg-transparent"
+          : isLightPage
+            ? "bg-gradient-to-b from-black/15 to-transparent"
+            : "bg-transparent"
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4">
         <Link to="/" className="flex items-center gap-2 shrink-0">
-          <span className="text-xl sm:text-2xl font-sans font-bold text-primary-foreground tracking-tight">
-            Ocean<span className="text-gradient-cq">GTA</span>
+          <span className={`text-xl sm:text-2xl font-sans font-bold tracking-tight ${
+            !scrolled && isLightPage ? "text-[hsl(220,30%,8%)]" : "text-primary-foreground"
+          }`}>
+            Ocean<span className={!scrolled && isLightPage ? "text-[hsl(32,90%,50%)]" : "text-gradient-cq"}>GTA</span>
           </span>
         </Link>
 
@@ -84,7 +89,11 @@ const Navbar = () => {
             <Link
               key={l.label}
               to={l.href}
-              className="text-sm font-medium text-primary-foreground/80 hover:text-primary-foreground transition-colors whitespace-nowrap"
+              className={`text-sm font-medium transition-colors whitespace-nowrap ${
+                !scrolled && isLightPage
+                  ? "text-[hsl(220,30%,8%)]/80 hover:text-[hsl(220,30%,8%)]"
+                  : "text-primary-foreground/80 hover:text-primary-foreground"
+              }`}
             >
               {l.label}
             </Link>
@@ -98,7 +107,11 @@ const Navbar = () => {
             onMouseLeave={handleMouseLeave}
           >
             <button
-              className="flex items-center gap-1 text-sm font-medium text-primary-foreground/80 hover:text-primary-foreground transition-colors whitespace-nowrap"
+              className={`flex items-center gap-1 text-sm font-medium transition-colors whitespace-nowrap ${
+                !scrolled && isLightPage
+                  ? "text-[hsl(220,30%,8%)]/80 hover:text-[hsl(220,30%,8%)]"
+                  : "text-primary-foreground/80 hover:text-primary-foreground"
+              }`}
               onClick={() => setDropdownOpen(!dropdownOpen)}
             >
               Centers of Excellence
@@ -151,7 +164,9 @@ const Navbar = () => {
 
         {/* Mobile toggle */}
         <button
-          className="lg:hidden text-primary-foreground p-2 min-h-[44px] min-w-[44px] flex items-center justify-center"
+          className={`lg:hidden p-2 min-h-[44px] min-w-[44px] flex items-center justify-center ${
+            !scrolled && isLightPage ? "text-[hsl(220,30%,8%)]" : "text-primary-foreground"
+          }`}
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
         >
