@@ -16,7 +16,7 @@ const navLinks = [
   { label: "Programs", href: "/#programs" },
   { label: "Faculty", href: "/#faculty" },
   { label: "Partnerships", href: "/#partnerships" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Contact", href: "/#send-inquiry" },
 ];
 
 const Navbar = () => {
