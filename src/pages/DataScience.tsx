@@ -120,7 +120,7 @@ const DataScience = () => {
       <section className="py-14 sm:py-20 bg-background">
         <div className="container mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4">Ready to Transform with Data?</h2>
-          <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-8 max-w-lg mx-auto">Join our next cohort and become a certified data science and engineering professional.</p>
+          <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-8 max-w-lg mx-auto">Join our next cohort and become a certified data engineering and big data professional.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/?scrollTo=send-inquiry"
