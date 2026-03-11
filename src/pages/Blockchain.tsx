@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowLeft, Shield, Globe, Lock, Layers, Code, Zap, Clock, Users, Award, BookOpen, Target, ChevronDown, Briefcase, GraduationCap, Building2, Landmark, TrendingUp, Wallet, Lightbulb } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import CTAModal from "@/components/CTAModal";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const fadeUp = {
