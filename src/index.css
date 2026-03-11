@@ -158,4 +158,48 @@
     backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.4);
   }
+
+  /* Data Science page unique styles */
+  .ds-grid-bg {
+    background-color: #0A0A0A;
+    background-image:
+      linear-gradient(rgba(14, 165, 233, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(14, 165, 233, 0.06) 1px, transparent 1px);
+    background-size: 60px 60px;
+    position: relative;
+  }
+
+  .ds-grid-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 50%, rgba(14, 165, 233, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .ds-glow-teal {
+    box-shadow: 0 0 20px rgba(14, 165, 233, 0.3), 0 0 60px rgba(14, 165, 233, 0.1);
+  }
+
+  .ds-glow-text {
+    text-shadow: 0 0 40px rgba(14, 165, 233, 0.3);
+  }
+
+  .ds-ticker {
+    animation: ds-scroll 40s linear infinite;
+  }
+
+  @keyframes ds-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .ds-tech-tile {
+    @apply bg-white border border-gray-200 rounded-xl p-4 text-center transition-all duration-300;
+  }
+
+  .ds-tech-tile:hover {
+    border-color: #0EA5E9;
+    box-shadow: 0 0 20px rgba(14, 165, 233, 0.15);
+  }
 }
