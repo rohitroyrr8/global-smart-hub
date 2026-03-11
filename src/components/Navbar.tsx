@@ -59,6 +59,7 @@ const Navbar = () => {
   };
 
   const isActive = (href: string) => location.pathname === href;
+  const isLightPage = location.pathname === "/sales-marketing";
 
   return (
     <motion.nav
@@ -68,7 +69,9 @@ const Navbar = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
           ? "gradient-ocean shadow-lg backdrop-blur-md"
-          : "bg-transparent"
+          : isLightPage
+            ? "bg-gradient-to-b from-black/15 to-transparent"
+            : "bg-transparent"
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4">
