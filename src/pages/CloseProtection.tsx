@@ -211,15 +211,16 @@ const CloseProtection = () => {
           </motion.div>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { title: "Before OceanGTA CPO Training", items: ["Travel to UK/USA/Europe required", "₹5–10 Lakhs in travel costs alone", "Language and cultural barriers", "Months of waiting for visa and admission"], color: "bg-black/20" },
-              { title: "With OceanGTA CPO Training", items: ["Train in India — zero travel cost", "Same international SEA certification", "Trained by a military commander in your region", "Enroll 1–2 months in advance — limited seats"], color: "bg-black/30" },
-              { title: "Career After Certification", items: ["Work in UAE, India, Singapore, UK", "Earn $75,000–$150,000+ annually", "Protect diplomats, corporates, celebrities, HNIs", "Join a global network of certified CPOs"], color: "bg-black/20" },
+              { title: "Before OceanGTA CPO Training", items: ["Travel to UK/USA/Europe required", "₹5–10 Lakhs in travel costs alone", "Language and cultural barriers", "Months of waiting for visa and admission"], color: "bg-[hsl(220,30%,12%)]" },
+              { title: "With OceanGTA CPO Training", items: ["Train in India — zero travel cost", "Same international SEA certification", "Trained by a military commander in your region", "Enroll 1–2 months in advance — limited seats"], color: "bg-[hsl(220,30%,8%)]" },
+              { title: "Career After Certification", items: ["Work in UAE, India, Singapore, UK", "Earn $75,000–$150,000+ annually", "Protect diplomats, corporates, celebrities, HNIs", "Join a global network of certified CPOs"], color: "bg-[hsl(220,30%,12%)]" },
             ].map((col, i) => (
-              <motion.div key={i} variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ delay: i * 0.1 }} className={`${col.color} rounded-xl p-6 backdrop-blur-sm`}>
-                <h3 className="font-bold text-accent-foreground text-base sm:text-lg mb-4">{col.title}</h3>
+              <motion.div key={i} variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ delay: i * 0.1 }} className={`${col.color} rounded-xl p-6`}>
+                <h3 className="font-bold text-white text-base sm:text-lg mb-4">{col.title}</h3>
                 <ul className="space-y-3">
                   {col.items.map((item, j) => (
-                    <li key={j} className="text-accent-foreground/90 text-sm flex gap-2">
+                    <li key={j} className="text-white/90 text-sm flex gap-2">
+
                       <span className="flex-shrink-0">✓</span> {item}
                     </li>
                   ))}
