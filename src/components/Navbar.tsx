@@ -89,7 +89,11 @@ const Navbar = () => {
             <Link
               key={l.label}
               to={l.href}
-              className="text-sm font-medium text-primary-foreground/80 hover:text-primary-foreground transition-colors whitespace-nowrap"
+              className={`text-sm font-medium transition-colors whitespace-nowrap ${
+                !scrolled && isLightPage
+                  ? "text-[hsl(220,30%,8%)]/80 hover:text-[hsl(220,30%,8%)]"
+                  : "text-primary-foreground/80 hover:text-primary-foreground"
+              }`}
             >
               {l.label}
             </Link>
