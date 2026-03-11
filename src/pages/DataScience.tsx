@@ -76,7 +76,7 @@ const DataScience = () => {
                 className="bg-[#0EA5E9] hover:bg-[#0EA5E9]/90 text-white font-semibold px-8 py-4 rounded-lg text-base min-h-[48px] transition-all ds-glow-teal">
                 Enroll Now — WhatsApp Us
               </a>
-              <Link to="/?scrollTo=send-inquiry"
+              <Link to="/#send-inquiry"
                 className="border border-white/30 text-white hover:bg-white/10 font-semibold px-8 py-4 rounded-lg text-base min-h-[48px] transition-all">
                 Send Detailed Inquiry
               </Link>
