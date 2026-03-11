@@ -6,18 +6,73 @@ import cqDay1 from "@/assets/cq-day1.jpg";
 import cqDay2 from "@/assets/cq-day2.jpg";
 import cqBenefitsBg from "@/assets/cq-benefits-bg.jpg";
 import cqOutcomes from "@/assets/cq-outcomes.jpg";
+import cqTrainerVasu from "@/assets/cq-trainer-vasu.jpg";
 import {
   Layers, Heart, Target, Handshake, Sparkles, FileCheck,
   Brain, Users, ShieldCheck, ArrowRight, CheckCircle2,
   Headphones, MessageSquare, BookOpen, PlayCircle, Link2, Zap,
   ChevronRight, ArrowLeft, Star, Award, Globe,
   Building2, Landmark, GraduationCap, Hospital, Rocket, Globe2,
-  TrendingUp, Quote, BarChart3, ChevronDown
+  TrendingUp, Quote, BarChart3, ChevronDown, AlertTriangle,
+  Lightbulb, Frown, FlaskConical, Trophy, Calendar, MapPin,
+  ArrowDown, Microscope
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+
+/* ── CountUp hook for stats ── */
+const useCountUp = (end: number, duration = 2000) => {
+  const [count, setCount] = useState(0);
+  const ref = useRef<HTMLDivElement>(null);
+  const started = useRef(false);
+  useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting && !started.current) {
+        started.current = true;
+        const startTime = performance.now();
+        const animate = (now: number) => {
+          const progress = Math.min((now - startTime) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          setCount(Math.round(eased * end));
+          if (progress < 1) requestAnimationFrame(animate);
+        };
+        requestAnimationFrame(animate);
+      }
+    }, { threshold: 0.3 });
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, [end, duration]);
+  return { count, ref };
+};
+
+/* ── Animated stat card ── */
+const AnimatedStatCard = ({ stat, label, source, index }: { stat: string; label: string; source: string; index: number }) => {
+  // Try to extract a number for animation
+  const numMatch = stat.match(/^(\d+)/);
+  const num = numMatch ? parseInt(numMatch[1]) : null;
+  const prefix = stat.match(/^[^0-9]*/)?.[0] || "";
+  const suffix = num !== null ? stat.replace(/^[^0-9]*\d+/, "") : "";
+  const { count, ref } = useCountUp(num || 0);
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, scale: 0.95 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+      transition={{ delay: index * 0.05 }}
+      className="bg-card rounded-2xl p-6 border border-border/50 text-center hover:shadow-lg hover:border-[hsl(var(--rust-orange))]/20 transition-all duration-300"
+    >
+      <div className="text-3xl md:text-4xl font-sans font-extrabold text-[hsl(var(--rust-orange))] mb-2">
+        {num !== null ? `${prefix}${count}${suffix}` : stat}
+      </div>
+      <p className="text-xs text-muted-foreground leading-relaxed mb-3">{label}</p>
+      <span className="text-[10px] uppercase tracking-wider font-bold text-muted-foreground/60">{source}</span>
+    </motion.div>
+  );
+};
 
 /* ── Day 1 modules ── */
 const day1 = [
@@ -98,14 +153,6 @@ const outcomes = [
   { title: "Harmonious Culture", desc: "Create a positive working environment where trust prevails." },
   { title: "Goal Achievement", desc: "Collaborate effectively toward desired organizational goals." },
   { title: "Synergy", desc: "Maximize the strengths and potential of all members." },
-];
-
-/* ── Synergy formula items ── */
-const synergyFormula = [
-  { label: "IQ", sub: "Intellectual", icon: Brain },
-  { label: "EQ", sub: "Emotional", icon: Heart },
-  { label: "VQ", sub: "Value", icon: ShieldCheck },
-  { label: "CQ", sub: "Collaborative", icon: Users },
 ];
 
 const fadeUp = { initial: { opacity: 0, y: 24 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true } };
@@ -203,7 +250,7 @@ const CollaborativeIntelligence = () => {
             <div className="flex flex-col sm:flex-row gap-4 mt-10">
               <Link
                 to="/#contact"
-                className="inline-block px-10 py-4 rounded-xl text-lg text-center hover:opacity-90 transition-opacity"
+                className="inline-block px-10 py-4 rounded-xl text-lg text-center hover:opacity-90 transition-opacity min-h-[48px]"
                 style={{ background: '#FFFFFF', color: '#0A1628', fontWeight: 700, boxShadow: '0 4px 15px rgba(0,0,0,0.3)' }}
               >
                 Rewire Your Team
@@ -212,7 +259,7 @@ const CollaborativeIntelligence = () => {
                 href="https://wa.me/919319165254?text=Hi%20OceanGTA!%20I%20am%20interested%20in%20the%20CQ%20Training%20for%20my%20team.%20Please%20share%20more%20details."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-10 py-4 rounded-xl text-lg text-center text-white hover:opacity-90 transition-all"
+                className="inline-block px-10 py-4 rounded-xl text-lg text-center text-white hover:opacity-90 transition-all min-h-[48px]"
                 style={{ background: '#0A1628', fontWeight: 700, boxShadow: '0 4px 15px rgba(0,0,0,0.3)' }}
               >
                 Book a Discovery Call
@@ -222,7 +269,59 @@ const CollaborativeIntelligence = () => {
         </div>
       </section>
 
-      {/* ──── The Gap / Why CQ ──── */}
+      {/* ──── ENHANCEMENT 1: Google Research Banner ──── */}
+      <section className="py-16 md:py-20 relative overflow-hidden" style={{ background: '#0A1628' }}>
+        <div className="absolute top-0 left-0 right-0 h-1 bg-[hsl(var(--rust-orange))]" />
+        <div className="container mx-auto px-6">
+          <motion.div {...fadeUp} className="text-center mb-12">
+            <span className="text-xs tracking-widest uppercase font-bold text-[hsl(var(--rust-orange))]">Backed by Science</span>
+            <h2 className="text-2xl md:text-4xl font-sans font-bold mt-3 text-white">The World's Biggest Research Confirms It</h2>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {[
+              {
+                emoji: "🔬",
+                title: "Google Project Aristotle",
+                text: "Google studied 180+ teams over 2 years in Project Aristotle — the largest team research in corporate history. Their #1 finding: Psychological Safety — the ability to speak, trust and connect — is the SINGLE most critical factor in team success. This is exactly what CQ builds.",
+                source: "Google Project Aristotle, 2014",
+              },
+              {
+                emoji: "🎓",
+                title: "Harvard Business School",
+                text: "Amy Edmondson of Harvard Business School found that psychologically safe teams are more willing to speak up, share ideas and advance innovation. Only 47% of employees worldwide work in psychologically safe environments.",
+                source: "Harvard Business School / Ipsos Research",
+              },
+              {
+                emoji: "🧠",
+                title: "Neuroscience Proof",
+                text: "Brain research using neural scanning technology proves that teams with high group identification literally develop synchronized brain activity — thinking more in sync, making better decisions and performing at higher collective levels.",
+                source: "Frontiers in Neuroscience, 2025",
+              },
+            ].map((col, i) => (
+              <motion.div
+                key={col.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.15 }}
+                className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-[hsl(var(--rust-orange))]/30 transition-all duration-300"
+              >
+                <span className="text-4xl mb-4 block">{col.emoji}</span>
+                <h3 className="font-sans font-bold text-lg text-white mb-3">{col.title}</h3>
+                <p className="text-white/70 text-sm leading-relaxed mb-4">{col.text}</p>
+                <span className="text-[10px] uppercase tracking-wider font-bold text-[hsl(var(--rust-orange))]/80">{col.source}</span>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.p {...fadeUp} className="text-center mt-10 text-lg md:text-xl font-sans font-bold text-[hsl(var(--rust-orange))]">
+            "CQ doesn't just feel right — science proves it works."
+          </motion.p>
+        </div>
+      </section>
+
+      {/* ──── ENHANCEMENT 2: Upgraded Challenge Section ──── */}
       <section className="py-20 md:py-28 bg-muted/30">
         <div className="container mx-auto px-6">
           <motion.div {...fadeUp} className="text-center mb-14">
@@ -230,6 +329,58 @@ const CollaborativeIntelligence = () => {
             <h2 className="text-2xl md:text-4xl font-sans font-bold mt-3 text-foreground">Why Smart Teams Still Fail to Sync</h2>
           </motion.div>
 
+          {/* 3 Bold Problem Cards */}
+          <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6 mb-10">
+            {[
+              {
+                emoji: "⚠️",
+                accent: "border-red-500/50 bg-red-500/5",
+                accentDot: "bg-red-500",
+                title: "THE CURRENT REALITY",
+                text: "Companies invest billions in IQ and EQ training every year — hiring the smartest, most emotionally aware people they can find.",
+              },
+              {
+                emoji: "😔",
+                accent: "border-border bg-muted/50",
+                accentDot: "bg-muted-foreground",
+                title: "THE PAINFUL GAP",
+                text: "Yet silos persist. Friction grows. Smart, nice people still fail to work as one. Individual excellence never becomes collective power.",
+              },
+              {
+                emoji: "💡",
+                accent: "border-[hsl(var(--rust-orange))]/50 bg-[hsl(var(--rust-orange))]/5",
+                accentDot: "bg-[hsl(var(--rust-orange))]",
+                title: "THE ROOT CAUSE",
+                text: "The missing ingredient was never intelligence or emotion. It was the chemistry between people — the invisible force that turns a group into a unified team.",
+              },
+            ].map((card, i) => (
+              <motion.div
+                key={card.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.12 }}
+                className={`rounded-2xl border-2 p-8 shadow-sm ${card.accent}`}
+              >
+                <span className="text-3xl mb-4 block">{card.emoji}</span>
+                <div className="flex items-center gap-2 mb-3">
+                  <div className={`w-2.5 h-2.5 rounded-full ${card.accentDot}`} />
+                  <h4 className="font-sans text-xs font-extrabold tracking-widest uppercase text-foreground">{card.title}</h4>
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed">{card.text}</p>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Dramatic statement */}
+          <motion.div {...fadeUp} className="text-center mb-14">
+            <p className="text-xl md:text-3xl font-sans font-bold text-foreground">
+              That invisible force has a name. It's called{" "}
+              <span className="text-[hsl(var(--rust-orange))]">CQ</span>.
+            </p>
+          </motion.div>
+
+          {/* Challenge image + existing content side by side */}
           <motion.div {...fadeUp} className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 items-stretch">
             <div className="rounded-2xl border border-border bg-card p-8 md:p-10 shadow-sm">
               <div className="space-y-6 text-sm text-muted-foreground">
@@ -247,17 +398,14 @@ const CollaborativeIntelligence = () => {
                 </div>
               </div>
             </div>
-
-            {/* Challenge Image - RIGHT side */}
             <motion.div {...fadeUp} className="rounded-xl overflow-hidden shadow-lg">
               <img src={cqChallenge} alt="Team facing communication challenges" className="w-full h-full object-cover" style={{ borderRadius: '12px' }} />
             </motion.div>
           </motion.div>
 
-          {/* CQ Definition + Synergy Formula */}
+          {/* ──── ENHANCEMENT 3: Upgraded Synergy Formula ──── */}
           <motion.div {...fadeUp} className="mt-14 max-w-5xl mx-auto rounded-2xl border border-border bg-card p-8 md:p-12 shadow-sm">
             <div className="grid md:grid-cols-2 gap-10 items-center">
-              {/* Concept Image - LEFT side */}
               <motion.div {...fadeUp} className="rounded-xl overflow-hidden shadow-lg order-2 md:order-1">
                 <img src={cqConcept} alt="Team breakthrough celebration" className="w-full h-full object-cover" style={{ borderRadius: '12px' }} />
               </motion.div>
@@ -271,18 +419,31 @@ const CollaborativeIntelligence = () => {
                   <p className="text-sm text-muted-foreground mb-5 leading-relaxed">
                     CQ is the latest discovery in team development — a transformational program that shifts the working chemistry of team members. The goal: to make team members more open, understanding, cooperative, forgiving, and trusting within a short period.
                   </p>
-                  <div className="flex items-center gap-3 flex-wrap">
-                    {synergyFormula.map((s, i) => (
-                      <div key={s.label} className="flex items-center gap-2">
-                        <div className="w-14 h-14 rounded-xl bg-muted border border-border flex flex-col items-center justify-center">
-                          <s.icon className="w-4 h-4 text-foreground" />
-                          <span className="text-xs font-extrabold tracking-wide text-foreground">{s.label}</span>
+
+                  {/* Enhanced Synergy Formula */}
+                  <div className="flex flex-col sm:flex-row items-center gap-3 flex-wrap">
+                    {[
+                      { label: "IQ", sub: "Intellectual", color: "from-blue-500 to-blue-600", shadow: "shadow-blue-500/30", icon: Brain },
+                      { label: "EQ", sub: "Emotional", color: "from-green-500 to-green-600", shadow: "shadow-green-500/30", icon: Heart },
+                      { label: "VQ", sub: "Value", color: "from-purple-500 to-purple-600", shadow: "shadow-purple-500/30", icon: ShieldCheck },
+                      { label: "CQ", sub: "Collaborative", color: "from-[hsl(var(--rust-orange))] to-[hsl(var(--sun-orange))]", shadow: "shadow-[hsl(var(--rust-orange))]/40", icon: Users, large: true },
+                    ].map((s, i) => (
+                      <div key={s.label} className="flex items-center gap-2 sm:gap-3">
+                        <div className={`relative flex flex-col items-center justify-center rounded-xl bg-gradient-to-br ${s.color} shadow-lg ${s.shadow} text-white ${s.large ? "w-16 h-16 md:w-20 md:h-20" : "w-14 h-14"}`}>
+                          <s.icon className={`${s.large ? "w-5 h-5" : "w-4 h-4"}`} />
+                          <span className={`font-extrabold tracking-wide ${s.large ? "text-sm" : "text-xs"}`}>{s.label}</span>
+                          {s.large && (
+                            <span className="absolute -bottom-6 text-[10px] font-bold text-[hsl(var(--rust-orange))] whitespace-nowrap">← The Missing Link</span>
+                          )}
                         </div>
-                        {i < synergyFormula.length - 1 && <span className="text-foreground font-extrabold text-lg">+</span>}
+                        {i < 3 && <span className="text-foreground font-extrabold text-lg hidden sm:inline">+</span>}
+                        {i < 3 && <ArrowDown className="w-4 h-4 text-foreground sm:hidden" />}
                       </div>
                     ))}
-                    <span className="text-foreground font-extrabold text-lg">=</span>
-                    <span className="font-sans font-extrabold text-xl px-3 py-1.5 rounded-lg bg-primary text-primary-foreground">Total Synergy</span>
+                    <span className="text-foreground font-extrabold text-lg mt-4 sm:mt-0">=</span>
+                    <span className="font-sans font-extrabold text-xl px-4 py-2 rounded-xl bg-gradient-to-r from-[hsl(var(--rust-orange))] to-[hsl(var(--sun-orange))] text-white shadow-lg mt-4 sm:mt-0">
+                      Total Synergy
+                    </span>
                   </div>
                 </div>
               </div>
@@ -352,8 +513,51 @@ const CollaborativeIntelligence = () => {
         </div>
       </section>
 
+      {/* ──── ENHANCEMENT 4: Trainer Spotlight ──── */}
+      <section className="py-20 md:py-28 bg-muted/30">
+        <div className="container mx-auto px-6">
+          <motion.div {...fadeUp} className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            {/* Left: Image */}
+            <motion.div {...fadeUp} className="rounded-xl overflow-hidden shadow-2xl">
+              <img src={cqTrainerVasu} alt="G. Vasu Thevan — CQ Master Trainer" className="w-full h-full object-cover object-top" style={{ borderRadius: '12px' }} />
+            </motion.div>
+
+            {/* Right: Content */}
+            <div>
+              <span className="inline-block px-4 py-1.5 rounded-full bg-[hsl(var(--rust-orange))]/10 text-[hsl(var(--rust-orange))] text-xs tracking-widest uppercase font-bold mb-5 border border-[hsl(var(--rust-orange))]/20">
+                Meet Your Trainer
+              </span>
+              <h2 className="text-2xl md:text-4xl font-sans font-bold text-foreground mb-1">G. Vasu Thevan</h2>
+              <p className="text-sm font-semibold text-[hsl(var(--rust-orange))] mb-4">Founder & Master Trainer — Collaborative Intelligence (CQ)</p>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+                With over 30 years of transformational leadership coaching experience across Southeast Asia and beyond, G. Vasu Thevan is the visionary founder of the Collaborative Intelligence (CQ) framework. He has empowered government leaders, Fortune 500 executives, and cross-functional teams to build high-performing, trust-based organizations. His expertise in cross-cultural dynamics, conflict management and human chemistry has made him one of Asia's most sought-after organizational transformation experts.
+              </p>
+
+              {/* Credential badges */}
+              <div className="flex flex-wrap gap-3 mb-6">
+                {[
+                  { emoji: "🏆", label: "30+ Years Experience" },
+                  { emoji: "🌍", label: "Southeast Asia Master Trainer" },
+                  { emoji: "🏛️", label: "Government & Fortune 500 Clients" },
+                  { emoji: "📜", label: "CQ Framework Founder & Author" },
+                ].map((badge) => (
+                  <span key={badge.label} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-border text-xs font-semibold text-foreground">
+                    <span>{badge.emoji}</span> {badge.label}
+                  </span>
+                ))}
+              </div>
+
+              {/* Pull quote */}
+              <blockquote className="text-base md:text-lg font-sans italic text-[hsl(var(--rust-orange))] leading-relaxed border-l-4 border-[hsl(var(--rust-orange))] pl-5">
+                "CQ magically rewires the chemistry of team members, transforming a working group into a unified entity."
+              </blockquote>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* ──── Immersive Methodology ──── */}
-      <section className="py-20 md:py-24 bg-muted/30">
+      <section className="py-20 md:py-24 bg-background">
         <div className="container mx-auto px-6">
           <motion.div {...fadeUp} className="text-center mb-14">
             <span className="text-xs tracking-widest uppercase font-bold text-muted-foreground">How We Deliver</span>
@@ -384,7 +588,7 @@ const CollaborativeIntelligence = () => {
       </section>
 
       {/* ──── Transformation Outcomes ──── */}
-      <section className="py-20 md:py-24 bg-background">
+      <section className="py-20 md:py-24 bg-muted/30">
         <div className="container mx-auto px-6">
           <motion.div {...fadeUp} className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -403,7 +607,6 @@ const CollaborativeIntelligence = () => {
                 ))}
               </div>
             </div>
-            {/* Outcomes Image - RIGHT side */}
             <motion.div {...fadeUp} className="rounded-xl overflow-hidden shadow-lg">
               <img src={cqOutcomes} alt="Team celebrating achievement" className="w-full h-full object-cover" style={{ borderRadius: '12px' }} />
             </motion.div>
@@ -413,7 +616,6 @@ const CollaborativeIntelligence = () => {
 
       {/* ──── Who Benefits from CQ ──── */}
       <section className="py-20 md:py-28 relative overflow-hidden">
-        {/* Background image with dark overlay */}
         <img src={cqBenefitsBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black/80" />
         <div className="container mx-auto px-6 relative z-10">
@@ -452,7 +654,55 @@ const CollaborativeIntelligence = () => {
         </div>
       </section>
 
-      {/* ──── Global Statistics ──── */}
+      {/* ──── ENHANCEMENT 5: Urgency Section ──── */}
+      <section className="py-16 md:py-20 relative overflow-hidden" style={{ background: '#0A1628' }}>
+        <div className="absolute top-0 left-0 right-0 h-1 bg-[hsl(var(--rust-orange))]" />
+        <div className="container mx-auto px-6">
+          <motion.div {...fadeUp} className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            {/* Left: Content */}
+            <div>
+              <h2 className="text-2xl md:text-3xl font-sans font-bold text-white mb-4 flex items-center gap-3">
+                <span className="text-3xl">⚡</span> Next CQ Batch — Limited Seats Available
+              </h2>
+              <p className="text-white/70 text-sm leading-relaxed mb-6">
+                Each CQ cohort is deliberately kept small to ensure maximum transformation. Seats fill weeks in advance. Organizations and institutions are advised to confirm early.
+              </p>
+              <div className="space-y-3">
+                {[
+                  { emoji: "🔴", text: "Batch Size: Limited for Maximum Impact" },
+                  { emoji: "📅", text: "Confirmation Required in Advance" },
+                  { emoji: "🌍", text: "Participants Joining from India, UAE & Southeast Asia" },
+                ].map((item) => (
+                  <div key={item.text} className="flex items-center gap-3">
+                    <span className="text-lg">{item.emoji}</span>
+                    <span className="text-white/80 text-sm font-medium">{item.text}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Right: Buttons */}
+            <div className="flex flex-col gap-4">
+              <a
+                href="https://wa.me/919319165254?text=Hi%20OceanGTA!%20I%20want%20to%20reserve%20seats%20for%20the%20CQ%20Training%20for%20my%20team.%20Please%20share%20upcoming%20batch%20details."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-8 py-4 rounded-xl text-lg text-center text-white font-bold bg-[hsl(var(--rust-orange))] hover:opacity-90 transition-all shadow-xl min-h-[48px]"
+              >
+                Reserve Your Team's Seats
+              </a>
+              <Link
+                to="/#contact"
+                className="inline-flex items-center justify-center px-8 py-4 rounded-xl text-lg text-center text-white font-bold border-2 border-white hover:bg-white/10 transition-all min-h-[48px]"
+              >
+                Send Inquiry
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ──── ENHANCEMENT 6: Global Statistics (with 2 new stats) ──── */}
       <section className="py-20 md:py-28 bg-background">
         <div className="container mx-auto px-6">
           <motion.div {...fadeUp} className="text-center mb-14">
@@ -462,7 +712,7 @@ const CollaborativeIntelligence = () => {
               The world's leading research institutions prove what we teach — collaboration isn't optional, it's the ultimate competitive advantage.
             </p>
           </motion.div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 max-w-7xl mx-auto">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 max-w-7xl mx-auto">
             {[
               { stat: "86%", label: "of business leaders say lack of collaboration is the #1 cause of workplace failure", source: "Fierce Inc." },
               { stat: "5×", label: "more likely to be high-performing — companies with strong collaborative cultures", source: "i4cp" },
@@ -474,25 +724,16 @@ const CollaborativeIntelligence = () => {
               { stat: "Only 20%", label: "of executives believe their teams are truly high-performing", source: "Gartner Research" },
               { stat: "$18.2B", label: "global collaboration tools market size in 2024", source: "Industry Research" },
               { stat: "70%", label: "of organizational change initiatives fail — collaboration breakdown is a top reason", source: "McKinsey & Company" },
+              { stat: "#1", label: "Psychological safety is the single most critical factor in team performance — studied across 180+ teams over 2 years", source: "Google Project Aristotle" },
+              { stat: "47%", label: "Only 47% of employees worldwide work in psychologically safe environments", source: "Ipsos Global Research / Harvard Business School" },
             ].map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.05 }}
-                className="bg-card rounded-2xl p-6 border border-border/50 text-center hover:shadow-lg hover:border-[hsl(var(--rust-orange))]/20 transition-all duration-300"
-              >
-                <div className="text-3xl md:text-4xl font-sans font-extrabold text-[hsl(var(--rust-orange))] mb-2">{item.stat}</div>
-                <p className="text-xs text-muted-foreground leading-relaxed mb-3">{item.label}</p>
-                <span className="text-[10px] uppercase tracking-wider font-bold text-muted-foreground/60">{item.source}</span>
-              </motion.div>
+              <AnimatedStatCard key={i} stat={item.stat} label={item.label} source={item.source} index={i} />
             ))}
           </div>
         </div>
       </section>
 
-      {/* ──── World Leaders Quote Wall ──── */}
+      {/* ──── ENHANCEMENT 7: World Leaders Quote Wall (with new quote) ──── */}
       <section className="py-20 md:py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-[hsl(var(--ocean-deep))]" />
         <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-[hsl(var(--rust-orange))] opacity-10 blur-[100px]" />
@@ -509,6 +750,7 @@ const CollaborativeIntelligence = () => {
               { quote: "We all agree that only by coordinating our actions can we stop the devastation… Bringing together countries with competing interests is hard work — but cooperation is vital.", author: "John Kerry", role: "Former U.S. Secretary of State, WEF" },
               { quote: "The disjointed global response to COVID-19 showed cooperation cannot be taken for granted, even when our interests are shared.", author: "World Economic Forum", role: "Global Cooperation Report 2023" },
               { quote: "Given the rise in humanitarian catastrophes and wars, you need to find a way to collaborate — or face the consequences.", author: "Dr. Comfort Ero", role: "President & CEO, Crisis Group, WEF 2025" },
+              { quote: "No single person, company, or country can tackle global challenges alone. Collaboration is not a choice — it is the only path forward.", author: "António Guterres", role: "Secretary-General, United Nations" },
               { quote: "Collaboration is not a skill you learn — it is a chemistry you build. When team members stop competing for significance and start contributing to a shared identity, ordinary people produce extraordinary results.", author: "G. Vasu Thevan", role: "Trainer, OceanGTA" },
             ].map((item, i) => (
               <motion.div
@@ -553,20 +795,39 @@ const CollaborativeIntelligence = () => {
         </div>
       </section>
 
-      {/* ──── Final CTA ──── */}
+      {/* ──── ENHANCEMENT 8: Upgraded Final CTA ──── */}
       <section className="py-20 md:py-28 relative overflow-hidden">
         <div className="absolute inset-0 bg-[hsl(var(--rust-orange))]" />
         <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-white opacity-10 blur-[100px]" />
         <div className="container mx-auto px-6 relative z-10 text-center">
           <motion.div {...fadeUp}>
             <h2 className="text-3xl md:text-5xl font-sans font-bold text-white mb-4">Ready to Rewire Your Team?</h2>
-            <p className="text-white/90 max-w-2xl mx-auto text-lg mb-10 leading-relaxed">
+            <p className="text-white/90 max-w-2xl mx-auto text-lg mb-6 leading-relaxed">
               Join organizations across Asia who have transformed their team dynamics with CQ. Start your journey today.
             </p>
+
+            {/* Trust indicators */}
+            <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-4">
+              {[
+                "Internationally Certified Program",
+                "30+ Years Master Trainer Experience",
+                "Trusted Across 50+ Nations",
+              ].map((text) => (
+                <span key={text} className="inline-flex items-center gap-2 text-white text-sm font-semibold">
+                  <CheckCircle2 className="w-5 h-5 text-white" /> {text}
+                </span>
+              ))}
+            </div>
+
+            {/* Urgency line */}
+            <p className="text-white font-bold text-base mb-10 flex items-center justify-center gap-2">
+              <span className="text-lg">⚡</span> Limited seats per batch — confirm your team's place today
+            </p>
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/#contact"
-                className="inline-block bg-white text-foreground px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/90 transition-all shadow-xl"
+                className="inline-flex items-center justify-center bg-white text-foreground px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/90 transition-all shadow-xl min-h-[48px]"
               >
                 Start the Transformation
               </Link>
@@ -574,7 +835,7 @@ const CollaborativeIntelligence = () => {
                 href="https://wa.me/919319165254?text=Hi%20OceanGTA!%20I%20want%20to%20discuss%20the%20CQ%20program%20for%20my%20organization."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all"
+                className="inline-flex items-center justify-center border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all min-h-[48px]"
               >
                 Talk to Us on WhatsApp
               </a>
