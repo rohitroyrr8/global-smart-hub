@@ -1,5 +1,11 @@
 import { motion } from "framer-motion";
 import cqHero from "@/assets/cq-hero.jpg";
+import cqChallenge from "@/assets/cq-challenge.jpg";
+import cqConcept from "@/assets/cq-concept.jpg";
+import cqDay1 from "@/assets/cq-day1.jpg";
+import cqDay2 from "@/assets/cq-day2.jpg";
+import cqBenefitsBg from "@/assets/cq-benefits-bg.jpg";
+import cqOutcomes from "@/assets/cq-outcomes.jpg";
 import {
   Layers, Heart, Target, Handshake, Sparkles, FileCheck,
   Brain, Users, ShieldCheck, ArrowRight, CheckCircle2,
@@ -162,24 +168,24 @@ const CollaborativeIntelligence = () => {
       {/* ──── Hero ──── */}
       <section className="relative pt-32 pb-24 md:pb-32 overflow-hidden">
         <img src={cqHero} alt="" className="absolute inset-0 w-full h-full object-cover object-center" />
-        <div className="absolute inset-0" style={{ background: 'linear-gradient(rgba(180,80,0,0.75), rgba(120,50,0,0.85))' }} />
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(160,65,0,0.82) 0%, rgba(100,35,0,0.90) 100%)' }} />
         <div className="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full bg-[hsl(var(--sun-orange))] opacity-20 blur-[100px]" />
         <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] rounded-full bg-[hsl(var(--rust-orange))] opacity-20 blur-[100px]" />
 
         <div className="container mx-auto px-6 relative z-10">
-          <Link to="/" className="inline-flex items-center gap-2 text-accent-foreground/70 hover:text-accent-foreground mb-8 transition-colors text-sm">
+          <Link to="/" className="inline-flex items-center gap-2 text-white/70 hover:text-white mb-8 transition-colors text-sm">
             <ArrowLeft size={16} /> Back to Home
           </Link>
 
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="max-w-3xl">
-            <span className="inline-block px-4 py-1.5 rounded-full bg-accent-foreground/20 text-accent-foreground text-xs tracking-widest uppercase font-bold mb-5">
+            <span className="inline-block px-4 py-1.5 rounded-full text-white text-xs tracking-widest uppercase font-bold mb-5 border" style={{ background: 'rgba(0,0,0,0.35)', borderColor: 'rgba(255,255,255,0.4)' }}>
               Internationally Certified Program — A Game Changer
             </span>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-sans font-bold text-accent-foreground leading-tight">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-sans text-white leading-tight" style={{ fontWeight: 800, textShadow: '0px 2px 8px rgba(0,0,0,0.4)' }}>
               Collaborative Intelligence{" "}
               <span className="text-gradient-teal">(CQ)</span>
             </h1>
-            <p className="text-accent-foreground/90 text-lg md:text-xl mt-5 max-w-2xl leading-relaxed">
+            <p className="text-white text-lg md:text-xl mt-5 max-w-2xl leading-relaxed" style={{ fontWeight: 500, textShadow: '0px 1px 6px rgba(0,0,0,0.5)' }}>
               The Missing Link to High-Performance Teams — A transformational 2-day program that rewires team chemistry and unlocks peak collaborative performance.
             </p>
             <div className="flex flex-wrap gap-3 mt-8">
@@ -189,15 +195,16 @@ const CollaborativeIntelligence = () => {
                 { icon: Globe, label: "Global Framework" },
                 { icon: Users, label: "All Levels" },
               ].map((t) => (
-                <span key={t.label} className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-accent-foreground/10 text-accent-foreground text-sm font-medium border border-accent-foreground/20 backdrop-blur-sm">
-                  <t.icon className="w-4 h-4" /> {t.label}
+                <span key={t.label} className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-white text-sm font-medium backdrop-blur-sm" style={{ background: 'rgba(0,0,0,0.40)', border: '1px solid rgba(255,255,255,0.5)' }}>
+                  <t.icon className="w-4 h-4 text-white" /> {t.label}
                 </span>
               ))}
             </div>
             <div className="flex flex-col sm:flex-row gap-4 mt-10">
               <Link
                 to="/#contact"
-                className="inline-block gradient-ocean text-primary-foreground px-10 py-4 rounded-xl font-bold text-lg text-center hover:opacity-90 transition-opacity shadow-xl border border-primary-foreground/20"
+                className="inline-block px-10 py-4 rounded-xl text-lg text-center hover:opacity-90 transition-opacity"
+                style={{ background: '#FFFFFF', color: '#0A1628', fontWeight: 700, boxShadow: '0 4px 15px rgba(0,0,0,0.3)' }}
               >
                 Rewire Your Team
               </Link>
@@ -205,7 +212,8 @@ const CollaborativeIntelligence = () => {
                 href="https://wa.me/919319165254?text=Hi%20OceanGTA!%20I%20am%20interested%20in%20the%20CQ%20Training%20for%20my%20team.%20Please%20share%20more%20details."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-10 py-4 rounded-xl font-bold text-lg text-center border-2 border-accent-foreground text-accent-foreground hover:bg-accent-foreground/10 transition-all"
+                className="inline-block px-10 py-4 rounded-xl text-lg text-center text-white hover:opacity-90 transition-all"
+                style={{ background: '#0A1628', fontWeight: 700, boxShadow: '0 4px 15px rgba(0,0,0,0.3)' }}
               >
                 Book a Discovery Call
               </a>
@@ -240,57 +248,42 @@ const CollaborativeIntelligence = () => {
               </div>
             </div>
 
-            {/* CQ Bridge Diagram */}
-            <div className="rounded-2xl border border-border bg-card p-8 md:p-10 flex flex-col items-center justify-center shadow-sm">
-              <h3 className="font-sans font-bold text-lg text-foreground mb-8">The Missing Link</h3>
-              <div className="flex items-end justify-center gap-4 w-full">
-                <div className="flex flex-col items-center">
-                  <div className="w-20 h-20 rounded-xl bg-muted flex items-center justify-center border border-border">
-                    <span className="font-sans text-lg text-foreground font-bold">IQ</span>
-                  </div>
-                  <span className="text-xs text-muted-foreground mt-2">Intellect</span>
-                </div>
-                <div className="flex flex-col items-center -mt-8">
-                  <div className="w-24 h-28 rounded-xl bg-[hsl(var(--rust-orange))] flex items-center justify-center shadow-xl shadow-[hsl(var(--rust-orange))]/30 relative">
-                    <span className="font-sans text-2xl text-white font-bold">CQ</span>
-                  </div>
-                  <ArrowRight className="w-4 h-4 text-muted-foreground rotate-90 my-2" />
-                  <span className="text-xs text-foreground font-semibold">Bridge to Peak Performance</span>
-                </div>
-                <div className="flex flex-col items-center">
-                  <div className="w-20 h-20 rounded-xl bg-muted flex items-center justify-center border border-border">
-                    <span className="font-sans text-lg text-foreground font-bold">EQ</span>
-                  </div>
-                  <span className="text-xs text-muted-foreground mt-2">Emotion</span>
-                </div>
-              </div>
-            </div>
+            {/* Challenge Image - RIGHT side */}
+            <motion.div {...fadeUp} className="rounded-xl overflow-hidden shadow-lg">
+              <img src={cqChallenge} alt="Team facing communication challenges" className="w-full h-full object-cover" style={{ borderRadius: '12px' }} />
+            </motion.div>
           </motion.div>
 
           {/* CQ Definition + Synergy Formula */}
           <motion.div {...fadeUp} className="mt-14 max-w-5xl mx-auto rounded-2xl border border-border bg-card p-8 md:p-12 shadow-sm">
             <div className="grid md:grid-cols-2 gap-10 items-center">
-              <blockquote className="text-lg md:text-xl font-sans italic text-foreground leading-relaxed border-l-4 border-[hsl(var(--rust-orange))] pl-6">
-                "CQ magically rewires the chemistry of team members, transforming a working group into a unified entity."
-                <footer className="mt-4 text-sm not-italic text-muted-foreground">— G. Vasu Thevan, CQ Founder</footer>
-              </blockquote>
-              <div>
-                <h4 className="font-sans font-bold text-lg text-foreground mb-3">The Core Concept</h4>
-                <p className="text-sm text-muted-foreground mb-5 leading-relaxed">
-                  CQ is the latest discovery in team development — a transformational program that shifts the working chemistry of team members. The goal: to make team members more open, understanding, cooperative, forgiving, and trusting within a short period.
-                </p>
-                <div className="flex items-center gap-3 flex-wrap">
-                  {synergyFormula.map((s, i) => (
-                    <div key={s.label} className="flex items-center gap-2">
-                      <div className="w-14 h-14 rounded-xl bg-muted border border-border flex flex-col items-center justify-center">
-                        <s.icon className="w-4 h-4 text-foreground" />
-                        <span className="text-xs font-extrabold tracking-wide text-foreground">{s.label}</span>
+              {/* Concept Image - LEFT side */}
+              <motion.div {...fadeUp} className="rounded-xl overflow-hidden shadow-lg order-2 md:order-1">
+                <img src={cqConcept} alt="Team breakthrough celebration" className="w-full h-full object-cover" style={{ borderRadius: '12px' }} />
+              </motion.div>
+              <div className="order-1 md:order-2">
+                <blockquote className="text-lg md:text-xl font-sans italic text-foreground leading-relaxed border-l-4 border-[hsl(var(--rust-orange))] pl-6">
+                  "CQ magically rewires the chemistry of team members, transforming a working group into a unified entity."
+                  <footer className="mt-4 text-sm not-italic text-muted-foreground">— G. Vasu Thevan, CQ Founder</footer>
+                </blockquote>
+                <div className="mt-6">
+                  <h4 className="font-sans font-bold text-lg text-foreground mb-3">The Core Concept</h4>
+                  <p className="text-sm text-muted-foreground mb-5 leading-relaxed">
+                    CQ is the latest discovery in team development — a transformational program that shifts the working chemistry of team members. The goal: to make team members more open, understanding, cooperative, forgiving, and trusting within a short period.
+                  </p>
+                  <div className="flex items-center gap-3 flex-wrap">
+                    {synergyFormula.map((s, i) => (
+                      <div key={s.label} className="flex items-center gap-2">
+                        <div className="w-14 h-14 rounded-xl bg-muted border border-border flex flex-col items-center justify-center">
+                          <s.icon className="w-4 h-4 text-foreground" />
+                          <span className="text-xs font-extrabold tracking-wide text-foreground">{s.label}</span>
+                        </div>
+                        {i < synergyFormula.length - 1 && <span className="text-foreground font-extrabold text-lg">+</span>}
                       </div>
-                      {i < synergyFormula.length - 1 && <span className="text-foreground font-extrabold text-lg">+</span>}
-                    </div>
-                  ))}
-                  <span className="text-foreground font-extrabold text-lg">=</span>
-                  <span className="font-sans font-extrabold text-xl px-3 py-1.5 rounded-lg bg-primary text-primary-foreground">Total Synergy</span>
+                    ))}
+                    <span className="text-foreground font-extrabold text-lg">=</span>
+                    <span className="font-sans font-extrabold text-xl px-3 py-1.5 rounded-lg bg-primary text-primary-foreground">Total Synergy</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -322,6 +315,9 @@ const CollaborativeIntelligence = () => {
           {/* Day 1 */}
           <div className="mb-16">
             <motion.div {...fadeUp} className="mb-8">
+              <img src={cqDay1} alt="Team alignment strategy workshop" className="w-full h-64 md:h-80 object-cover shadow-lg" style={{ borderRadius: '12px' }} />
+            </motion.div>
+            <motion.div {...fadeUp} className="mb-8">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-lg bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm">D1</div>
                 <div>
@@ -337,6 +333,9 @@ const CollaborativeIntelligence = () => {
 
           {/* Day 2 */}
           <div>
+            <motion.div {...fadeUp} className="mb-8">
+              <img src={cqDay2} alt="Team trust building workshop" className="w-full h-64 md:h-80 object-cover shadow-lg" style={{ borderRadius: '12px' }} />
+            </motion.div>
             <motion.div {...fadeUp} className="mb-8">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-lg bg-[hsl(var(--rust-orange))] text-white flex items-center justify-center font-bold text-sm">D2</div>
@@ -404,28 +403,24 @@ const CollaborativeIntelligence = () => {
                 ))}
               </div>
             </div>
-            <motion.div {...fadeUp} className="rounded-2xl overflow-hidden border border-border bg-muted/30 p-10 flex flex-col items-center justify-center text-center shadow-sm">
-              <div className="w-20 h-20 rounded-full bg-[hsl(var(--rust-orange))]/10 flex items-center justify-center mb-6">
-                <Zap className="w-10 h-10 text-[hsl(var(--rust-orange))]" />
-              </div>
-              <p className="font-sans font-bold text-2xl text-foreground">From Working Group</p>
-              <ArrowRight className="w-6 h-6 text-[hsl(var(--rust-orange))] my-3 rotate-90" />
-              <p className="font-sans text-2xl text-gradient-cq font-bold">To Unified Entity</p>
-              <p className="text-sm text-muted-foreground mt-4 max-w-xs leading-relaxed">
-                CQ rewires team chemistry in just 2 days — creating lasting bonds, trust, and collaborative excellence.
-              </p>
+            {/* Outcomes Image - RIGHT side */}
+            <motion.div {...fadeUp} className="rounded-xl overflow-hidden shadow-lg">
+              <img src={cqOutcomes} alt="Team celebrating achievement" className="w-full h-full object-cover" style={{ borderRadius: '12px' }} />
             </motion.div>
           </motion.div>
         </div>
       </section>
 
       {/* ──── Who Benefits from CQ ──── */}
-      <section className="py-20 md:py-28 bg-muted/30">
-        <div className="container mx-auto px-6">
+      <section className="py-20 md:py-28 relative overflow-hidden">
+        {/* Background image with dark overlay */}
+        <img src={cqBenefitsBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-black/80" />
+        <div className="container mx-auto px-6 relative z-10">
           <motion.div {...fadeUp} className="text-center mb-14">
-            <span className="text-xs tracking-widest uppercase font-bold text-muted-foreground">Who Benefits from CQ?</span>
-            <h2 className="text-2xl md:text-4xl font-sans font-bold mt-3 text-foreground">Industries That Need CQ Most</h2>
-            <p className="text-muted-foreground mt-2 max-w-2xl mx-auto text-sm leading-relaxed">
+            <span className="text-xs tracking-widest uppercase font-bold text-white/50">Who Benefits from CQ?</span>
+            <h2 className="text-2xl md:text-4xl font-sans font-bold mt-3 text-white">Industries That Need CQ Most</h2>
+            <p className="text-white/70 mt-2 max-w-2xl mx-auto text-sm leading-relaxed">
               Collaborative Intelligence transforms team dynamics across every sector — from boardrooms to hospitals.
             </p>
           </motion.div>
@@ -444,13 +439,13 @@ const CollaborativeIntelligence = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
-                className="bg-card rounded-2xl p-8 border border-border/50 hover:shadow-xl hover:border-[hsl(var(--rust-orange))]/30 transition-all duration-300 group"
+                className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:shadow-xl hover:border-white/30 transition-all duration-300 group"
               >
-                <div className="w-14 h-14 rounded-xl bg-[hsl(var(--rust-orange))]/10 flex items-center justify-center mb-5 group-hover:bg-[hsl(var(--rust-orange))]/20 transition-colors">
+                <div className="w-14 h-14 rounded-xl bg-[hsl(var(--rust-orange))]/20 flex items-center justify-center mb-5 group-hover:bg-[hsl(var(--rust-orange))]/30 transition-colors">
                   <item.icon className="w-7 h-7 text-[hsl(var(--rust-orange))]" />
                 </div>
-                <h4 className="font-sans text-base font-bold text-foreground mb-2">{item.title}</h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                <h4 className="font-sans text-base font-bold text-white mb-2">{item.title}</h4>
+                <p className="text-sm text-white/70 leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -551,8 +546,6 @@ const CollaborativeIntelligence = () => {
               { q: "Can this program be customized for our industry or organization?", a: "Yes. While the core CQ framework remains consistent, Ocean GTA tailors the examples, case studies, role-plays, and dependency agreements to your specific organizational context — whether you're in healthcare, government, education, manufacturing, or services. Contact us to discuss a bespoke design." },
               { q: "What results can we realistically expect after 2 days?", a: "Participants consistently report immediate shifts in how they relate to teammates. Within 2 days, teams experience: reduced interpersonal friction, clearer role agreements, shared language for conflict resolution, and a concrete Action Plan. Organizational outcomes — including reduced silos, improved morale, and better cross-team performance — typically show within 30–60 days post-program." },
               { q: "Is there post-program support or certification?", a: "Yes. Participants receive CQ Certification upon completion. Additionally, Ocean GTA provides follow-up tools including CQ Busters & Boosters frameworks, action plan templates, and optional refresher sessions to sustain the transformation and embed CQ into your organizational culture." },
-              { q: "How do we measure ROI from a CQ program?", a: "Global research shows companies with strong collaboration cultures are 5x more likely to be high-performing (i4cp), have 50% lower turnover (Gallup), and achieve 20–25% productivity gains (McKinsey). We work with your HR and leadership team to identify pre/post metrics — such as team engagement scores, project delivery speed, conflict incidents, and employee retention — so you can measure the real business impact of your CQ investment." },
-              { q: "How do we get started or enroll our team?", a: "Simply reach out to us at business@oceangta.com or use the Request a Quote button on this page. Our team will schedule a discovery call to understand your team's challenges, size, and goals — and propose the best CQ delivery format (in-person, hybrid, or virtual) for your organization." },
             ].map((item, i) => (
               <FAQItem key={i} question={item.q} answer={item.a} index={i} />
             ))}
@@ -560,31 +553,30 @@ const CollaborativeIntelligence = () => {
         </div>
       </section>
 
-      {/* ──── CTA ──── */}
-      <section className="py-20 md:py-24 relative overflow-hidden">
-        <div className="absolute inset-0 gradient-cq" />
-        <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-[hsl(var(--sun-orange))] opacity-20 blur-[80px]" />
+      {/* ──── Final CTA ──── */}
+      <section className="py-20 md:py-28 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[hsl(var(--rust-orange))]" />
+        <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-white opacity-10 blur-[100px]" />
         <div className="container mx-auto px-6 relative z-10 text-center">
           <motion.div {...fadeUp}>
-            <h2 className="text-3xl md:text-5xl font-sans font-bold text-accent-foreground mb-5">Ready to Elevate Your CQ?</h2>
-            <p className="text-accent-foreground/80 mb-10 max-w-lg mx-auto text-lg leading-relaxed">
-              Join our internationally certified Collaborative Intelligence program — trusted by leaders across Asia — and transform how your teams collaborate, communicate and perform.
+            <h2 className="text-3xl md:text-5xl font-sans font-bold text-white mb-4">Ready to Rewire Your Team?</h2>
+            <p className="text-white/90 max-w-2xl mx-auto text-lg mb-10 leading-relaxed">
+              Join organizations across Asia who have transformed their team dynamics with CQ. Start your journey today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="#contact"
-                onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}
-                className="inline-block gradient-ocean text-primary-foreground px-10 py-4 rounded-xl font-bold text-lg text-center hover:opacity-90 transition-opacity shadow-xl border border-primary-foreground/20"
+              <Link
+                to="/#contact"
+                className="inline-block bg-white text-foreground px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/90 transition-all shadow-xl"
               >
-                Rewire Your Team
-              </a>
+                Start the Transformation
+              </Link>
               <a
-                href="https://wa.me/9319165254?text=Hi%20OceanGTA!%20I%20am%20interested%20in%20the%20CQ%20Training%20for%20my%20team.%20Please%20share%20more%20details."
+                href="https://wa.me/919319165254?text=Hi%20OceanGTA!%20I%20want%20to%20discuss%20the%20CQ%20program%20for%20my%20organization."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-10 py-4 rounded-xl font-bold text-lg text-center border-2 border-accent-foreground text-accent-foreground hover:bg-accent-foreground/10 transition-all"
+                className="inline-block border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all"
               >
-                Book a Discovery Call
+                Talk to Us on WhatsApp
               </a>
             </div>
           </motion.div>
