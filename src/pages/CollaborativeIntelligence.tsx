@@ -6,7 +6,7 @@ import cqDay1 from "@/assets/cq-day1.jpg";
 import cqDay2 from "@/assets/cq-day2.jpg";
 import cqBenefitsBg from "@/assets/cq-benefits-bg.jpg";
 import cqOutcomes from "@/assets/cq-outcomes.jpg";
-import cqTrainerVasu from "@/assets/cq-trainer-vasu.jpg";
+import cqTrainerVasu from "@/assets/trainer-vasu.jpg";
 import {
   Layers, Heart, Target, Handshake, Sparkles, FileCheck,
   Brain, Users, ShieldCheck, ArrowRight, CheckCircle2,
