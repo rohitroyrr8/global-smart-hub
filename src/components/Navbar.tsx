@@ -164,7 +164,9 @@ const Navbar = () => {
 
         {/* Mobile toggle */}
         <button
-          className="lg:hidden text-primary-foreground p-2 min-h-[44px] min-w-[44px] flex items-center justify-center"
+          className={`lg:hidden p-2 min-h-[44px] min-w-[44px] flex items-center justify-center ${
+            !scrolled && isLightPage ? "text-[hsl(220,30%,8%)]" : "text-primary-foreground"
+          }`}
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
         >

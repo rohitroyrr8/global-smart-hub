@@ -174,8 +174,9 @@ const SalesMarketing = () => {
             </div>
             {/* Right 40% */}
             <motion.div className="lg:col-span-2 relative" initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.7, delay: 0.2 }}>
-              <div className="rounded-2xl overflow-hidden shadow-2xl">
+              <div className="rounded-2xl overflow-hidden shadow-2xl relative">
                 <img src={salesHero} alt="International sales trainer commanding a corporate audience" className="w-full h-[400px] lg:h-[520px] object-cover" />
+                <div className="absolute inset-0 bg-black/30" />
               </div>
               <div className="absolute -bottom-4 -left-4 bg-foreground text-background px-5 py-3 rounded-xl shadow-lg">
                 <span className="text-2xl font-black">50+</span>
