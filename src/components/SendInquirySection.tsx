@@ -13,15 +13,6 @@ const SendInquirySection = () => {
     setSubmitting(true);
 
     try {
-      const whatsappMessage = encodeURIComponent(
-        `New Inquiry from OceanGTA Website:\n\nName: ${form.name}\nEmail: ${form.email}\nWhatsApp: ${form.whatsapp}\nOrganization: ${form.org}\nMessage: ${form.message}`
-      );
-      const link = document.createElement("a");
-      link.href = `https://wa.me/919319165254?text=${whatsappMessage}`;
-      link.target = "_blank";
-      link.rel = "noopener noreferrer";
-      link.click();
-
       await fetch("https://formspree.io/f/mreyplrv", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
