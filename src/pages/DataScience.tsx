@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowLeft, Database, BarChart3, Cpu, GitBranch, Server, BrainCircuit } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import CTAModal from "@/components/CTAModal";
 
 const modules = [
   { icon: Database, title: "Data Engineering Foundations", desc: "Build scalable data pipelines, ETL processes, and data warehousing solutions for enterprise-grade analytics." },
