@@ -249,7 +249,7 @@ const CollaborativeIntelligence = () => {
             </div>
             <div className="flex flex-col sm:flex-row gap-4 mt-10">
               <Link
-                to="/#contact"
+                to="/#send-inquiry"
                 className="inline-block px-10 py-4 rounded-xl text-lg text-center hover:opacity-90 transition-opacity min-h-[48px]"
                 style={{ background: '#FFFFFF', color: '#0A1628', fontWeight: 700, boxShadow: '0 4px 15px rgba(0,0,0,0.3)' }}
               >
