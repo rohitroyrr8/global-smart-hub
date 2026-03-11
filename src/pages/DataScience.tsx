@@ -402,7 +402,7 @@ const DataScience = () => {
           <motion.div {...fadeUp}>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight mb-6">Your Data Career Starts Today.</h2>
             <p className="text-gray-400 text-base sm:text-lg leading-relaxed">
-              3-month basic or 6-month advanced. Interview preparation included. International certification. Global trainer. Real projects. Real results.
+              3-month basic or 6-month advanced. Interview preparation included. Global trainer. Real projects. Real results.
             </p>
           </motion.div>
         </div>
