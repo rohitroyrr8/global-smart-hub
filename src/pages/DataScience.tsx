@@ -31,11 +31,11 @@ const roleTiles = [
 
 const comparisonRows = [
   { feature: "Learning Style", typical: "Pre-recorded videos", ocean: "Live interactive sessions" },
-  { feature: "Trainer", typical: "Unknown content creator", ocean: "International certified trainer" },
+  { feature: "Trainer", typical: "Unknown content creator", ocean: "Experienced Industry Trainer" },
   { feature: "Interview Prep", typical: "None or basic", ocean: "Full mock interviews with feedback" },
   { feature: "Projects", typical: "Generic datasets", ocean: "Real industry datasets" },
   { feature: "Duration", typical: "Self-paced (often abandoned)", ocean: "Structured 3 or 6 months" },
-  { feature: "Certification", typical: "Platform certificate only", ocean: "Internationally recognized" },
+  { feature: "Certification", typical: "Platform certificate only", ocean: "Industry recognized" },
   { feature: "Career Support", typical: "None", ocean: "Placement support + global network" },
   { feature: "Mentorship", typical: "Forum Q&A", ocean: "Direct trainer access" },
 ];
@@ -60,7 +60,7 @@ const DataScience = () => {
           <motion.div {...fadeUp}>
             {/* Pill badge */}
             <span className="inline-block px-5 py-2 rounded-full text-xs font-semibold tracking-wide text-[#0EA5E9] border border-[#0EA5E9]/30 bg-[#0EA5E9]/10 ds-glow-teal mb-8">
-              📊 Globally Certified · International Trainer · 3-Month & 6-Month Programs
+              📊 3-Month & 6-Month Programs
             </span>
 
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold text-white leading-tight ds-glow-text mb-6">
@@ -402,7 +402,7 @@ const DataScience = () => {
           <motion.div {...fadeUp}>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight mb-6">Your Data Career Starts Today.</h2>
             <p className="text-gray-400 text-base sm:text-lg leading-relaxed">
-              3-month basic or 6-month advanced. Interview preparation included. International certification. Global trainer. Real projects. Real results.
+              3-month basic or 6-month advanced. Interview preparation included. Global trainer. Real projects. Real results.
             </p>
           </motion.div>
         </div>
