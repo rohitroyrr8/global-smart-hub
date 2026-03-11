@@ -161,7 +161,8 @@ const CollaborativeIntelligence = () => {
 
       {/* ──── Hero ──── */}
       <section className="relative pt-32 pb-24 md:pb-32 overflow-hidden">
-        <div className="absolute inset-0 gradient-cq" />
+        <img src={cqHero} alt="" className="absolute inset-0 w-full h-full object-cover object-center" />
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(rgba(180,80,0,0.75), rgba(120,50,0,0.85))' }} />
         <div className="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full bg-[hsl(var(--sun-orange))] opacity-20 blur-[100px]" />
         <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] rounded-full bg-[hsl(var(--rust-orange))] opacity-20 blur-[100px]" />
 
