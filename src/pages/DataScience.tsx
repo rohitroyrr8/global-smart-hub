@@ -126,7 +126,7 @@ const DataScience = () => {
               to="/?scrollTo=send-inquiry"
               className="gradient-cq text-accent-foreground px-6 sm:px-8 py-3 rounded-md font-semibold hover:opacity-90 transition-opacity min-h-[48px] flex items-center justify-center"
             >
-              Book Your Data Science Training Now
+              Book Your Data Engineering Training Now
             </Link>
             <button
               onClick={() => setModalOpen(true)}

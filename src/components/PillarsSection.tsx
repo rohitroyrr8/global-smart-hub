@@ -38,7 +38,7 @@ const pillars = [
   },
   {
     icon: Database,
-    title: "Data Science & Engineering",
+    title: "Data Engineering / Big Data",
     tag: "INNOVATION",
     description:
       "Scalable data pipelines, machine learning, and AI-powered analytics for digital transformation.",
