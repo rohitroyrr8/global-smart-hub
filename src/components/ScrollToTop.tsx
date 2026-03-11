@@ -1,9 +1,18 @@
 import { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
+if (history.scrollRestoration) {
+  history.scrollRestoration = "manual";
+}
+
 const ScrollToTop = () => {
   const { pathname, hash } = useLocation();
   const navigate = useNavigate();
+
+  // Force scroll to top on initial mount (handles refresh)
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" as ScrollBehavior });
+  }, []);
 
   useEffect(() => {
     // On first load, if on an internal page, redirect to homepage
@@ -26,7 +35,7 @@ const ScrollToTop = () => {
         }
       }, 100);
     } else {
-      window.scrollTo(0, 0);
+      window.scrollTo({ top: 0, left: 0, behavior: "instant" as ScrollBehavior });
     }
   }, [pathname, hash]);
   return null;
