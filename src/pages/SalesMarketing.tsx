@@ -130,7 +130,7 @@ const SalesMarketing = () => {
       <Navbar />
 
       {/* SECTION 1 — HERO (Split Screen) */}
-      <section className="pt-20 md:pt-24 bg-white">
+      <section className="pt-20 md:pt-24 bg-[#F8F8F6]">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-center min-h-[80vh] py-12 lg:py-20">
             {/* Left 60% */}
