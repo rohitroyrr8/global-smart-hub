@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const stats = [
@@ -50,6 +51,12 @@ const Counter = ({ target, suffix }: { target: number; suffix: string }) => {
 };
 
 const HeroSection = () => {
+  const handleScrollToInquiry = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const el = document.getElementById("send-inquiry");
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background */}
@@ -84,18 +91,18 @@ const HeroSection = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-16 sm:mb-20">
-            <a
-              href="#programs"
-              className="gradient-teal text-primary-foreground px-6 sm:px-8 py-3.5 sm:py-4 rounded-md font-semibold text-center hover:opacity-90 transition-opacity min-h-[48px] flex items-center justify-center"
-            >
-              Explore Our Programs
-            </a>
-            <a
-              href="#cq"
+            <Link
+              to="/collaborative-intelligence"
               className="gradient-cq text-accent-foreground px-6 sm:px-8 py-3.5 sm:py-4 rounded-md font-semibold text-center hover:opacity-90 transition-opacity min-h-[48px] flex items-center justify-center"
             >
-              Transform Your Team (CQ)
-            </a>
+              Explore Our Programs
+            </Link>
+            <button
+              onClick={handleScrollToInquiry}
+              className="border border-primary-foreground/40 text-primary-foreground px-6 sm:px-8 py-3.5 sm:py-4 rounded-md font-semibold text-center hover:bg-primary-foreground/10 transition-colors min-h-[48px] flex items-center justify-center"
+            >
+              Rewire Your Team
+            </button>
           </div>
         </motion.div>
 
