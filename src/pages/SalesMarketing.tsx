@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CountUpNumber from "@/components/CountUpNumber";
 import salesHero from "@/assets/sales-hero.jpg";
-import salesTrainer from "@/assets/sales-trainer.jpg";
+import salesTrainer from "@/assets/trainer-taco.jpg";
 
 const WHATSAPP_LINK = "https://wa.me/919319165254?text=Hi%20OceanGTA!%20I%20want%20to%20know%20more%20about%20the%20Advanced%20Sales%20%26%20Marketing%20training.%20Please%20share%20details.";
 const WHATSAPP_RESERVE = "https://wa.me/919319165254?text=Hi%20OceanGTA!%20I%20want%20to%20reserve%20my%20seat%20for%20the%20Advanced%20Sales%20%26%20Marketing%20training.%20Please%20share%20batch%20dates%20and%20pricing.";
