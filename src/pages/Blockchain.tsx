@@ -381,12 +381,27 @@ const Blockchain = () => {
           <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4">Ready to Master Blockchain?</h2>
           <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-8 max-w-lg mx-auto">Join our next cohort and gain industry-recognized certification in blockchain and Web3 technologies.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="mailto:business@oceangta.com" className="inline-block border border-accent text-accent px-6 sm:px-8 py-3 rounded-md font-semibold hover:bg-accent/10 transition-colors min-h-[48px]">
-              Request a Quote
-            </a>
+            <Link
+              to="/?scrollTo=send-inquiry"
+              className="gradient-cq text-accent-foreground px-6 sm:px-8 py-3 rounded-md font-semibold hover:opacity-90 transition-opacity min-h-[48px] flex items-center justify-center"
+            >
+              Book Your Blockchain Training Now
+            </Link>
+            <button
+              onClick={() => setModalOpen(true)}
+              className="border border-accent text-accent px-6 sm:px-8 py-3 rounded-md font-semibold hover:bg-accent/10 transition-colors min-h-[48px]"
+            >
+              Join the Web3 Revolution
+            </button>
           </div>
         </div>
       </section>
+
+      <CTAModal
+        open={modalOpen}
+        onClose={() => setModalOpen(false)}
+        whatsappUrl="https://wa.me/919319165254?text=Hi%20OceanGTA!%20I%20am%20interested%20in%20the%20Blockchain%20%26%20Web3%20Training.%20Please%20share%20more%20details."
+      />
 
       <Footer />
     </div>
