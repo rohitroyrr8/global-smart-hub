@@ -751,7 +751,7 @@ const CollaborativeIntelligence = () => {
               { quote: "The disjointed global response to COVID-19 showed cooperation cannot be taken for granted, even when our interests are shared.", author: "World Economic Forum", role: "Global Cooperation Report 2023" },
               { quote: "Given the rise in humanitarian catastrophes and wars, you need to find a way to collaborate — or face the consequences.", author: "Dr. Comfort Ero", role: "President & CEO, Crisis Group, WEF 2025" },
               { quote: "No single person, company, or country can tackle global challenges alone. Collaboration is not a choice — it is the only path forward.", author: "António Guterres", role: "Secretary-General, United Nations" },
-              { quote: "Collaboration is not a skill you learn — it is a chemistry you build. When team members stop competing for significance and start contributing to a shared identity, ordinary people produce extraordinary results.", author: "G. Vasu Thevan", role: "Trainer, OceanGTA" },
+              
             ].map((item, i) => (
               <motion.div
                 key={i}
