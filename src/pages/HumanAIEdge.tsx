@@ -145,7 +145,7 @@ const audience = [
 const programs = [
   { flagship: true, title: "The Human-AI Edge — Executive Masterclass", duration: "2-Day Immersive", desc: "An exclusive, high-intensity program for senior leaders. Covers strategic AI adoption, human-AI teaming frameworks, and ethical governance. Walk away with a personalized AI transformation roadmap." },
   { flagship: false, title: "AI Fluency for Teams", duration: "4-Week Program", desc: "Equip your entire team with AI literacy. Covers prompt engineering, AI tool evaluation, workflow automation, and collaborative intelligence principles." },
-  { flagship: false, title: "Keynote & Workshop", duration: "Half / Full Day", desc: "Book Neelima for your conference, corporate retreat, or leadership summit. Customized talks and workshops on human-AI collaboration and the future of work." },
+  { flagship: false, title: "Keynote & Workshop", duration: "Half / Full Day", desc: "Invite a powerful keynote or workshop to your conference, corporate retreat, or leadership summit. Customized talks on human-AI collaboration and the future of work." },
 ];
 
 const speakingTopics = [
@@ -523,7 +523,7 @@ const HumanAIEdge = () => {
             </FadeUp>
 
             <FadeUp delay={0.2}>
-              <span className="text-xs tracking-[0.25em] uppercase font-semibold text-accent">Your Guide</span>
+              <span className="text-xs tracking-[0.25em] uppercase font-semibold text-accent">Lead Faculty</span>
               <h2 className="text-3xl sm:text-4xl font-bold mt-3 text-foreground">Meet Neelima</h2>
               <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
                 <p>
@@ -639,7 +639,7 @@ const HumanAIEdge = () => {
             <FadeUp>
               <span className="text-xs tracking-[0.25em] uppercase font-semibold text-accent">Keynotes & Workshops</span>
               <h2 className="text-3xl sm:text-4xl md:text-[42px] font-bold mt-3 mb-8" style={{ background: "linear-gradient(135deg, #fff 40%, hsl(24 80% 60%))", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-                Book Neelima for Your Event
+                Bring This Experience to Your Organization
               </h2>
             </FadeUp>
 
