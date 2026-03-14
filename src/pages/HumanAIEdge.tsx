@@ -523,7 +523,7 @@ const HumanAIEdge = () => {
             </FadeUp>
 
             <FadeUp delay={0.2}>
-              <span className="text-xs tracking-[0.25em] uppercase font-semibold text-accent">Your Guide</span>
+              <span className="text-xs tracking-[0.25em] uppercase font-semibold text-accent">Lead Faculty</span>
               <h2 className="text-3xl sm:text-4xl font-bold mt-3 text-foreground">Meet Neelima</h2>
               <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
                 <p>
