@@ -10,6 +10,7 @@ import HealthWellness from "./pages/HealthWellness";
 import CollaborativeIntelligence from "./pages/CollaborativeIntelligence";
 import CloseProtection from "./pages/CloseProtection";
 import SalesMarketing from "./pages/SalesMarketing";
+import HumanAIEdge from "./pages/HumanAIEdge";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 import WhatsAppBubble from "./components/WhatsAppBubble";
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/collaborative-intelligence" element={<CollaborativeIntelligence />} />
           <Route path="/close-protection" element={<CloseProtection />} />
           <Route path="/sales-marketing" element={<SalesMarketing />} />
+          <Route path="/human-ai-edge" element={<HumanAIEdge />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
