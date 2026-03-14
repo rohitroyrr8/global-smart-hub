@@ -639,7 +639,7 @@ const HumanAIEdge = () => {
             <FadeUp>
               <span className="text-xs tracking-[0.25em] uppercase font-semibold text-accent">Keynotes & Workshops</span>
               <h2 className="text-3xl sm:text-4xl md:text-[42px] font-bold mt-3 mb-8" style={{ background: "linear-gradient(135deg, #fff 40%, hsl(24 80% 60%))", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-                Book Neelima for Your Event
+                Bring This Experience to Your Organization
               </h2>
             </FadeUp>
 
