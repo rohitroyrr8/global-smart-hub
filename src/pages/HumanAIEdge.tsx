@@ -145,7 +145,7 @@ const audience = [
 const programs = [
   { flagship: true, title: "The Human-AI Edge — Executive Masterclass", duration: "2-Day Immersive", desc: "An exclusive, high-intensity program for senior leaders. Covers strategic AI adoption, human-AI teaming frameworks, and ethical governance. Walk away with a personalized AI transformation roadmap." },
   { flagship: false, title: "AI Fluency for Teams", duration: "4-Week Program", desc: "Equip your entire team with AI literacy. Covers prompt engineering, AI tool evaluation, workflow automation, and collaborative intelligence principles." },
-  { flagship: false, title: "Keynote & Workshop", duration: "Half / Full Day", desc: "Book Neelima for your conference, corporate retreat, or leadership summit. Customized talks and workshops on human-AI collaboration and the future of work." },
+  { flagship: false, title: "Keynote & Workshop", duration: "Half / Full Day", desc: "Invite a powerful keynote or workshop to your conference, corporate retreat, or leadership summit. Customized talks on human-AI collaboration and the future of work." },
 ];
 
 const speakingTopics = [
