@@ -10,6 +10,7 @@ import HealthWellness from "./pages/HealthWellness";
 import CollaborativeIntelligence from "./pages/CollaborativeIntelligence";
 import CloseProtection from "./pages/CloseProtection";
 import SalesMarketing from "./pages/SalesMarketing";
+import HumanAIEdge from "./pages/HumanAIEdge";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 import WhatsAppBubble from "./components/WhatsAppBubble";
