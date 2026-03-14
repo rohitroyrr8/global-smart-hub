@@ -494,60 +494,6 @@ const HumanAIEdge = () => {
         </div>
       </section>
 
-      {/* ════════════════════════ MEET NEELIMA ════════════════════════ */}
-      <section className="py-16 sm:py-24 bg-background">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center max-w-5xl mx-auto">
-            <FadeUp>
-              <div className="relative group">
-                {/* Animated ring */}
-                <motion.div
-                  className="absolute -inset-3 rounded-2xl border-2 border-accent/30"
-                  animate={{ borderColor: ["hsl(24 80% 50% / 0.2)", "hsl(24 80% 50% / 0.5)", "hsl(24 80% 50% / 0.2)"] }}
-                  transition={{ duration: 3, repeat: Infinity }}
-                />
-                <div className="relative overflow-hidden rounded-2xl">
-                  <img
-                    src={neelimaImg}
-                    alt="Neelima — Human-AI Edge Program Lead"
-                    className="w-full object-cover"
-                    style={{ maxHeight: 500 }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <p className="text-white font-bold text-xl">Neelima</p>
-                    <p className="text-white/70 text-sm">Human-AI Edge Creator & Keynote Speaker</p>
-                  </div>
-                </div>
-              </div>
-            </FadeUp>
-
-            <FadeUp delay={0.2}>
-              <span className="text-xs tracking-[0.25em] uppercase font-semibold text-accent">Lead Faculty</span>
-              <h2 className="text-3xl sm:text-4xl font-bold mt-3 text-foreground">Meet Neelima</h2>
-              <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
-                <p>
-                  Neelima is a globally recognized thought leader on Human-AI collaboration. With over 15 years of experience spanning technology leadership, executive education, and organizational transformation, she has trained thousands of leaders across 20+ countries.
-                </p>
-                <p>
-                  Her unique approach bridges the gap between technical AI capabilities and human strategic thinking — making AI accessible, actionable, and ethical for leaders at every level.
-                </p>
-                <p>
-                  She has been invited to speak at some of the world's most prestigious stages and has advised Fortune 500 companies on their AI transformation journeys.
-                </p>
-              </div>
-              <div className="flex flex-wrap gap-3 mt-8">
-                {["20+ Countries", "5000+ Leaders Trained", "Fortune 500 Advisor", "TEDx Speaker"].map((tag) => (
-                  <span key={tag} className="px-4 py-2 rounded-full text-xs font-semibold border border-accent/30 text-accent bg-accent/5">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </FadeUp>
-          </div>
-        </div>
-      </section>
-
       {/* ════════════════════════ GLOBAL FACTS ════════════════════════ */}
       <section className="py-16 sm:py-24 relative overflow-hidden">
         <div className="absolute inset-0">
