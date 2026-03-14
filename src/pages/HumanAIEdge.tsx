@@ -742,7 +742,7 @@ const HumanAIEdge = () => {
       </section>
 
       <Footer />
-      <CTAModal open={modalOpen} onClose={() => setModalOpen(false)} />
+      <CTAModal open={modalOpen} onClose={() => setModalOpen(false)} whatsappUrl="https://wa.me/919319165254?text=Hi%20OceanGTA!%20I'm%20interested%20in%20The%20Human-AI%20Edge%20program." />
     </motion.div>
   );
 };
