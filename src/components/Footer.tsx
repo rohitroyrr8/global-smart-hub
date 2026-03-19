@@ -16,7 +16,7 @@ const centerLinks = [
   { label: "Data Engineering / Big Data", href: "/data-science" },
   { label: "Health & Wellness", href: "/health-wellness" },
   { label: "Close Protection Officer", href: "/close-protection" },
-  { label: "Sales & Marketing", href: "/sales-marketing" },
+  { label: "Elite Sales Mastery", href: "/sales-marketing" },
 ];
 
 const Footer = () => {
