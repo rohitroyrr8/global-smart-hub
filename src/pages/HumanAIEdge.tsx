@@ -21,9 +21,8 @@ import governmentImg from "@/assets/hai-government.jpg";
 import homemakerImg from "@/assets/hai-homemaker.jpg";
 import humanRobotImg from "@/assets/hai-human-robot.jpg";
 import literacyImg from "@/assets/hai-literacy.jpg";
-import globalBg from "@/assets/global-network-bg.jpg";
+import governanceImg from "@/assets/hai-governance.jpg";
 import stageBg from "@/assets/speaking-stage-bg.jpg";
-import neelimaImg from "@/assets/trainer-neelima.jpg";
 
 /* ─── Floating Particles ─── */
 const Particles = () => (
@@ -133,7 +132,7 @@ const healthcareBoxes = [
   { icon: PieChart, title: "Predictive Healthcare", text: "AI predicts which patients are at highest risk before symptoms appear — enabling prevention rather than just treatment." },
   { icon: Pill, title: "Personalized Treatment", text: "AI analyzes individual patient data to recommend the exact treatment plan most likely to work for that specific person." },
   { icon: Bot, title: "Hospital Efficiency", text: "AI manages patient scheduling, reduces waiting times, optimizes staff deployment, and cuts administrative workload by up to 40%." },
-  { icon: Heart, title: "Mental Health & AI", text: "AI tools support mental health diagnosis, therapy assistance, and 24/7 emotional support — especially critical for women and underserved communities." },
+  { icon: Heart, title: "Mental Health & AI", text: "AI tools support mental health diagnosis, therapy assistance, and 24/7 emotional support — especially critical for underserved communities." },
   { icon: Shield, title: "Ethics in Medical AI", text: "Who is responsible when AI makes a wrong diagnosis? How do we ensure medical AI is fair across gender, race, and income? These questions demand trained advocates." },
 ];
 
@@ -237,7 +236,7 @@ const HumanAIEdge = () => {
               </Link>
 
               <h1 className="text-4xl sm:text-5xl md:text-[64px] font-bold leading-[1.08] tracking-tight">
-                {"AI Is Not The Future. It Is Right Now. And Every Woman Deserves To Lead It.".split(" ").map((word, i) => (
+                {"AI Is Not The Future. It Is Right Now. And Everyone Deserves To Lead It.".split(" ").map((word, i) => (
                   <motion.span
                     key={i}
                     initial={{ opacity: 0, y: 20 }}
@@ -261,7 +260,7 @@ const HumanAIEdge = () => {
                 transition={{ delay: 1.8, duration: 0.6 }}
                 className="text-white/70 mt-6 max-w-lg text-lg leading-relaxed font-light"
               >
-                I train students, teachers, homemakers, professionals, doctors, entrepreneurs, and government officers — to harness Artificial Intelligence with confidence, purpose, and power.
+                We train students, teachers, homemakers, professionals, doctors, entrepreneurs, and government officers — to harness Artificial Intelligence with confidence, purpose, and power.
               </motion.p>
 
               <motion.p
@@ -270,7 +269,7 @@ const HumanAIEdge = () => {
                 transition={{ delay: 2.1, duration: 0.6 }}
                 className="text-[hsl(24,80%,50%)] mt-4 text-sm font-medium"
               >
-                From your kitchen to the boardroom. From classrooms to policy halls. AI belongs to all of us.
+                From classrooms to boardrooms. From homes to policy halls. AI belongs to all of us.
               </motion.p>
 
               <motion.div
@@ -288,7 +287,7 @@ const HumanAIEdge = () => {
                   Explore All Programs
                 </motion.a>
                 <a
-                  href="https://wa.me/919319165254?text=Hi%20Neelima!%20I'd%20like%20to%20book%20a%20session%20about%20The%20Human-AI%20Edge."
+                  href="https://wa.me/919319165254?text=Hi%20OceanGTA!%20I'd%20like%20to%20book%20a%20session%20about%20The%20Human-AI%20Edge."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center border border-white/30 text-white px-8 py-4 rounded-lg font-semibold text-base hover:bg-white/10 transition-colors min-h-[52px]"
@@ -309,7 +308,7 @@ const HumanAIEdge = () => {
                 animate={{ boxShadow: ["0 0 40px hsl(24 80% 50% / 0.2)", "0 0 80px hsl(24 80% 50% / 0.4)", "0 0 40px hsl(24 80% 50% / 0.2)"] }}
                 transition={{ duration: 3, repeat: Infinity }}
               />
-              <img src={heroImg} alt="Neelima speaking at global AI conference" className="rounded-2xl w-full object-cover shadow-2xl relative z-10" style={{ maxHeight: 480 }} />
+              <img src={heroImg} alt="Diverse group of professionals working with technology" className="rounded-2xl w-full object-cover shadow-2xl relative z-10" style={{ maxHeight: 480 }} />
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/40 via-transparent to-transparent z-20" />
             </motion.div>
           </div>
@@ -326,23 +325,22 @@ const HumanAIEdge = () => {
             <SlideIn from="left">
               <div className="relative">
                 <div className="absolute -inset-3 border-2 border-[hsl(24,80%,36%)] rounded-2xl" />
-                <img src={missionImg} alt="Diverse Indian women empowered and confident" className="rounded-2xl w-full object-cover relative z-10" style={{ maxHeight: 560 }} />
+                <img src={missionImg} alt="Mixed group of professionals in a training environment" className="rounded-2xl w-full object-cover relative z-10" style={{ maxHeight: 560 }} />
               </div>
             </SlideIn>
 
             <SlideIn from="right">
               <span className="text-xs tracking-[0.25em] uppercase font-bold text-[hsl(24,80%,36%)]">THE MISSION</span>
               <h2 className="text-3xl sm:text-4xl md:text-[42px] font-bold mt-3 text-[hsl(0,0%,10%)] leading-tight">
-                Every Person. Every Woman.<br />Every Level. AI Ready.
+                Every Person. Every Level.<br />AI Ready.
               </h2>
               <div className="mt-6 text-[hsl(0,0%,25%)] text-lg leading-relaxed space-y-4">
                 <p>We live in a world where Artificial Intelligence is reshaping everything — how we work, how we learn, how governments serve citizens, how doctors heal patients, how businesses grow.</p>
                 <p>But most AI education today is built only for coders and tech experts.</p>
-                <p className="font-semibold text-[hsl(0,0%,10%)]">I believe that is wrong.</p>
-                <p>A homemaker managing her family deserves to understand AI. A school teacher shaping young minds deserves AI tools. A government officer serving citizens deserves AI efficiency. A young girl with big dreams deserves AI skills before anyone else.</p>
-                <p>My work is to make AI accessible, practical, and empowering — for every single person, especially every woman.</p>
+                <p className="font-semibold text-[hsl(0,0%,10%)]">We believe that is wrong.</p>
+                <p>A homemaker managing her family deserves to understand AI. A school teacher shaping young minds deserves AI tools. A government officer serving citizens deserves AI efficiency. A student with big dreams deserves AI skills before anyone else.</p>
+                <p>OceanGTA's mission is to make AI accessible, practical, and empowering — for every single person, at every level, from Basic to Pro.</p>
               </div>
-              <p className="mt-6 text-[hsl(24,80%,36%)] italic font-medium">— Neelima Tiwari, Founder & Director, OceanGTA</p>
             </SlideIn>
           </div>
         </div>
@@ -353,8 +351,8 @@ const HumanAIEdge = () => {
         <div className="container mx-auto px-4 sm:px-6">
           <FadeUp className="text-center mb-12 sm:mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-[42px] font-bold text-white">This Is For YOU</h2>
-            <p className="text-[hsl(24,80%,50%)] mt-4 max-w-xl mx-auto text-lg">
-              No technical background needed. No coding required. Just the courage to lead your future.
+            <p className="text-[hsl(24,80%,50%)] mt-4 max-w-2xl mx-auto text-lg">
+              No technical background needed. No coding required. Whether you are a complete beginner or already working with AI — we have a path for you. Basic to Pro.
             </p>
           </FadeUp>
 
@@ -379,11 +377,11 @@ const HumanAIEdge = () => {
 
       {/* ══════════════ SECTION 4 — WOMEN & AI ══════════════ */}
       <section className="relative overflow-hidden">
-        <div className="grid lg:grid-cols-2 min-h-[700px]">
+        <div className="grid lg:grid-cols-2 min-h-[600px]">
           {/* Left - rust orange */}
           <div className="bg-[hsl(24,80%,36%)] p-8 sm:p-12 lg:p-16 flex flex-col justify-center">
             <FadeUp>
-              <img src={womenSummitImg} alt="Woman speaking at global summit" className="rounded-xl mb-8 w-full object-cover" style={{ maxHeight: 280 }} />
+              <img src={womenSummitImg} alt="Women in diverse professional roles standing together" className="rounded-xl mb-8 w-full object-cover" style={{ maxHeight: 280 }} />
             </FadeUp>
             <FadeUp delay={0.1}>
               <h2 className="text-3xl sm:text-4xl md:text-[42px] font-bold text-white leading-tight">
@@ -392,15 +390,16 @@ const HumanAIEdge = () => {
             </FadeUp>
             <FadeUp delay={0.2}>
               <div className="mt-6 text-white/90 text-base leading-relaxed space-y-3">
-                <p>Today AI leadership is 85% male. That is not because women are less capable. It is because women were not given the seat at the table early enough.</p>
-                <p className="font-bold text-white">I am here to change that.</p>
-                <p>When women lead AI — in governments, in boardrooms, in hospitals, in classrooms — the outcomes are more ethical, more inclusive, and more human.</p>
+                <p>Today AI leadership is 85% male — not because women are less capable, but because women were not given the seat at the table early enough.</p>
+                <p className="font-bold text-white">OceanGTA is here to change that.</p>
+                <p>Our programs reach every woman — from homemaker to entrepreneur, from teacher to doctor, from local leader to head of state.</p>
+                <p>When women lead AI the outcomes are more ethical, more inclusive, and more human.</p>
                 <p className="font-bold text-white text-lg">This is not just training. This is a movement.</p>
               </div>
             </FadeUp>
             <FadeUp delay={0.3}>
               <div className="flex flex-wrap gap-2 mt-8">
-                {["UN Women Aligned", "UNESCO AI Ethics Framework", "WEF Future of Work", "G20 AI Principles", "Social Impact Certified"].map((b) => (
+                {["UN Women Aligned", "UNESCO AI Ethics", "WEF Future of Work", "G20 AI Principles", "Social Impact Certified"].map((b) => (
                   <span key={b} className="border border-white/40 text-white text-xs px-3 py-1.5 rounded-full font-medium">{b}</span>
                 ))}
               </div>
@@ -438,7 +437,7 @@ const HumanAIEdge = () => {
             <div className="grid lg:grid-cols-2 gap-10 items-center">
               <SlideIn from="left">
                 <div className="relative">
-                  <img src={humanRobotImg} alt="Human hand and robot hand touching" className="rounded-2xl w-full object-cover shadow-lg" style={{ maxHeight: 400 }} />
+                  <img src={humanRobotImg} alt="Two professionals discussing data on a laptop" className="rounded-2xl w-full object-cover shadow-lg" style={{ maxHeight: 400 }} />
                   <div className="absolute inset-0 rounded-2xl shadow-[inset_0_0_60px_hsl(24,80%,50%,0.15)]" />
                 </div>
               </SlideIn>
@@ -480,11 +479,11 @@ const HumanAIEdge = () => {
                   <p className="font-semibold text-[hsl(0,0%,10%)]">This is not a luxury. This is survival in the AI era.</p>
                 </div>
                 <div className="mt-6 bg-[hsl(0,0%,10%)] text-white p-5 rounded-xl text-sm leading-relaxed">
-                  From rural homemakers to urban executives — AI literacy is the great equalizer. My mission is to make it reach everyone.
+                  From rural homemakers to urban executives — AI literacy is the great equalizer. Our mission is to make it reach everyone.
                 </div>
               </SlideIn>
               <SlideIn from="right" className="order-1 lg:order-2">
-                <img src={literacyImg} alt="Diverse group learning together" className="rounded-2xl w-full object-cover shadow-lg" style={{ maxHeight: 400 }} />
+                <img src={literacyImg} alt="Diverse group of learners in a classroom with tablets" className="rounded-2xl w-full object-cover shadow-lg" style={{ maxHeight: 400 }} />
               </SlideIn>
             </div>
           </div>
@@ -494,7 +493,7 @@ const HumanAIEdge = () => {
             <div className="grid lg:grid-cols-2 gap-10 items-center">
               <SlideIn from="left">
                 <div className="relative">
-                  <img src={governmentImg} alt="Government building with digital overlay" className="rounded-2xl w-full object-cover shadow-lg" style={{ maxHeight: 400 }} />
+                  <img src={governanceImg} alt="Government officials in a policy meeting" className="rounded-2xl w-full object-cover shadow-lg" style={{ maxHeight: 400 }} />
                 </div>
               </SlideIn>
               <SlideIn from="right">
@@ -510,7 +509,7 @@ const HumanAIEdge = () => {
                   </ul>
                 </div>
                 <div className="mt-6 bg-[hsl(24,80%,36%)] text-white p-5 rounded-xl text-sm leading-relaxed">
-                  I train government officers, corporate leaders, and institutions to understand and implement responsible AI — before regulators force them to.
+                  We train government officers, corporate leaders, and institutions to understand and implement responsible AI — before regulators force them to.
                 </div>
               </SlideIn>
             </div>
@@ -528,13 +527,13 @@ const HumanAIEdge = () => {
 
           <FadeUp className="mb-10">
             <p className="text-white/70 text-center max-w-3xl mx-auto text-base leading-relaxed">
-              Healthcare is the most powerful application of AI in human history. But doctors need to understand it. Nurses need to use it. Hospital administrators need to manage it. Patients need to trust it. I bridge that gap — training healthcare professionals not just on AI tools, but on the human side of AI in medicine.
+              Healthcare is the most powerful application of AI in human history. But doctors need to understand it. Nurses need to use it. Hospital administrators need to manage it. Patients need to trust it. OceanGTA bridges that gap — training healthcare professionals not just on AI tools, but on the human side of AI in medicine.
             </p>
           </FadeUp>
 
           <FadeUp className="mb-12">
             <div className="relative rounded-2xl overflow-hidden">
-              <img src={healthcareImg} alt="Doctor using AI diagnostic screen" className="w-full object-cover" style={{ maxHeight: 400 }} />
+              <img src={healthcareImg} alt="Medical professionals reviewing data on a tablet" className="w-full object-cover" style={{ maxHeight: 400 }} />
               <div className="absolute inset-0 bg-gradient-to-t from-[hsl(24,80%,36%,0.6)] to-transparent" />
             </div>
           </FadeUp>
@@ -558,8 +557,8 @@ const HumanAIEdge = () => {
           <FadeUp delay={0.3}>
             <div className="mt-12 bg-[hsl(24,80%,36%)] rounded-2xl p-8 text-center">
               <p className="text-white text-lg sm:text-xl font-medium leading-relaxed">
-                I don't replace your doctor.<br />
-                I train your doctor's intelligence to work alongside AI.<br />
+                OceanGTA doesn't replace your doctor.<br />
+                We train your doctor's intelligence to work alongside AI.<br />
                 <strong>The result? Better outcomes for every patient.</strong>
               </p>
             </div>
@@ -579,7 +578,7 @@ const HumanAIEdge = () => {
             <SlideIn from="left">
               <div className="relative">
                 <div className="absolute -inset-3 border-2 border-[hsl(24,80%,36%)] rounded-2xl" />
-                <img src={governmentImg} alt="Woman government officer with technology" className="rounded-2xl w-full object-cover relative z-10" style={{ maxHeight: 420 }} />
+                <img src={governmentImg} alt="Government administrators working with technology in an office" className="rounded-2xl w-full object-cover relative z-10" style={{ maxHeight: 420 }} />
               </div>
             </SlideIn>
 
@@ -587,7 +586,7 @@ const HumanAIEdge = () => {
               <div className="text-[hsl(0,0%,25%)] text-base leading-relaxed space-y-4">
                 <p>Governments globally are racing to adopt Artificial Intelligence — to deliver faster services, reduce corruption, improve decision-making, and serve citizens more efficiently.</p>
                 <p>But there is a massive gap. Most government officers have never received a single hour of AI training.</p>
-                <p>I train government employees, IAS officers, administrators, and public servants to:</p>
+                <p>OceanGTA trains government employees, IAS officers, administrators, and public servants to:</p>
                 <ul className="space-y-1 ml-4">
                   {["Understand AI capabilities and limitations", "Use AI tools for efficient governance", "Implement AI ethically in public service", "Recognize and prevent AI bias in government decisions", "Prepare departments for the AI era", "Engage with national and international AI policy frameworks"].map((item, i) => (
                     <li key={i} className="flex items-start gap-2"><span className="text-[hsl(24,80%,36%)]">→</span>{item}</li>
@@ -613,7 +612,7 @@ const HumanAIEdge = () => {
 
           <FadeUp delay={0.3}>
             <div className="mt-12 bg-[hsl(0,0%,10%)] rounded-2xl p-6 sm:p-8 text-center">
-              <p className="text-white/60 text-sm mb-3">Recognized frameworks I align with:</p>
+              <p className="text-white/60 text-sm mb-3">Recognized frameworks OceanGTA aligns with:</p>
               <p className="text-white font-medium text-sm">
                 United Nations AI Governance &nbsp;|&nbsp; UNESCO AI Ethics &nbsp;|&nbsp; G20 Digital Economy &nbsp;|&nbsp; India National AI Strategy (NITI Aayog) &nbsp;|&nbsp; WEF Future of Government
               </p>
@@ -625,9 +624,17 @@ const HumanAIEdge = () => {
       {/* ══════════════ SECTION 8 — TRAINING PROGRAMS ══════════════ */}
       <section id="programs" className="py-16 sm:py-24 bg-[hsl(0,0%,6%)]">
         <div className="container mx-auto px-4 sm:px-6">
-          <FadeUp className="text-center mb-14">
+          <FadeUp className="text-center mb-6">
             <h2 className="text-3xl sm:text-4xl md:text-[42px] font-bold text-white">Training Programs</h2>
             <p className="text-[hsl(24,80%,50%)] mt-3 text-lg">For Every Person. Every Level. Every Goal.</p>
+          </FadeUp>
+
+          <FadeUp delay={0.1} className="mb-14">
+            <div className="text-center">
+              <span className="inline-block bg-[hsl(24,80%,36%)] text-white text-sm font-bold px-6 py-3 rounded-full">
+                All programs available from Basic to Pro Level — designed for complete beginners to advanced practitioners
+              </span>
+            </div>
           </FadeUp>
 
           {programRows.map((row, ri) => (
@@ -648,7 +655,7 @@ const HumanAIEdge = () => {
                       <p className="text-white/60 text-sm leading-relaxed flex-grow">{card.desc}</p>
                       <p className="text-white/40 text-xs mt-4">{card.format}</p>
                       <a
-                        href="https://wa.me/919319165254?text=Hi%20Neelima!%20I'm%20interested%20in%20the%20program%20'${encodeURIComponent(card.title)}'."
+                        href={`https://wa.me/919319165254?text=Hi%20OceanGTA!%20I'm%20interested%20in%20the%20program%20'${encodeURIComponent(card.title)}'.`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center mt-4 text-[hsl(24,80%,50%)] text-sm font-semibold hover:underline"
@@ -669,12 +676,12 @@ const HumanAIEdge = () => {
         <div className="container mx-auto px-4 sm:px-6">
           <FadeUp className="text-center mb-10">
             <h2 className="text-3xl sm:text-4xl md:text-[42px] font-bold text-[hsl(0,0%,10%)]">Yes — This Is For You Too</h2>
-            <p className="text-[hsl(24,80%,50%)] mt-3 text-lg">To Every Woman At Home — AI Can Change Your Life</p>
+            <p className="text-[hsl(24,80%,50%)] mt-3 text-lg">To Every Person At Home — AI Can Change Your Life</p>
           </FadeUp>
 
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <SlideIn from="left">
-              <img src={homemakerImg} alt="Indian woman at home using smartphone confidently" className="rounded-2xl w-full object-cover shadow-lg" style={{ maxHeight: 450 }} />
+              <img src={homemakerImg} alt="Person at home working on a laptop in a cozy setting" className="rounded-2xl w-full object-cover shadow-lg" style={{ maxHeight: 450 }} />
             </SlideIn>
 
             <SlideIn from="right">
@@ -683,15 +690,15 @@ const HumanAIEdge = () => {
                 <p className="font-semibold text-[hsl(0,0%,10%)]">Now imagine adding AI to that power.</p>
                 <p>AI can help you:</p>
                 <ul className="space-y-1 ml-4">
-                  {["Start a business from home with zero investment", "Learn new skills and earn online", "Manage household budgets smarter", "Support your children's education", "Access health information instantly", "Build a professional identity online", "Teach yourself anything — in your own language, at your own pace"].map((item, i) => (
+                  {["Start a business from home", "Learn new skills and earn online", "Manage household budgets smarter", "Support your children's education", "Access health information instantly", "Build a professional identity online", "Teach yourself anything — in your own language, at your own pace"].map((item, i) => (
                     <li key={i} className="flex items-start gap-2"><span className="text-[hsl(24,80%,36%)]">→</span>{item}</li>
                   ))}
                 </ul>
-                <p>You do not need a degree. You do not need to know coding. <strong className="text-[hsl(0,0%,10%)]">You just need to start.</strong></p>
-                <p>I have created programs specifically designed for women at home — simple, practical, in plain language, with real results.</p>
+                <p>You do not need a degree. You do not need coding. <strong className="text-[hsl(0,0%,10%)]">You just need to start.</strong></p>
+                <p>OceanGTA has created programs specifically designed for people at home — simple, practical, in plain language, with real results.</p>
               </div>
               <a
-                href="https://wa.me/919319165254?text=Hi%20Neelima!%20I'm%20a%20homemaker%20interested%20in%20learning%20AI."
+                href="https://wa.me/919319165254?text=Hi%20OceanGTA!%20I'm%20interested%20in%20learning%20AI%20from%20home."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center mt-8 bg-[hsl(24,80%,36%)] text-white px-8 py-4 rounded-lg font-bold text-base hover:bg-[hsl(24,80%,30%)] transition-colors"
@@ -704,11 +711,7 @@ const HumanAIEdge = () => {
       </section>
 
       {/* ══════════════ SECTION 10 — GLOBAL STATS ══════════════ */}
-      <section className="relative py-16 sm:py-24 overflow-hidden">
-        <div className="absolute inset-0">
-          <img src={globalBg} alt="" className="w-full h-full object-cover opacity-30" />
-          <div className="absolute inset-0 bg-[hsl(0,0%,6%,0.85)]" />
-        </div>
+      <section className="relative py-16 sm:py-24 overflow-hidden bg-[hsl(0,0%,6%)]">
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <FadeUp className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl md:text-[42px] font-bold text-white">The World Is Already Changing</h2>
@@ -731,7 +734,7 @@ const HumanAIEdge = () => {
         </div>
       </section>
 
-      {/* ══════════════ SECTION 12 — SPEAKING & RECOGNITION ══════════════ */}
+      {/* ══════════════ SECTION 11 — SPEAKING & RECOGNITION ══════════════ */}
       <section className="relative py-16 sm:py-24 overflow-hidden">
         <div className="absolute inset-0">
           <img src={stageBg} alt="" className="w-full h-full object-cover" />
@@ -739,7 +742,7 @@ const HumanAIEdge = () => {
         </div>
         <div className="container mx-auto px-4 sm:px-6 relative z-10 text-center">
           <FadeUp>
-            <h2 className="text-3xl sm:text-4xl md:text-[42px] font-bold text-white">Invite Neelima to Speak</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-[42px] font-bold text-white">Invite OceanGTA to Speak</h2>
             <p className="text-[hsl(24,80%,50%)] mt-3 text-lg">For Conferences | Universities | Government Events | International Forums</p>
           </FadeUp>
 
@@ -764,18 +767,18 @@ const HumanAIEdge = () => {
 
           <FadeUp delay={0.5}>
             <a
-              href="https://wa.me/919319165254?text=Hi%20Neelima!%20I'd%20like%20to%20book%20you%20as%20a%20speaker%20at%20our%20event."
+              href="https://wa.me/919319165254?text=Hi%20OceanGTA!%20I'd%20like%20to%20book%20you%20for%20a%20speaking%20engagement%20at%20our%20event."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center mt-8 bg-[hsl(24,80%,36%)] text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-[hsl(24,80%,30%)] transition-colors"
             >
-              Book Neelima as Speaker
+              Book OceanGTA for Your Event
             </a>
           </FadeUp>
         </div>
       </section>
 
-      {/* ══════════════ SECTION 13 — FINAL CTA ══════════════ */}
+      {/* ══════════════ SECTION 12 — FINAL CTA ══════════════ */}
       <section className="relative py-20 sm:py-32 overflow-hidden">
         <motion.div
           className="absolute inset-0"
@@ -793,7 +796,7 @@ const HumanAIEdge = () => {
           <FadeUp>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
               The AI Era Is Here.<br />
-              Every Woman Deserves<br />
+              Every Person Deserves<br />
               To Lead It.
             </h2>
           </FadeUp>
@@ -810,7 +813,7 @@ const HumanAIEdge = () => {
           <FadeUp delay={0.35}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
               <motion.a
-                href="https://wa.me/919319165254?text=Hi%20Neelima!%20I%20want%20to%20start%20my%20AI%20journey%20today."
+                href="https://wa.me/919319165254?text=Hi%20OceanGTA!%20I%20want%20to%20start%20my%20AI%20journey%20today."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center bg-[hsl(24,80%,36%)] text-white px-10 py-4 rounded-lg font-bold text-lg min-h-[56px]"
@@ -820,12 +823,12 @@ const HumanAIEdge = () => {
                 Start Your AI Journey Today
               </motion.a>
               <a
-                href="https://wa.me/919319165254?text=Hi%20Neelima!%20I'd%20like%20to%20talk%20to%20you%20directly."
+                href="https://wa.me/919319165254?text=Hi%20OceanGTA!%20I'd%20like%20to%20talk%20to%20your%20team."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center border-2 border-white text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-white/10 transition-colors min-h-[56px]"
               >
-                Talk to Neelima Directly
+                Talk to Our Team
               </a>
             </div>
           </FadeUp>
