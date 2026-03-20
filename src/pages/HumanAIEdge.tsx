@@ -381,7 +381,7 @@ const HumanAIEdge = () => {
           {/* Left - rust orange */}
           <div className="bg-[hsl(24,80%,36%)] p-8 sm:p-12 lg:p-16 flex flex-col justify-center">
             <FadeUp>
-              <img src={womenSummitImg} alt="Women in diverse professional roles standing together" className="rounded-xl mb-8 w-full object-cover" style={{ maxHeight: 280 }} />
+              <img src={womenSummitImg} alt="Women in diverse professional roles standing together" className="rounded-xl mb-8 w-full object-cover object-top" style={{ maxHeight: 320 }} />
             </FadeUp>
             <FadeUp delay={0.1}>
               <h2 className="text-3xl sm:text-4xl md:text-[42px] font-bold text-white leading-tight">
