@@ -533,7 +533,7 @@ const HumanAIEdge = () => {
 
           <FadeUp className="mb-12">
             <div className="relative rounded-2xl overflow-hidden">
-              <img src={healthcareImg} alt="Medical professionals reviewing data on a tablet" className="w-full object-cover" style={{ maxHeight: 400 }} />
+              <img src={healthcareImg} alt="Medical professionals reviewing data on a tablet" className="w-full object-cover object-top" style={{ maxHeight: 400 }} />
               <div className="absolute inset-0 bg-gradient-to-t from-[hsl(24,80%,36%,0.6)] to-transparent" />
             </div>
           </FadeUp>
