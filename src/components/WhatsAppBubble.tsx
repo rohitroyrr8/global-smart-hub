@@ -1,7 +1,7 @@
 import { MessageCircle } from "lucide-react";
 
 const WHATSAPP_URL =
-  "https://wa.me/919319165254?text=Hi%20OceanGTA!%20I%20would%20like%20to%20know%20more%20about%20your%20training%20programs.";
+  "https://wa.me/919232118685?text=Hi%20OceanGTA!%20I%20would%20like%20to%20know%20more%20about%20your%20training%20programs.";
 
 const WhatsAppBubble = () => {
   return (

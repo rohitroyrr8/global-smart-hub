@@ -5,10 +5,10 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CountUpNumber from "@/components/CountUpNumber";
 
-const WHATSAPP_GENERAL = "https://wa.me/919319165254?text=Hi%20OceanGTA!%20I%20want%20to%20know%20more%20about%20the%20Data%20Science%20%26%20Big%20Data%20program.%20Please%20share%20details.";
-const WHATSAPP_BASIC = "https://wa.me/919319165254?text=Hi%20OceanGTA!%20I%20want%20to%20enroll%20in%20the%203-Month%20Data%20Science%20Basic%20Program.%20Please%20share%20details.";
-const WHATSAPP_ADVANCED = "https://wa.me/919319165254?text=Hi%20OceanGTA!%20I%20want%20to%20enroll%20in%20the%206-Month%20Advanced%20Data%20Science%20Program.%20Please%20share%20details.";
-const WHATSAPP_ENROLL = "https://wa.me/919319165254?text=Hi%20OceanGTA!%20I%20want%20to%20enroll%20in%20the%20Data%20Science%20program.%20Please%20share%20batch%20details%20and%20fee%20structure.";
+const WHATSAPP_GENERAL = "https://wa.me/919232118685?text=Hi%20OceanGTA!%20I%20want%20to%20know%20more%20about%20the%20Data%20Science%20%26%20Big%20Data%20program.%20Please%20share%20details.";
+const WHATSAPP_BASIC = "https://wa.me/919232118685?text=Hi%20OceanGTA!%20I%20want%20to%20enroll%20in%20the%203-Month%20Data%20Science%20Basic%20Program.%20Please%20share%20details.";
+const WHATSAPP_ADVANCED = "https://wa.me/919232118685?text=Hi%20OceanGTA!%20I%20want%20to%20enroll%20in%20the%206-Month%20Advanced%20Data%20Science%20Program.%20Please%20share%20details.";
+const WHATSAPP_ENROLL = "https://wa.me/919232118685?text=Hi%20OceanGTA!%20I%20want%20to%20enroll%20in%20the%20Data%20Science%20program.%20Please%20share%20batch%20details%20and%20fee%20structure.";
 
 const tickerText = "$862 Billion — Global Big Data Market by 2030 📊 · 2.5 Quintillion bytes of data created EVERY DAY ⚡ · India to create 11 Million Data Jobs by 2026 · Only 30% of collected data is ever analyzed — creating massive opportunity 🔥 · Data Scientist = #1 Most In-Demand Job Globally · ₹1 Crore+ annual salary at senior leadership levels · 20.4% CAGR — Data Science is the fastest growing market on earth · 95% of businesses use data to make decisions but lack skilled analysts";
 

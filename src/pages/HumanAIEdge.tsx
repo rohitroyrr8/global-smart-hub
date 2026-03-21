@@ -287,7 +287,7 @@ const HumanAIEdge = () => {
                   Explore All Programs
                 </motion.a>
                 <a
-                  href="https://wa.me/919319165254?text=Hi%20OceanGTA!%20I'd%20like%20to%20book%20a%20session%20about%20The%20Human-AI%20Edge."
+                  href="https://wa.me/919232118685?text=Hi%20OceanGTA!%20I'd%20like%20to%20book%20a%20session%20about%20The%20Human-AI%20Edge."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center border border-white/30 text-white px-8 py-4 rounded-lg font-semibold text-base hover:bg-white/10 transition-colors min-h-[52px]"
@@ -655,7 +655,7 @@ const HumanAIEdge = () => {
                       <p className="text-white/60 text-sm leading-relaxed flex-grow">{card.desc}</p>
                       <p className="text-white/40 text-xs mt-4">{card.format}</p>
                       <a
-                        href={`https://wa.me/919319165254?text=Hi%20OceanGTA!%20I'm%20interested%20in%20the%20program%20'${encodeURIComponent(card.title)}'.`}
+                        href={`https://wa.me/919232118685?text=Hi%20OceanGTA!%20I'm%20interested%20in%20the%20program%20'${encodeURIComponent(card.title)}'.`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center mt-4 text-[hsl(24,80%,50%)] text-sm font-semibold hover:underline"
@@ -698,7 +698,7 @@ const HumanAIEdge = () => {
                 <p>OceanGTA has created programs specifically designed for people at home — simple, practical, in plain language, with real results.</p>
               </div>
               <a
-                href="https://wa.me/919319165254?text=Hi%20OceanGTA!%20I'm%20interested%20in%20learning%20AI%20from%20home."
+                href="https://wa.me/919232118685?text=Hi%20OceanGTA!%20I'm%20interested%20in%20learning%20AI%20from%20home."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center mt-8 bg-[hsl(24,80%,36%)] text-white px-8 py-4 rounded-lg font-bold text-base hover:bg-[hsl(24,80%,30%)] transition-colors"
@@ -767,7 +767,7 @@ const HumanAIEdge = () => {
 
           <FadeUp delay={0.5}>
             <a
-              href="https://wa.me/919319165254?text=Hi%20OceanGTA!%20I'd%20like%20to%20book%20you%20for%20a%20speaking%20engagement%20at%20our%20event."
+              href="https://wa.me/919232118685?text=Hi%20OceanGTA!%20I'd%20like%20to%20book%20you%20for%20a%20speaking%20engagement%20at%20our%20event."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center mt-8 bg-[hsl(24,80%,36%)] text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-[hsl(24,80%,30%)] transition-colors"
@@ -813,7 +813,7 @@ const HumanAIEdge = () => {
           <FadeUp delay={0.35}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
               <motion.a
-                href="https://wa.me/919319165254?text=Hi%20OceanGTA!%20I%20want%20to%20start%20my%20AI%20journey%20today."
+                href="https://wa.me/919232118685?text=Hi%20OceanGTA!%20I%20want%20to%20start%20my%20AI%20journey%20today."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center bg-[hsl(24,80%,36%)] text-white px-10 py-4 rounded-lg font-bold text-lg min-h-[56px]"
@@ -823,7 +823,7 @@ const HumanAIEdge = () => {
                 Start Your AI Journey Today
               </motion.a>
               <a
-                href="https://wa.me/919319165254?text=Hi%20OceanGTA!%20I'd%20like%20to%20talk%20to%20your%20team."
+                href="https://wa.me/919232118685?text=Hi%20OceanGTA!%20I'd%20like%20to%20talk%20to%20your%20team."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center border-2 border-white text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-white/10 transition-colors min-h-[56px]"
