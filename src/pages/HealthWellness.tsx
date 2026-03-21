@@ -438,7 +438,7 @@ const HealthWellness = () => {
                 Discover Your Wellness Journey
               </Link>
               <a
-                href="https://wa.me/919319165254?text=Hi%20OceanGTA!%20I%20am%20interested%20in%20the%20Health%20%26%20Wellness%20Program.%20Please%20share%20more%20details."
+                href="https://wa.me/919232118685?text=Hi%20OceanGTA!%20I%20am%20interested%20in%20the%20Health%20%26%20Wellness%20Program.%20Please%20share%20more%20details."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border border-primary-foreground/40 text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary-foreground/10 transition-colors min-h-[48px] flex items-center justify-center"

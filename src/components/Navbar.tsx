@@ -154,7 +154,7 @@ const Navbar = () => {
           </div>
 
           <a
-            href="https://wa.me/919319165254?text=Hi%20OceanGTA!%20I%20would%20like%20to%20book%20a%20free%20call.%20Please%20share%20available%20times."
+            href="https://wa.me/919232118685?text=Hi%20OceanGTA!%20I%20would%20like%20to%20book%20a%20free%20call.%20Please%20share%20available%20times."
             target="_blank"
             rel="noopener noreferrer"
             className="gradient-cq text-accent-foreground px-4 xl:px-5 py-2.5 rounded-md text-sm font-semibold hover:opacity-90 transition-opacity whitespace-nowrap min-h-[44px] flex items-center"
@@ -235,7 +235,7 @@ const Navbar = () => {
               </AnimatePresence>
 
               <a
-                href="https://wa.me/919319165254?text=Hi%20OceanGTA!%20I%20would%20like%20to%20book%20a%20free%20call.%20Please%20share%20available%20times."
+                href="https://wa.me/919232118685?text=Hi%20OceanGTA!%20I%20would%20like%20to%20book%20a%20free%20call.%20Please%20share%20available%20times."
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileOpen(false)}

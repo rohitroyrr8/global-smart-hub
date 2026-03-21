@@ -385,7 +385,7 @@ const Blockchain = () => {
           <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-8 max-w-lg mx-auto">Join our next cohort and gain industry-recognized certification in blockchain and Web3 technologies.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://wa.me/919319165254?text=Hi%20OceanGTA!%20I%20am%20interested%20in%20the%20Blockchain%20%26%20Web3%20Training.%20I%20would%20like%20to%20book%20my%20training%20now.%20Please%20share%20batch%20dates%20and%20details."
+              href="https://wa.me/919232118685?text=Hi%20OceanGTA!%20I%20am%20interested%20in%20the%20Blockchain%20%26%20Web3%20Training.%20I%20would%20like%20to%20book%20my%20training%20now.%20Please%20share%20batch%20dates%20and%20details."
               target="_blank"
               rel="noopener noreferrer"
               className="gradient-cq text-accent-foreground px-6 sm:px-8 py-3 rounded-md font-semibold hover:opacity-90 transition-opacity min-h-[48px] flex items-center justify-center"
@@ -405,7 +405,7 @@ const Blockchain = () => {
       <CTAModal
         open={modalOpen}
         onClose={() => setModalOpen(false)}
-        whatsappUrl="https://wa.me/919319165254?text=Hi%20OceanGTA!%20I%20am%20interested%20in%20the%20Blockchain%20%26%20Web3%20Training.%20Please%20share%20more%20details."
+        whatsappUrl="https://wa.me/919232118685?text=Hi%20OceanGTA!%20I%20am%20interested%20in%20the%20Blockchain%20%26%20Web3%20Training.%20Please%20share%20more%20details."
       />
 
       <Footer />

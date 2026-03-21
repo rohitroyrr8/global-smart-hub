@@ -256,7 +256,7 @@ const CollaborativeIntelligence = () => {
                 Rewire Your Team
               </Link>
               <a
-                href="https://wa.me/919319165254?text=Hi%20OceanGTA!%20I%20am%20interested%20in%20the%20CQ%20Training%20for%20my%20team.%20Please%20share%20more%20details."
+                href="https://wa.me/919232118685?text=Hi%20OceanGTA!%20I%20am%20interested%20in%20the%20CQ%20Training%20for%20my%20team.%20Please%20share%20more%20details."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block px-10 py-4 rounded-xl text-lg text-center text-white hover:opacity-90 transition-all min-h-[48px]"
@@ -684,7 +684,7 @@ const CollaborativeIntelligence = () => {
             {/* Right: Buttons */}
             <div className="flex flex-col gap-4">
               <a
-                href="https://wa.me/919319165254?text=Hi%20OceanGTA!%20I%20want%20to%20reserve%20seats%20for%20the%20CQ%20Training%20for%20my%20team.%20Please%20share%20upcoming%20batch%20details."
+                href="https://wa.me/919232118685?text=Hi%20OceanGTA!%20I%20want%20to%20reserve%20seats%20for%20the%20CQ%20Training%20for%20my%20team.%20Please%20share%20upcoming%20batch%20details."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-4 rounded-xl text-lg text-center text-white font-bold bg-[hsl(var(--rust-orange))] hover:opacity-90 transition-all shadow-xl min-h-[48px]"
@@ -832,7 +832,7 @@ const CollaborativeIntelligence = () => {
                 Start the Transformation
               </Link>
               <a
-                href="https://wa.me/919319165254?text=Hi%20OceanGTA!%20I%20want%20to%20discuss%20the%20CQ%20program%20for%20my%20organization."
+                href="https://wa.me/919232118685?text=Hi%20OceanGTA!%20I%20want%20to%20discuss%20the%20CQ%20program%20for%20my%20organization."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all min-h-[48px]"

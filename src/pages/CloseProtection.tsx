@@ -70,7 +70,7 @@ const CloseProtection = () => {
           </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }} className="mt-8 flex flex-col sm:flex-row gap-4">
-            <a href="https://wa.me/919319165254?text=Hi%20OceanGTA!%20I%20want%20to%20reserve%20my%20seat%20for%20the%20CPO%20training.%20Please%20share%20details." target="_blank" rel="noopener noreferrer" className="gradient-cq text-accent-foreground px-8 py-3.5 rounded-lg font-bold text-base hover:opacity-90 transition-opacity min-h-[48px] text-center">
+            <a href="https://wa.me/919232118685?text=Hi%20OceanGTA!%20I%20want%20to%20reserve%20my%20seat%20for%20the%20CPO%20training.%20Please%20share%20details." target="_blank" rel="noopener noreferrer" className="gradient-cq text-accent-foreground px-8 py-3.5 rounded-lg font-bold text-base hover:opacity-90 transition-opacity min-h-[48px] text-center">
               Reserve Your Seat Now
             </a>
             <Link to="/#send-inquiry" className="border-2 border-primary-foreground/40 text-primary-foreground px-8 py-3.5 rounded-lg font-bold text-base hover:bg-primary-foreground/10 transition-colors min-h-[48px] text-center">
@@ -298,7 +298,7 @@ const CloseProtection = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="https://wa.me/919319165254?text=Hi%20OceanGTA!%20I%20want%20to%20reserve%20my%20seat%20for%20the%20CPO%20training.%20Please%20share%20batch%20dates%20and%20details." target="_blank" rel="noopener noreferrer" className="gradient-cq text-accent-foreground px-8 py-4 rounded-lg font-bold text-base sm:text-lg hover:opacity-90 transition-opacity min-h-[48px] text-center">
+              <a href="https://wa.me/919232118685?text=Hi%20OceanGTA!%20I%20want%20to%20reserve%20my%20seat%20for%20the%20CPO%20training.%20Please%20share%20batch%20dates%20and%20details." target="_blank" rel="noopener noreferrer" className="gradient-cq text-accent-foreground px-8 py-4 rounded-lg font-bold text-base sm:text-lg hover:opacity-90 transition-opacity min-h-[48px] text-center">
                 Reserve Your Seat on WhatsApp
               </a>
               <Link to="/#send-inquiry" className="border-2 border-primary-foreground/30 text-primary-foreground px-8 py-4 rounded-lg font-bold text-base hover:bg-primary-foreground/10 transition-colors min-h-[48px] text-center">
