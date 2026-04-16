@@ -4,7 +4,7 @@ import trainerVijay from "@/assets/trainer-vijay.jpg";
 import trainerTaco from "@/assets/trainer-taco.jpg";
 import trainerRohit from "@/assets/trainer-rohit.jpg";
 import trainerData from "@/assets/trainer-data.jpg";
-import trainerArvind from "@/assets/trainer-arvind.png";
+
 
 const trainers = [
   {
@@ -30,14 +30,6 @@ const trainers = [
     desc: "Global transformation expert driving organizational development across 29 countries. Specialist in sales mastery and revenue acceleration.",
     image: trainerTaco,
     accent: "gradient-cq",
-  },
-  {
-    name: "Dr. Arvind O. Singh",
-    role: "Ayurveda Consultant & Wellness Coach",
-    exp: "17+ Years",
-    desc: "M.D. Medicine (Ayurveda) specialist in chronic and lifestyle disorder management. Integrates authentic Ayurveda with personalized wellness guidance across India and internationally.",
-    image: trainerArvind,
-    accent: "gradient-teal",
   },
   {
     name: "Rohit Roy",
