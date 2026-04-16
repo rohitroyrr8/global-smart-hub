@@ -4,7 +4,7 @@ import trainerVijay from "@/assets/trainer-vijay.jpg";
 import trainerTaco from "@/assets/trainer-taco.jpg";
 import trainerRohit from "@/assets/trainer-rohit.jpg";
 import trainerData from "@/assets/trainer-data.jpg";
-import trainerArvind from "@/assets/trainer-arvind.png";
+
 
 const trainers = [
   {
