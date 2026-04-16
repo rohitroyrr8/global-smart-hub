@@ -32,14 +32,6 @@ const trainers = [
     accent: "gradient-cq",
   },
   {
-    name: "Dr. Arvind O. Singh",
-    role: "Ayurveda Consultant & Wellness Coach",
-    exp: "17+ Years",
-    desc: "M.D. Medicine (Ayurveda) specialist in chronic and lifestyle disorder management. Integrates authentic Ayurveda with personalized wellness guidance across India and internationally.",
-    image: trainerArvind,
-    accent: "gradient-teal",
-  },
-  {
     name: "Rohit Roy",
     role: "Co-founder & CTO | Web3 & Fintech",
     exp: "10+ Years",
