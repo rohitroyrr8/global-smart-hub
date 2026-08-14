@@ -72,7 +72,7 @@ const HeroSection = () => {
           className="max-w-3xl"
         >
           <div className="inline-flex items-center gap-2 mb-4 sm:mb-6 px-3 sm:px-4 py-2 rounded-full bg-white/80 backdrop-blur border border-border shadow-sm">
-            <div className="w-2 h-2 rounded-full gradient-cq" />
+            <div className="w-2 h-2 rounded-full gradient-dark-blue" />
             <span className="text-[10px] sm:text-xs font-semibold tracking-widest uppercase text-foreground/70">
               Professional Certification Course
             </span>
@@ -80,7 +80,7 @@ const HeroSection = () => {
 
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-sans font-bold leading-[1.1] mb-4 sm:mb-6 text-foreground">
             Empowering Global Excellence through{" "}
-            <span className="text-gradient-cq">Collaborative Intelligence</span>{" "}
+            <span className="text-gradient-navy">Collaborative Intelligence</span>{" "}
             & Elite Training
           </h1>
 
