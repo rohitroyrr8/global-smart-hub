@@ -91,7 +91,7 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-16 sm:mb-20">
             <Link
               to="/collaborative-intelligence"
-              className="gradient-logo text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-md font-semibold text-center hover:opacity-90 transition-opacity min-h-[48px] flex items-center justify-center"
+              className="gradient-dark-blue text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-md font-semibold text-center hover:opacity-90 transition-opacity min-h-[48px] flex items-center justify-center"
             >
               Explore Our Programs
             </Link>
