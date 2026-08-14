@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import logoAsset from "@/assets/oceangta-logo.png.asset.json";
 
 const programLinks = [
   { label: "Collaborative Intelligence", href: "/collaborative-intelligence" },
@@ -76,11 +77,17 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4">
-        <Link to="/" className="flex items-center gap-2 shrink-0">
-          <span className={`text-xl sm:text-2xl font-sans font-bold tracking-tight ${
-            !scrolled && isLightPage ? "text-[hsl(220,30%,8%)]" : "text-primary-foreground"
-          }`}>
-            Ocean<span className={!scrolled && isLightPage ? "text-[hsl(32,90%,50%)]" : "text-gradient-cq"}>GTA</span>
+        <Link to="/" className="flex items-center shrink-0" aria-label="OceanGTA home">
+          <span
+            className={`inline-flex items-center rounded-lg px-2.5 py-1.5 transition-colors ${
+              !scrolled && isLightPage ? "bg-transparent" : "bg-white/95 shadow-sm"
+            }`}
+          >
+            <img
+              src={logoAsset.url}
+              alt="OceanGTA logo"
+              className="h-7 sm:h-9 w-auto"
+            />
           </span>
         </Link>
 
