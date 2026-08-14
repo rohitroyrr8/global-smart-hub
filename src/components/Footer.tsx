@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Linkedin, Instagram, MessageCircle, MapPin, Mail } from "lucide-react";
-import logoAsset from "@/assets/oceangta-logo.png.asset.json";
+import logoUrl from "@/assets/oceangta-logo.png";
 
 const quickLinks = [
   { label: "Programs", href: "/#programs" },
@@ -33,7 +33,7 @@ const Footer = () => {
             <div className="space-y-4 sm:space-y-5">
               <Link to="/" className="inline-block" aria-label="OceanGTA home">
                 <span className="inline-flex items-center rounded-lg bg-white/95 px-3 py-2 shadow-sm">
-                  <img src={logoAsset.url} alt="OceanGTA logo" className="h-9 w-auto" />
+                  <img src={logoUrl} alt="OceanGTA logo" className="h-9 w-auto" />
                 </span>
               </Link>
               <p className="text-sm leading-relaxed text-[hsl(220,10%,65%)]">

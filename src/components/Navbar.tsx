@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
-import logoAsset from "@/assets/oceangta-logo.png.asset.json";
+import logoUrl from "@/assets/oceangta-logo.png";
 
 const programLinks = [
   { label: "Collaborative Intelligence", href: "/collaborative-intelligence" },
@@ -84,7 +84,7 @@ const Navbar = () => {
             }`}
           >
             <img
-              src={logoAsset.url}
+              src={logoUrl}
               alt="OceanGTA logo"
               className="h-7 sm:h-9 w-auto"
             />
