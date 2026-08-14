@@ -78,17 +78,11 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4">
         <Link to="/" className="flex items-center shrink-0" aria-label="OceanGTA home">
-          <span
-            className={`inline-flex items-center rounded-lg px-2.5 py-1.5 transition-colors ${
-              !scrolled && isLightPage ? "bg-transparent" : "bg-white/95 shadow-sm"
-            }`}
-          >
-            <img
-              src={logoUrl}
-              alt="OceanGTA logo"
-              className="h-7 sm:h-9 w-auto"
-            />
-          </span>
+          <img
+            src={logoUrl}
+            alt="OceanGTA logo"
+            className="h-7 sm:h-9 w-auto drop-shadow-sm"
+          />
         </Link>
 
         {/* Desktop */}
