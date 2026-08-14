@@ -215,9 +215,9 @@ const CollaborativeIntelligence = () => {
       {/* ──── Hero ──── */}
       <section className="relative pt-32 pb-24 md:pb-32 overflow-hidden">
         <img src={cqHero} alt="" className="absolute inset-0 w-full h-full object-cover object-center" />
-        <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(160,65,0,0.82) 0%, rgba(100,35,0,0.90) 100%)' }} />
-        <div className="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full bg-[hsl(var(--sun-orange))] opacity-20 blur-[100px]" />
-        <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] rounded-full bg-[hsl(var(--rust-orange))] opacity-20 blur-[100px]" />
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(8,145,178,0.82) 0%, rgba(6,182,212,0.90) 100%)' }} />
+        <div className="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full bg-[hsl(var(--logo-cyan-light))] opacity-20 blur-[100px]" />
+        <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] rounded-full bg-[hsl(var(--logo-cyan))] opacity-20 blur-[100px]" />
 
         <div className="container mx-auto px-6 relative z-10">
           <Link to="/" className="inline-flex items-center gap-2 text-white/70 hover:text-white mb-8 transition-colors text-sm">

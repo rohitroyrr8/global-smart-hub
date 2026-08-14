@@ -146,7 +146,7 @@ const Navbar = () => {
             href="https://wa.me/919232118685?text=Hi%20OceanGTA!%20I%20would%20like%20to%20book%20a%20free%20call.%20Please%20share%20available%20times."
             target="_blank"
             rel="noopener noreferrer"
-            className="gradient-cq text-accent-foreground px-4 xl:px-5 py-2.5 rounded-md text-sm font-semibold hover:opacity-90 transition-opacity whitespace-nowrap min-h-[44px] flex items-center"
+            className="gradient-logo text-white px-4 xl:px-5 py-2.5 rounded-md text-sm font-semibold hover:opacity-90 transition-opacity whitespace-nowrap min-h-[44px] flex items-center"
           >
             Book a Free Call
           </a>
@@ -226,7 +226,7 @@ const Navbar = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileOpen(false)}
-                className="gradient-cq text-accent-foreground px-5 py-3 rounded-md text-sm font-semibold text-center mt-2 min-h-[48px] flex items-center justify-center"
+                className="gradient-logo text-white px-5 py-3 rounded-md text-sm font-semibold text-center mt-2 min-h-[48px] flex items-center justify-center"
               >
                 Book a Free Call
               </a>
