@@ -31,8 +31,9 @@ const Navbar = () => {
   const location = useLocation();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
+    const onScroll = () => setScrolled(window.scrollY > 10);
     window.addEventListener("scroll", onScroll);
+    onScroll();
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
@@ -61,19 +62,14 @@ const Navbar = () => {
   };
 
   const isActive = (href: string) => location.pathname === href;
-  const isLightPage = location.pathname === "/sales-marketing";
 
   return (
     <motion.nav
       initial={{ y: -80 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "gradient-ocean shadow-lg backdrop-blur-md"
-          : isLightPage
-            ? "bg-gradient-to-b from-black/15 to-transparent"
-            : "bg-transparent"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-background/95 backdrop-blur-md border-b border-border/60 ${
+        scrolled ? "shadow-md" : ""
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4">
@@ -81,7 +77,7 @@ const Navbar = () => {
           <img
             src={logoUrl}
             alt="OceanGTA logo"
-            className="h-10 sm:h-12 w-auto drop-shadow-sm"
+            className="h-10 sm:h-12 w-auto drop-shadow-sm contrast-[1.05]"
           />
         </Link>
 
@@ -91,11 +87,7 @@ const Navbar = () => {
             <Link
               key={l.label}
               to={l.href}
-              className={`text-sm font-medium transition-colors whitespace-nowrap ${
-                !scrolled && isLightPage
-                  ? "text-[hsl(220,30%,8%)]/80 hover:text-[hsl(220,30%,8%)]"
-                  : "text-primary-foreground/80 hover:text-primary-foreground"
-              }`}
+              className="text-sm font-medium transition-colors whitespace-nowrap text-foreground/80 hover:text-foreground"
             >
               {l.label}
             </Link>
@@ -109,11 +101,7 @@ const Navbar = () => {
             onMouseLeave={handleMouseLeave}
           >
             <button
-              className={`flex items-center gap-1 text-sm font-medium transition-colors whitespace-nowrap ${
-                !scrolled && isLightPage
-                  ? "text-[hsl(220,30%,8%)]/80 hover:text-[hsl(220,30%,8%)]"
-                  : "text-primary-foreground/80 hover:text-primary-foreground"
-              }`}
+              className="flex items-center gap-1 text-sm font-medium transition-colors whitespace-nowrap text-foreground/80 hover:text-foreground"
               onClick={() => setDropdownOpen(!dropdownOpen)}
             >
               Centers of Excellence
@@ -166,9 +154,7 @@ const Navbar = () => {
 
         {/* Mobile toggle */}
         <button
-          className={`lg:hidden p-2 min-h-[44px] min-w-[44px] flex items-center justify-center ${
-            !scrolled && isLightPage ? "text-[hsl(220,30%,8%)]" : "text-primary-foreground"
-          }`}
+          className="lg:hidden p-2 min-h-[44px] min-w-[44px] flex items-center justify-center text-foreground"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
         >
@@ -183,7 +169,7 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden gradient-ocean border-t border-primary-foreground/10 max-h-[calc(100vh-60px)] overflow-y-auto"
+            className="lg:hidden bg-background border-t border-border max-h-[calc(100vh-60px)] overflow-y-auto"
           >
             <div className="flex flex-col px-4 sm:px-6 py-4 gap-1">
               {navLinks.map((l) => (
@@ -191,7 +177,7 @@ const Navbar = () => {
                   key={l.label}
                   to={l.href}
                   onClick={() => setMobileOpen(false)}
-                  className="text-primary-foreground/80 hover:text-primary-foreground text-base font-medium py-3 min-h-[48px] flex items-center"
+                  className="text-foreground/80 hover:text-foreground text-base font-medium py-3 min-h-[48px] flex items-center"
                 >
                   {l.label}
                 </Link>
@@ -200,7 +186,7 @@ const Navbar = () => {
               {/* Mobile Centers of Excellence */}
               <button
                 onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
-                className="flex items-center justify-between text-primary-foreground/80 hover:text-primary-foreground text-base font-medium py-3 min-h-[48px]"
+                className="flex items-center justify-between text-foreground/80 hover:text-foreground text-base font-medium py-3 min-h-[48px]"
               >
                 Centers of Excellence
                 <ChevronDown
@@ -225,7 +211,7 @@ const Navbar = () => {
                         className={`text-sm font-medium py-2.5 min-h-[44px] flex items-center transition-colors ${
                           isActive(p.href)
                             ? "text-accent"
-                            : "text-primary-foreground/70 hover:text-primary-foreground"
+                            : "text-foreground/70 hover:text-foreground"
                         }`}
                       >
                         {p.label}
