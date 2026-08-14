@@ -143,9 +143,9 @@ const Footer = () => {
           <div className="container mx-auto px-4 sm:px-6 py-4 sm:py-5 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 text-xs text-[hsl(220,10%,50%)]">
             <p>© {new Date().getFullYear()} OceanGTA. All rights reserved.</p>
             <div className="flex gap-4">
-              <span className="hover:text-[hsl(32,90%,50%)] cursor-pointer transition-colors">Privacy Policy</span>
+              <Link to="/privacy" className="hover:text-[hsl(32,90%,50%)] transition-colors">Privacy Policy</Link>
               <span className="text-white/20">|</span>
-              <span className="hover:text-[hsl(32,90%,50%)] cursor-pointer transition-colors">Terms of Service</span>
+              <Link to="/terms" className="hover:text-[hsl(32,90%,50%)] transition-colors">Terms of Service</Link>
             </div>
           </div>
         </div>
