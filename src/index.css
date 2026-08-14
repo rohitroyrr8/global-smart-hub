@@ -164,6 +164,13 @@
     background-clip: text;
   }
 
+  .text-gradient-navy {
+    background: linear-gradient(135deg, hsl(215 60% 32%), hsl(220 55% 22%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
   .glass-card {
     background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(12px);
