@@ -81,7 +81,7 @@ const Navbar = () => {
           <img
             src={logoUrl}
             alt="OceanGTA logo"
-            className="h-7 sm:h-9 w-auto drop-shadow-sm"
+            className="h-10 sm:h-12 w-auto drop-shadow-sm"
           />
         </Link>
 
