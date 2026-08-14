@@ -32,7 +32,7 @@ const Footer = () => {
             {/* Column 1 — Brand */}
             <div className="space-y-4 sm:space-y-5">
               <Link to="/" className="inline-block" aria-label="OceanGTA home">
-                <img src={logoUrl} alt="OceanGTA logo" className="h-14 w-auto" />
+                <img src={logoUrl} alt="OceanGTA logo" className="h-14 w-auto brightness-0 invert opacity-90 hover:opacity-100 transition-opacity" />
               </Link>
               <p className="text-sm leading-relaxed text-[hsl(220,10%,65%)]">
                 Transforming Teams. Elevating Leaders. Changing the World.
